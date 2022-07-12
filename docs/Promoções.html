@@ -46,6 +46,7 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
   .card-heade {
     background-color: white;
 
@@ -89,11 +90,10 @@
     text-align: center;
     align-items: center;
   }
- #promocao{
-min-width: 100vw;
- }
- 
- 
+
+  #promocao {
+    min-width: 100vw;
+  }
 </style>
 
 <body>
@@ -190,7 +190,8 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <p class="preco-anterior" style="font-size:15px; text-align:center;">Ida e volta - <s> R$
                       900,00</s></p>
                   <p class="preco-atual"><strong>R$ 800,00</strong>
-                  <a href="#" class="btn btn-warning ">+ Detalhes</a></p>
+                    <a href="#" class="btn btn-warning ">+ Detalhes</a>
+                  </p>
 
                 </div>
               </div>
@@ -204,7 +205,8 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <p class="preco-anterior" style="font-size:15px; text-align:center;">Ida e volta - <s>R$ 960,00</s>
                   </p>
                   <p class="preco-atual"><strong>R$ 768,00</strong>
-                    <a href="#" class="btn btn-warning ">+ Detalhes</a></p>
+                    <a href="#" class="btn btn-warning ">+ Detalhes</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -216,17 +218,32 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <p class="preco-anterior" style="font-size:15px; text-align:center;">Ida e volta - <s> R$ 856,00</s>
                   </p>
                   <p class="preco-atual"><strong>R$ 748,00</strong>
-                    <a href="#" class="btn btn-warning">+ Detalhes</a></p>
+                    <a href="#" class="btn btn-warning">+ Detalhes</a>
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-4  align-content-center text-center mb-2">
+            <div class="col text-center" style="width: 20rem;">
+              <div class="card h=100" id="img-zoom">
+                <img src="./imagens/foz-do-iguacu-01.jpg" class="card-img-top rounded img-responsive"
+                  alt="Foz do Iguaçu">
+                <div class="card-body">
+                  <h5 class="card-text mb-lg-5 mt-1" style="color: orange;"><strong>Foz do Iguaçu</strong></h5>
+                  <p class="preco-anterior" style="font-size:15px; text-align:center;">Ida e volta - <s> R$ 2.050</s>
+                  </p>
+                  <p class="preco-atual"><strong>R$ 1.750</strong>
+                    <a href="#" class="btn btn-warning">+ Detalhes</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-5  align-content-center text-center mb-2">
               <a href="#" role="button" type="submit" class="btn btn-warning text-center mt-2 mb-2 pe-5 px-5">Ver mais
                 voos</a>
             </div>
 
             <!--promoção-pacotes -->
-            <div class="col-12 bg-warning p-1 mb-3 mt-3 align-content-center text-center"id="title-02">
+            <div class="col-12 bg-warning p-1 mb-3 mt-3 align-content-center text-center" id="title-02">
               <h2>Uma seleção de pacotes com o melhor serviço e assistência</h2>
             </div>
             <div class="col text-center align-content-center " style="width: 20rem;">
@@ -236,14 +253,16 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <h5 class="card-title"><strong>Pacotes para Fortaleza</strong></h5>
                 </div>
                 <ul class="list-group list-group-flush text-start">
-                  <li class="list-group-item"><i class="icon ri-flight-takeoff-fill me-2" style="font-size: 1.3rem;"></i>Saindo de Brasilia</li>
+                  <li class="list-group-item"><i class="icon ri-flight-takeoff-fill me-2"
+                      style="font-size: 1.3rem;"></i>Saindo de Brasilia</li>
                   <li class="list-group-item"><i class="icon ri-hotel-bed-fill me-2" style="font-size: 1.2rem;"></i>6
                     dias/5 noites</li>
                   <li class="list-group-item"><i class="icon fa fa-plane me-2" aria-hidden="true"
                       style="font-size: 1.2rem;"></i>Passagem - ida e volta</li>
                 </ul>
                 <div class="card-body pb-0 justify-content-end">
-                  <p class="preco-anterior" style="font-size:14px; text-align:center;">Preço por pessoa: <s> R$ 1.842</s></p>
+                  <p class="preco-anterior" style="font-size:14px; text-align:center;">Preço por pessoa: <s> R$
+                      1.842</s></p>
                   <p class="preco-atual"><strong>R$ 1.456</strong>
                     <span><a href="#" class="btn btn-warning  text-center"> + Detalhes</a></span>
                   </p>
@@ -257,14 +276,16 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <h5 class="card-title"><strong>Pacotes para Salvador</strong></h5>
                 </div>
                 <ul class="list-group list-group-flush text-start">
-                  <li class="list-group-item"><i class="icon ri-flight-takeoff-fill me-2" style="font-size: 1.3rem;"></i>Saindo de Fortaleza</li>
+                  <li class="list-group-item"><i class="icon ri-flight-takeoff-fill me-2"
+                      style="font-size: 1.3rem;"></i>Saindo de Fortaleza</li>
                   <li class="list-group-item"><i class="icon ri-hotel-bed-fill me-2" style="font-size: 1.2rem;"></i>3
                     dias</li>
                   <li class="list-group-item"><i class="icon fa fa-plane me-2" aria-hidden="true"
                       style="font-size: 1.2rem;"></i>Passagem - ida e volta</li>
                 </ul>
                 <div class="card-body pb-0 justify-content-end">
-                  <p class="preco-anterior" style="font-size:14px; text-align: center;">Preço por pessoa: <s> R$ 505,00</s></p>
+                  <p class="preco-anterior" style="font-size:14px; text-align: center;">Preço por pessoa: <s> R$
+                      505,00</s></p>
                   <p class="preco-atual"><strong>R$ 450,00</strong>
                     <span><a href="#" class="btn btn-warning  text-center"> + Detalhes</a></span>
                   </p>
@@ -278,14 +299,16 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <h5 class="card-title"><strong>Pacotes para Gramado</strong></h5>
                 </div>
                 <ul class="list-group list-group-flush text-start">
-                  <li class="list-group-item"><i class="icon ri-flight-takeoff-fill me-2" style="font-size: 1.3rem;"></i>Saindo de São Paulo</li>
+                  <li class="list-group-item"><i class="icon ri-flight-takeoff-fill me-2"
+                      style="font-size: 1.3rem;"></i>Saindo de São Paulo</li>
                   <li class="list-group-item"><i class="icon ri-hotel-bed-fill me-2" style="font-size: 1.2rem;"></i>3
                     dias /3 noites</li>
                   <li class="list-group-item"><i class="icon fa fa-plane me-2" aria-hidden="true"
                       style="font-size: 1.2rem;"></i>Passagem - ida e volta</li>
                 </ul>
                 <div class="card-body pb-0 justify-content-end">
-                  <p class="preco-anterior" style="font-size:14px; text-align: center;">Preço por pessoa: <s> R$ 1.242</s></p>
+                  <p class="preco-anterior" style="font-size:14px; text-align: center;">Preço por pessoa: <s> R$
+                      1.242</s></p>
                   <p class="preco-atual"><strong>R$ 890,00</strong>
                     <span><a href="#" class="btn btn-warning  text-center me-2 "> + Detalhes</a></span>
                   </p>
@@ -299,31 +322,35 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
                   <h5 class="card-title"><strong>Istambul + Capadócia</strong></h5>
                 </div>
                 <ul class="list-group list-group-flush text-start">
-                  <li class="list-group-item "><i class="icon ri-flight-takeoff-fill me-2" style="font-size: 1.3rem;"></i>Viaje entre
+                  <li class="list-group-item "><i class="icon ri-flight-takeoff-fill me-2"
+                      style="font-size: 1.3rem;"></i>Viaje entre
                     mar/23 e nov/23</li>
-                  <li class="list-group-item"><i class="icon ri-hotel-bed-fill me-2" style="font-size: 1.2rem;"></i>8 diárias
+                  <li class="list-group-item"><i class="icon ri-hotel-bed-fill me-2" style="font-size: 1.2rem;"></i>8
+                    diárias
                   </li>
                   <li class="list-group-item"><i class="icon fa fa-plane me-2" aria-hidden="true"
                       style="font-size: 1.2rem;"></i>Passagem - ida e volta</li>
                 </ul>
                 <div class="card-body pb-0 justify-content-end">
-                  <p class="preco-anterior" style="font-size:14px; text-align: center;"> a partir de <s> R$ 3.350</s></p>
+                  <p class="preco-anterior" style="font-size:14px; text-align: center;"> a partir de <s> R$ 3.350</s>
+                  </p>
                   <p class="preco-atual"><strong>R$ 2.630</strong>
                     <span><a href="#" class="btn btn-warning  text-center me-2 "> + Detalhes</a></span>
                   </p>
                 </div>
               </div>
             </div>
-                 
+
             <div class="pacote-col-4 text-center">
-              <a href="#" role="button" type="submit" class="btn btn-warning text-center pe-lg-5 px-5">Ver mais pacotes</a>
+              <a href="#" role="button" type="submit" class="btn btn-warning text-center pe-lg-5 px-5">Ver mais
+                pacotes</a>
             </div>
           </div>
-               <!--fim cad -pacote -->
-          </div>
+          <!--fim cad -pacote -->
         </div>
-      </section>
-      <!--fim cad -->
+    </div>
+    </section>
+    <!--fim cad -->
     </div>
   </main>
   <!-- Grid container -->
@@ -450,6 +477,25 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
           Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
     </div>
   </footer>
+  <div id="btnTop">
+    <i class="arrow up">&#9650;</i>
+  </div>
+  <script>
+    const btn = document.getElementById("btnTop")
+    btn.addEventListener("click", function () {
+      window.scrollTo(0, 0)
+    })
+    document.addEventListener('scroll', ocultar)
+
+    function ocultar() {
+      if (window.scrollY > 10) {
+        btn.style.display = "flex"
+      } else {
+        btn.style.display = "none"
+      }
+    }
+    ocultar()
+  </script>
 
   <!-- Bootstrap JavaScript  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
