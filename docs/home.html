@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Bootstrap remxicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+
+  <!--CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="next" href="./Destino.html">
+
+
+</head>
+
+<body>
+
+  <header>
+    <!--inicio navbar -->
+    <nav class="navbar navbar-light justify-content-end pe-2" style="background-color:rgba(255, 166, 0, 0.719)">
+      <div class="d-flex  me-4" id="cabecalho1">
+        <img src="./imagens/cent.atend.svg" alt="atendimento" width="21" height="21"> <small> Central de
+          atendimento: <strong> (11) 0000-5555 </strong> | Televendas: <strong>0800 000 3334</strong></small><span>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light p-2" style="background-color:#68810bc2;" id="cabecalho2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h1 class="display-6"><strong>DVSviagem</strong></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" style="color: orange" aria-current="page" href="#"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Destino.html" target="_self" rel="next">Destino</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Promoções.html">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hospedagem</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Mais
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                <li><a class="dropdown-item" href="#">Termos e Condições</a></li>
+                <li><a class="dropdown-item" href="#">Central de ajuda</a></li>
+                <li><a class="dropdown-item" href="#">Política de Cancelamento</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Seguro viagem</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center me-2">
+            <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
+              <button class="btn btn-outline-primary rounded-pill text-white" type="submit">Entrar ou
+                cadastra-se</button></span>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--fim navbar -->
+  </header>
+
+
+  <main class="carrosel">
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="./imagens/wepik-creative.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="color:rgb(194, 188, 188)">Viaje com destino ao sol</h1>
+            <h3 style="color:orange">Planeje a viagem dos sues sonhos</h3>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./imagens/balões.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="color: white">Aproveite nossos pacotes</h1>
+            <h3 style="color:orange">Monte pacotes turísticos e escolha a viagens na sua maneira.</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./imagens/Buenos Aires.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="color: white">Ofertas imperdivéis esperando você</h1>
+            <h3 style="color:orange">Encontre os melhores preços e segurança.</h3>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Grid container -->
+  <footer class="container-footer">
+
+    <div class="row-footer">
+      <!-- Social media -->
+      <div class="footer-col">
+        <p class="text-center fs-6 p-0 m-1"><strong>Siga-nos</strong></p>
+        <div class="icon-medias-sociais">
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <!--fim Social media -->
+
+      <!--newslatter Grid column-->
+      <div class="footer-col">
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
+          <strong>Inscreva para receber ofertas exclusivas</strong>
+        </p>
+        <!--newsletter input -->
+        <form action="">
+          <div class="input-group mb-3">
+            <input class="form-control" type="text" placeholder="Digite seu e-mail" aria-label="nome-destinatario"
+              aria-describedby="button-addon2"></input>
+            <button class="btn  btn-outline border-0 rounded-1" style="background-color:#68810bc2;"
+              id="button-addon2" type="button"><i class="ri-send-plane-2-fill"></i></button>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="footer-col p-0">
+        <!--Grid column card-->
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
+          <strong>Formas de pagamento</strong>
+        </p>
+        <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito"><span>
+      </div>
+    </div>
+    <!--fim Grid row 1-->
+
+    <!--inicio Grid row 2-->
+    <div class="row-footer">
+      <!--Grid column-->
+      <div class="footer-col pt-3 ">
+        <ul>
+          <li>
+            <a href="#">Sobre nós</a>
+          </li>
+          <li>
+            <a href="#">Termos e condições gerais</a>
+          </li>
+          <li>
+            <a href="#">Politica de privacidade</a>
+          </li>
+          <li>
+            <a href="#">Código de conduta ética</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--Grid column-->
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Minha conta</a>
+          </li>
+          <li>
+            <a href="#">Minhas viagens</a>
+          </li>
+          <li>
+            <a href="#">Compra segura</a>
+          </li>
+          <li>
+            <a href="#">Cancelamento e reembolso</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Central de atendimento</a>
+          </li>
+          <li>
+            <a href="#">central de ajuda</a>
+          </li>
+          <li>
+            <a href="#">Remarcações de viagens</a>
+          </li>
+          <li>
+            <a href="#">Suporte pós venda</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Passagens Promocionais</a>
+          </li>
+          <li>
+            <a href="#">Passagens aéreas barata</a>
+          </li>
+          <li>
+            <a href="#">Pacotes promocionais</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="copyright-row">
+      <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2"><small>&copy; 2022 by
+          Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

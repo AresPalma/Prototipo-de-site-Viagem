@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Destino</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Bootstrap remxicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+
+  <!--CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="next" href="./Promoções.html">
+  <link rel="prev" href="./Home.html">
+
+
+</head>
+
+<style>
+  .container-segundario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 0px 0;
+  }
+
+  #destinos {
+    overflow: hidden;
+  }
+  #img-zoom {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #img-zoom:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .card-text {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color:white;
+    font-weight: 800;
+  }
+</style>
+
+<body>
+  <header>
+    <!--inicio navbar -->
+    <nav class="navbar navbar-light justify-content-end pe-2" style="background-color:rgba(255, 166, 0, 0.719)">
+      <div class="d-flex me-4" id="cabecalho1">
+        <img src="./imagens/cent.atend.svg" alt="atendimento" width="21" height="21"> <small> Central de
+          atendimento: <strong> (11) 0000-5555 </strong> | Televendas: <strong>0800 000 3334</strong></small><span>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light p-2" style="background-color:#68810bc2;" id="cabecalho2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h1 class="display-6"><strong>DVSviagem</strong></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html" target="_self" rel="prev"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: orange" aria-current="page" href="#"><strong>Destino</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Promoções.html" rel="next">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hospedagem</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Mais
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                <li><a class="dropdown-item" href="#">Termos e Condições</a></li>
+                <li><a class="dropdown-item" href="#">Central de ajuda</a></li>
+                <li><a class="dropdown-item" href="#">Política de Cancelamento</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Seguro viagem</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center me-2">
+            <i class="ri-account-circle-line text-light" style="font-size: 2.5rem; opacity: 50%"></i><span>
+              <button class="btn btn-outline-primary rounded-pill text-white" type="submit">Entrar ou
+                cadastra-se</button></span>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--fim navbar -->
+  </header>
+  <main class="lugares">
+    <div class="container-segundario">
+            <!-- Background + form image -->
+    <div class="p-5 text-center bg-image w-100 " id="img-cabec" style="
+background-image:url('./imagens/Parque Nacion. Montanha.jpg');
+">
+      <div class="mask mt-1" style="background-color: rgba(22, 22, 22, 0.473);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-0 mt-2" style="color: orange">Os melhores destinos</h1>
+            <form action class="row  col-sm-12 m-1 form" id="formulario">
+              <div class="col-auto">
+                <label class="visually-hidden" for="destino">Origem</label>
+                <div class="name">Origem</div>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="icon ri-send-plane-fill" style="font-size: 1rem;"></i></div>
+                  <input type="text" size="10px" class="form-control" id="origem" placeholder="De onde vai sair?">
+                </div>
+              </div>
+              <div class="col-auto">
+                <label class="visually-hidden" for="destino">destino</label>
+                <div class="name">Destino</div>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="icon ri-map-pin-line" style="font-size: 1rem;"></i></div>
+                  <input type="text" size="10px" class="form-control" id="destino" placeholder="Para onde vai?">
+                </div>
+              </div>
+              <div class="col-auto">
+                <label class="visually-hidden" for="dateIda">dataIda</label>
+                <div class="name">Ida</div>
+                <input type="date" size="5px" class="form-control" id="dataida" placeholder="ida">
+              </div>
+              <div class="col-auto me-lg-2">
+                <label class="visually-hidden" for="dateVolta">dataVolta</label>
+                <div class="name">Volta</div>
+                <input type="date" size="5px" class="form-control" id="datavolta" placeholder="ida">
+              </div>
+              <div class="col-auto p-0 me-lg-2">
+                <label class="visually-hidden" for="destino">destino</label>
+                <div class="name">Passageiros / Quarto</div>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="icon ri-parent-line pe-1 " style="font-size: 1rem;"></i><i
+                      class="icon ri-hotel-bed-fill" style="font-size: 1rem;"></i></div>
+                  <input type="text" size="17px" class="form-control" id="destino" placeholder="2 passageiros 1 Quarto">
+                </div>
+              </div>
+              <div class="col-auto me-lg-1" id="buscarSeach">
+                <label class="visually-hidden" for="destino">busca</label>
+                <div class="col-auto mt-4" id=seach>
+                  <button class="btn btn-outline-primary text-white rounded-5" type="submit">Buscar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fim  Background +form image -->
+
+ <!--inicio cad -->
+ <section class="px-1" id="card-destino">
+  <div class=" col-sm-12">
+    <div class="btn-group mx-5 mt-lg-4 pb-2 px-2" role="group" aria-label="Exemplo Basic">
+      <a href="./Destino.html"class="btn btn-outline-primary text-dark" style="font-size: 20px;">Nacional</a>
+      <a href="#" class="btn btn-warning active"aria-current="page" style="font-size: 20px;"><strong>Internacional</strong></a>
+    </div>
+  </div>
+    <div class="card-header">
+      <div class="nav nav-tabs card-header-tabs">
+        <div class="row row-cols-1 row-cols-md-4 mx-lg-1 g-3 pb-3 justify-content-center" id="destinos">
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Boston.jpg" class="card-img-top rounded img-responsive"
+                alt="Boston">
+              <div class="card-body">
+                <h5 class="card-text">Boston</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Cancun.jpg" class="card-img-top rounded img-responsive"
+                alt="Cancun">
+              <div class="card-body">
+                <h5 class="card-text">Cancun</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Machu_Picchu.jpeg" class="card-img-top rounded img-responsive"
+                alt="Machu_Picchu">
+              <div class="card-body">
+                <h5 class="card-text">Machu Picchu</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/dusseldorf-Alemanha.jpg" class="card-img-top rounded img-responsive"
+                alt="Dusseldorf">
+              <div class="card-body">
+                <h5 class="card-text">Dusseldorf</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Buenos Aires 01.jpg" class="card-img-top rounded img-responsive"
+                alt="Buenos Aires">
+              <div class="card-body">
+                <h5 class="card-text">Buenos Aires</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Basílica_Catedral_Metropolitana_de_Lima.jpg" class="card-img-top rounded img-responsive"
+                alt="Lima">
+              <div class="card-body">
+                <h5 class="card-text">Lima</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Lisboa-01.jpg" class="card-img-top rounded img-responsive"
+                alt="Lisboa">
+              <div class="card-body">
+                <h5 class="card-text">Lisboa</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/maldivas.jpg" class="card-img-top rounded img-responsive"
+                alt="Ilhas maldivas">
+              <div class="card-body">
+                <h5 class="card-text">Ilhas Maldivas</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Genebra-chillon-castle.jpg" class="card-img-top rounded img-responsive"
+                alt="Genebra">
+              <div class="card-body">
+                <h5 class="card-text">Genebra</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Tel_Aviv_Israel.jpg" class="card-img-top rounded img-responsive"
+                alt="Tel Aviv">
+              <div class="card-body">
+                <h5 class="card-text">Tel Aviv</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/new-york-.jpg" class="card-img-top rounded img-responsive"
+                alt="New York">
+              <div class="card-body">
+                <h5 class="card-text">New York</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/plaza-grande-quito.jpg" class="card-img-top rounded img-responsive"
+                alt="Quito">
+              <div class="card-body">
+                <h5 class="card-text">Quito</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Miami.jpg" class="card-img-top rounded img-responsive"
+                alt="Miami">
+              <div class="card-body">
+                <h5 class="card-text">Miami</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Conpenhagen.jpg" class="card-img-top rounded img-responsive"
+                alt="Conpenhagen">
+              <div class="card-body">
+                <h5 class="card-text">Conpenhagen</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Paris.jpg" class="card-img-top rounded img-responsive"
+                alt="Paris">
+              <div class="card-body">
+                <h5 class="card-text">Paris</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/vatican--roma.jpg" class="card-img-top rounded img-responsive"
+                alt="Roma">
+              <div class="card-body">
+                <h5 class="card-text">Roma</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Stuttgart-Alemanha.jpg" class="card-img-top rounded img-responsive"
+                alt="Stuttgart">
+              <div class="card-body">
+                <h5 class="card-text">Stuttgart</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Orlando.jpg" class="card-img-top rounded img-responsive"
+                alt="Orlando">
+              <div class="card-body">
+                <h5 class="card-text">Orlando</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/berlin.jpg" class="card-img-top rounded img-responsive"
+                alt="berlin">
+              <div class="card-body">
+                <h5 class="card-text">Berlin</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Interlaken._Suiça.jpg" class="card-img-top rounded img-responsive"
+                alt="/Interlaken">
+              <div class="card-body">
+                <h5 class="card-text">/Interlaken</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/channel-veneza.jpg" class="card-img-top rounded img-responsive"
+                alt="Veneza">
+              <div class="card-body">
+                <h5 class="card-text">Veneza</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Sevilla-Plaza_de_Espanha.jpg" class="card-img-top rounded img-responsive"
+                alt="Sevilla">
+              <div class="card-body">
+                <h5 class="card-text">Sevilla</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Uruguai-Maldonado-Punta_Del_Este.jpg" class="card-img-top rounded img-responsive"
+                alt="Maldonado">
+              <div class="card-body">
+                <h5 class="card-text">Maldonado</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Zurique-Suica.jpg" class="card-img-top rounded img-responsive"
+                alt="Zurique">
+              <div class="card-body">
+                <h5 class="card-text">Zurique</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/barcelona-Espanha.jpg" class="card-img-top rounded img-responsive"
+                alt="Barcelona">
+              <div class="card-body">
+                <h5 class="card-text">Barcelona</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Capadócia_Turquia.jpg" class="card-img-top rounded img-responsive"
+                alt="Capadócia">
+              <div class="card-body">
+                <h5 class="card-text">Capadócia</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Montreal-Jardim-botanico.jpg" class="card-img-top rounded img-responsive"
+                alt="Montreal">
+              <div class="card-body">
+                <h5 class="card-text">Montreal</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center" style="width: 20rem;">
+            <div class="card h=100 border-light" id="img-zoom">
+              <img src="./imagens/Madri.jpg" class="card-img-top rounded img-responsive"
+                alt="Madri">
+              <div class="card-body">
+                <h5 class="card-text">Madri</h5>
+                <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+        <!--fim cad-row -->
+        </div>
+       </div>
+       </div>
+    </section>
+    <!--fim cad -->
+    </div>
+  </main>
+
+     <!--inicio do Grid container rodapé -->
+  <footer class="container-footer" id="rodape">
+    <div class="row-footer">
+      <!-- Social media -->
+      <div class="footer-col">
+        <p class="text-center fs-6 p-0 m-1"><strong>Siga-nos</strong></p>
+        <div class="icon-medias-sociais">
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- inicio newslatter Grid column-->
+      <div class="footer-col">
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
+          <strong>Inscreva para receber ofertas exclusivas</strong>
+        </p>
+        <!--newsletter input -->
+        <form action="">
+          <div class="input-group mb-3">
+            <input class="form-control" type="text" placeholder="Digite seu e-mail" aria-label="nome-destinatario"
+              aria-describedby="button-addon2"></input>
+            <button class="btn  btn-outline border-0 rounded-1" style="background-color: #68810bc2;" id="button-addon2"
+              type="button"><i class="ri-send-plane-2-fill"></i></button>
+          </div>
+        </form>
+      </div>
+      <!--fim newslatter Grid column-->
+      <div class="footer-col p-0">
+        <!--Grid column card-->
+        <p class="text-center fs-6 p-0 m-0" style="color: rgb(48, 46, 46);">
+          <strong>Formas de pagamento</strong>
+        </p>
+        <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito"><span>
+      </div>
+    </div>
+    <!--fim Grid row 1-->
+
+    <!--inicio Grid row 2-->
+    <div class="row-footer">
+      <!--Grid column-->
+      <div class="footer-col pt-3 ">
+        <ul>
+          <li>
+            <a href="#">Sobre nós</a>
+          </li>
+          <li>
+            <a href="#">Termos e condições gerais</a>
+          </li>
+          <li>
+            <a href="#">Politica de privacidade</a>
+          </li>
+          <li>
+            <a href="#">Código de conduta ética</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Minha conta</a>
+          </li>
+          <li>
+            <a href="#">Minhas viagens</a>
+          </li>
+          <li>
+            <a href="#">Compra segura</a>
+          </li>
+          <li>
+            <a href="#">Cancelamento e reembolso</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Central de atendimento</a>
+          </li>
+          <li>
+            <a href="#">central de ajuda</a>
+          </li>
+          <li>
+            <a href="#">Remarcações de viagens</a>
+          </li>
+          <li>
+            <a href="#">Suporte pós venda</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Passagens Promocionais</a>
+          </li>
+          <li>
+            <a href="#">Passagens aéreas barata</a>
+          </li>
+          <li>
+            <a href="#">Pacotes promocionais</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="copyright-row" id=copyright>
+      <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2" font-size=" 1px">
+        <small>&copy; 2022 by
+          Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a>
+      </p>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
