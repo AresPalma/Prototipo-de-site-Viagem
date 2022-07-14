@@ -1,5 +1,6 @@
-# Prototipo-de-site-Viagem
-Projeto Recode Modulo2
-Atividade pratica
+#Projeto Recode Modulo2
+
 Módulo 2 - Iniciação ao Mundo da Computação, Programação de Computadores e Front-end Fundamentos
-Protótipo de site
+Atividade pratica
+Prototipo de site Viagem
+
