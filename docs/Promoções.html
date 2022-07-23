@@ -17,83 +17,12 @@
 
   <!--CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="detino.css" />
+  
   <link rel="next" href="./Contato.html">
   <link rel="prev" href="./Destino.html">
 
 </head>
-<style>
-  .container-segundario {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 0 0px 0;
-  }
-
-  #destinos {
-    overflow: hidden;
-  }
-
-  #img-zoom {
-    max-width: 100%;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  #img-zoom:hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  .card-heade {
-    background-color: white;
-
-  }
-
-  .card-text {
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    bottom: 20px;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 130px;
-    color: rgba(247, 247, 247, 0.781);
-    font-weight: 800;
-    font-size: 25px;
-    text-shadow: 1px 1px 1px rgb(92, 90, 90);
-  }
-
-  .gallery_product {
-    margin-bottom: 30px;
-  }
-
-  .gallery_product .title {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    bottom: 100px;
-    left: 200px;
-  }
-
-  .gallery_product .title small {
-    display: flex;
-    justify-content: end;
-  }
-
-  .preco-atual {
-    padding: 0%;
-    color: red;
-    font-size: 25px;
-    text-align: center;
-    align-items: center;
-  }
-  #promocao {
-    min-width: 100vw;
-  }
-</style>
 
 <body>
   <header>
@@ -109,7 +38,7 @@
         <a class="navbar-brand" href="#">
           <h1 class="display-6"><strong>DVSviagem</strong></h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -151,14 +80,14 @@
           <form class="d-flex align-items-center me-2">
             <i class="ri-account-circle-line text-light" style="font-size: 2.5rem; opacity: 50%"></i><span>
               <button class="btn btn-outline-primary rounded-pill text-white" type="submit">Entrar ou
-                cadastra-se</button></span>
+                cadastrar</button></span>
           </form>
         </div>
       </div>
     </nav>
   </header>
   <!-- fim navbar -->
-  <main class="lugares">
+  <main>
     <div class="container-segundario">
       <!-- Background + form image -->
       <div class="p-5  text-center bg-image w-100 " id="img-cabec" style="
@@ -476,26 +405,12 @@ background-image:url('./imagens/Parque\ Nacion.\ Montanha.jpg');
           Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
     </div>
   </footer>
-  <div id="btnTop">
-    <i class="arrow up">&#9650;</i>
+
+  <div class="buttontop-top buttontop-fade-out buttontop-is-visible" id="btnTop">
+    <i class="arrow up"><i class="fa fa-arrow-up"></i>
   </div>
-  <script>
-    const btn = document.getElementById("btnTop")
-    btn.addEventListener("click", function () {
-      window.scrollTo(0, 0)
-    })
-    document.addEventListener('scroll', ocultar)
 
-    function ocultar() {
-      if (window.scrollY > 10) {
-        btn.style.display = "flex"
-      } else {
-        btn.style.display = "none"
-      }
-    }
-    ocultar()
-  </script>
-
+  <script src="script.js"> </script>
   <!-- Bootstrap JavaScript  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

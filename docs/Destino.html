@@ -18,50 +18,12 @@
 
   <!--CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="detino.css" />
+  
   <link rel="next" href="./Promoções.html">
   <link rel="prev" href="./index.html">
 
-
 </head>
-
-<style>
-  .container-segundario {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 0px 0;
-  }
-
-  #destinos {
-    overflow: hidden;
-  }
-
-  #img-zoom {
-    max-width: 100%;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  #img-zoom:hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  .card-text {
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    bottom: 20px;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    color: orange;
-    font-weight: 800;
-  }
-</style>
 
 <body>
   <header>
@@ -77,7 +39,7 @@
         <a class="navbar-brand" href="#">
           <h1 class="display-6"><strong>DVSviagem</strong></h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -118,14 +80,14 @@
           <form class="d-flex align-items-center me-2">
             <i class="ri-account-circle-line text-light" style="font-size: 2.5rem; opacity: 50%"></i><span>
               <button class="btn btn-outline-primary rounded-pill text-white" type="submit">Entrar ou
-                cadastra-se</button></span>
+                cadastrar</button></span>
           </form>
         </div>
       </div>
     </nav>
     <!--fim navbar -->
   </header>
-  <main class="lugares">
+  <main>
     <div class="container-segundario">
       <!-- Background + form image -->
       <div class="p-5 text-center bg-image w-100 " id="img-cabec" style="
@@ -184,18 +146,17 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
         </div>
       </div>
       <!--fim  Background +form image -->
-      
-      <section class="px-1" id="card-destino">
-        <!--inicio cad -->
-        <section class="px-1" id="card-destino-">
+
+              <!--inicio cad -->
+        <section class="px-2" id="card-destino-">
           <div class=" col-sm-12 mx-5 mt-3 col-lg-12 mt-lg-1">
-          <div class="btn-group mx-5 mt-lg-4 pb-2 px-2" role="group" aria-label="Exemplo Basic">
-            <a href="#" class="btn btn-warning active" aria-current="page"
-              style="font-size: 20px;"><strong>Nacional</strong></a>
-            <a href="./destinoInter.html" class="btn btn-outline-primary text-dark"
-              style="font-size: 20px;"><strong>Internacional</strong></a>
+            <div class="btn-group mx-5 mt-lg-4 pb-2 px-2" role="group" aria-label="Exemplo Basic">
+              <a href="#" class="btn btn-warning active" aria-current="page"
+                style="font-size: 20px;"><strong>Nacional</strong></a>
+              <a href="./destinoInter.html" class="btn btn-outline-primary text-dark"
+                style="font-size: 20px;"><strong>Internacional</strong></a>
+            </div>
           </div>
-        </div>
           <div class="card-header">
             <div class="nav nav-tabs card-header-tabs">
               <div class="row row-cols-1 row-cols-md-4 mx-lg-2 g-3 pb-3 justify-content-center" id="destinos">
@@ -204,7 +165,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Bonito Matogrosso doSul.jpg" class="card-img-top rounded img-responsive"
                       alt="Bonito">
                     <div class="card-body">
-                      <h5 class="card-text">Bonito</h5>
+                      <h5 class="card-text-nacional">Bonito</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -213,7 +174,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/fortaleza.jpg" class="card-img-top rounded img-responsive" alt="fortaleza">
                     <div class="card-body">
-                      <h5 class="card-text">Fortaleza</h5>
+                      <h5 class="card-text-nacional">Fortaleza</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -223,7 +184,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Foz do Iguaçu.jpg" class="card-img-top rounded img-responsive"
                       alt="Foz do Iguaçu">
                     <div class="card-body">
-                      <h5 class="card-text">Foz do Iguaçu</h5>
+                      <h5 class="card-text-nacional">Foz do Iguaçu</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -232,7 +193,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Maceió.jpg" class="card-img-top rounded img-responsive" alt="maceio">
                     <div class="card-body">
-                      <h5 class="card-text">Macéio</h5>
+                      <h5 class="card-text-nacional">Macéio</h5>
                       <a href="#" class="btn btn-warning rounded-pill" size="10">Saiba Mais</a>
                     </div>
                   </div>
@@ -242,7 +203,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/porto Seguro.jpg" class="card-img-top rounded img-responsive"
                       alt="Porto Seguro">
                     <div class="card-body">
-                      <h5 class="card-text">Porto Seguro</h5>
+                      <h5 class="card-text-nacional">Porto Seguro</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -252,7 +213,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Poços_de_Caldas_MG.jpg" class="card-img-top rounded img-responsive"
                       alt="Poços de Caldas">
                     <div class="card-body">
-                      <h5 class="card-text">Poços de Caldas</h5>
+                      <h5 class="card-text-nacional">Poços de Caldas</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -261,7 +222,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Salvador.jpeg" class="card-img-top img-responsive" alt="Salvador">
                     <div class="card-body">
-                      <h5 class="card-text">Salvador</h5>
+                      <h5 class="card-text-nacional">Salvador</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -270,7 +231,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Buzios.jpg" class="card-img-top img-responsive" alt="buzios">
                     <div class="card-body">
-                      <h5 class="card-text">Búzios</h5>
+                      <h5 class="card-text-nacional">Búzios</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -280,7 +241,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Fernando de Noronha.jpg" class="card-img-top img-responsive"
                       alt="Fernando de Noronha">
                     <div class="card-body">
-                      <h5 class="card-text">Fernando de Noronha</h5>
+                      <h5 class="card-text-nacional">Fernando de Noronha</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -290,7 +251,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Curva_da_Avenida_Beira_Mar_Aracaju.jpg" class="card-img-top img-responsive"
                       alt="Aracaju">
                     <div class="card-body">
-                      <h5 class="card-text">Aracaju</h5>
+                      <h5 class="card-text-nacional">Aracaju</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -299,7 +260,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Gramado-01.jpg" class="card-img-top img-responsive" alt="Gramado">
                     <div class="card-body">
-                      <h5 class="card-text">Gramado</h5>
+                      <h5 class="card-text-nacional">Gramado</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -309,7 +270,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/praia-das-conchas-cabo-frio.jpg" class="card-img-top img-responsive"
                       alt="Cabo Frio">
                     <div class="card-body">
-                      <h5 class="card-text">Cabo Frio</h5>
+                      <h5 class="card-text-nacional">Cabo Frio</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -318,7 +279,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Recife.jpg" class="card-img-top img-responsive" alt="Recife">
                     <div class="card-body">
-                      <h5 class="card-text ">Recife</h5>
+                      <h5 class="card-text-nacional ">Recife</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -328,7 +289,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Ilha_do_Fogo_e_Orla_I_-_Petrolina,_Pernambuco.jpg"
                       class="card-img-top img-responsive" alt="Petrolina">
                     <div class="card-body">
-                      <h5 class="card-text">Petrolina</h5>
+                      <h5 class="card-text-nacional">Petrolina</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -337,7 +298,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Natal_R-Grande do Norte.jpg" class="card-img-top img-responsive" alt="Natal">
                     <div class="card-body">
-                      <h5 class="card-text">Natal</h5>
+                      <h5 class="card-text-nacional">Natal</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -346,7 +307,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/Rio_de_Janeiro-01.jpg" class="card-img-top img-responsive" alt="Rio de janeiro">
                     <div class="card-body">
-                      <h5 class="card-text">Rio de Janeiro</h5>
+                      <h5 class="card-text-nacional">Rio de Janeiro</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -356,7 +317,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/ilhéus.jpg" class="card-img-top img-responsive" alt="ilhéus">
                     <div class="card-body">
-                      <h5 class="card-text">ilhéus</h5>
+                      <h5 class="card-text-nacional">ilhéus</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -367,7 +328,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/Brasilia-Planalto_Central.jpg" class="card-img-top img-responsive"
                       alt="Brasilia">
                     <div class="card-body">
-                      <h5 class="card-text">Brasilia</h5>
+                      <h5 class="card-text-nacional">Brasilia</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -376,7 +337,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="card h=100 border-light" id="img-zoom">
                     <img src="./imagens/bahia-peninsula-de-marau.jpg" class="card-img-top img-responsive" alt="Maraú">
                     <div class="card-body">
-                      <h5 class="card-text">Maraú</h5>
+                      <h5 class="card-text-nacional">Maraú</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -386,7 +347,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     <img src="./imagens/São Paulo-avenida-brigadeiro-faria-lima.jpg" class="card-img-top img-responsive"
                       alt="São Paulo">
                     <div class="card-body">
-                      <h5 class="card-text">São Paulo</h5>
+                      <h5 class="card-text-nacional">São Paulo</h5>
                       <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
                     </div>
                   </div>
@@ -443,7 +404,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
     <!--inicio Grid row 2-->
     <div class="row-footer">
       <!--Grid column-->
-      <div class="footer-col pt-3 ">
+      <div class="footer-col pt-1 ">
         <ul>
           <li>
             <a href="#">Sobre nós</a>
@@ -519,26 +480,12 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
     </div>
   </footer>
 
-  <div id="btnTop">
-    <i class="arrow up">&#9650;</i>
+  <div class="buttontop-top buttontop-fade-out buttontop-is-visible" id="btnTop">
+    <i class="arrow up"><i class="fa fa-arrow-up"></i>
   </div>
-  <script>
-    const btn = document.getElementById("btnTop")
-    btn.addEventListener("click", function () {
-      window.scrollTo(0, 0)
-    })
-    document.addEventListener('scroll', ocultar)
-
-    function ocultar() {
-      if (window.scrollY > 10) {
-        btn.style.display = "flex"
-      } else {
-        btn.style.display = "none"
-      }
-    }
-    ocultar()
-  </script>
-  <!-- Bootstrap JavaScript -->
+  
+  <script src="script.js"> </script>
+       <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
