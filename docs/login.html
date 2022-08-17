@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Bootstrap remxicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!--CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <!--inicio navbar -->
+    <nav class="navbar navbar-light justify-content-end pe-2" style="background-color:rgba(255, 166, 0, 0.719)">
+      <div class="d-flex me-4" id="cabecalho1">
+        <img src="./imagens/cent.atend.svg" alt="atendimento" width="21" height="21"> <small> Central de
+          atendimento: <strong> (11) 0000-5555 </strong> | Televendas: <strong>0800 000 3334</strong></small><span>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light p-2 pb-0 pt-0" style="background-color:#68810bc2;" id="cabecalho2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h1 class="display-6"><strong>DVSviagem</strong></h1>
+        </a>
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html" target="_self" rel="prev"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: orange" aria-current="page" href="#"><strong>Destino</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Promoções.html" rel="next">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hospedagem</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Mais
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                <li><a class="dropdown-item" href="#">Termos e Condições</a></li>
+                <li><a class="dropdown-item" href="#">Política de Cancelamento</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center me-2">
+            <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
+              <button id="btn-login" class="btn btn-outline-primary rounded-pill text-white">Entre ou
+                cadastre-se</button></span>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--fim navbar -->
+  </header>
+
+
+  <button onclick="document.getElementById('modal').style.display='block'" style="width:auto;">Login</button>
+
+
+  <div id="modal" class="modal-container" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header pt-0 pb-0">
+
+          <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+          <!--botão fechar -->
+          <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
+            data-bs-dismiss="modal" aria-label="Close">&times;</span>
+          <div class=" text-center mt-0" id="text-cab-login">
+            <h1 class="display-6 modal-title"><strong>DVSviagem</strong></h1>
+            <p class="subtexto mb-1">Gerencie com mais facilidade as suas passagens aéreas e aproveite vantagens
+              exclusivas!
+            </p>
+            <p class="subtexto mb-2" style="font-size: .8rem;">Insira seu e-mail para fazer login</p>
+          </div>
+        </div>
+
+        <!--formulario login -->
+        <form class="modal-body p-1 mx-0 " action="" method="post">
+          <div class="container">
+            <fieldset>
+              <legend class="subtitulo">Login</legend>
+              <div class="input-group form-group mt-3 mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="user" id="icone-login">
+                    <i class="fa fa-user fa-fw"></i></span>
+                </div>
+                <input id="user" autocomplete="email" type="text" class="form-control login" name="usuario"
+                  placeholder="exemplo@email.com" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+              <!--passaword -->
+               <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="senha" id="icone-senha"><i   class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input id="psw" class="form-control login" type="password" name="password" placeholder="Senha"
+                  aria-label="password" aria-describedby="password-constraints" required>
+
+                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+              </div>
+            </fieldset>
+            <button id="button-login" class="rounded-3" type="submit">Login</button>
+            <label>
+              <input id="remember" type="checkbox" checked="checked" name="remember"> Lembrar
+            </label>
+            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./Cadastro.html">
+                Esqueceu sua senha?</a>
+            </div>
+          </div>
+          <hr style="border-bottom: 2px solid rgb(48, 46, 46);margin-bottom: 0px;">
+          <div class="text-modal d-flex justify-content-center"><a href="#">
+              Inscreva-se</a>
+          </div>
+          <div class="container pb-1 pt-1" style="background-color:#f1f1f1">
+            <div class="caption">
+              <span>Ao fazer login ou criar uma conta, você concorda com nossos</span>
+              <span><a href="/termos-e-condicoes-de-uso" target="_blank">
+                  <span class="caption ">Termos e Condições</span></a>
+                <span class=" caption textPrimary"> e </span>
+                <a href="/politica-de-privacidade" target="_blank"><span> Política de Privacidade</span></a>
+                <span>e saiba sobre o tratamento dos seus dados pessoais.</span></span>
+            </div>
+          </div>
+      </div>
+      </form>
+    </div>
+    <!--fim modal -->
+  </div>
+  </div>
+
+
+
+  <script>
+    // Get the modal
+    /*var modal = document.getElementById('modal');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }*/
+     //mostar password
+ let btn= document.querySelector('.fa-eye')
+
+btn.addEventListener('click', () => {
+  let inputSenha = document.querySelector('#psw')
+
+  if (inputSenha.getAttribute('type') == 'password') {
+    inputSenha.setAttribute('type', 'text')
+  } else {
+    inputSenha.setAttribute('type', 'password')
+  }
+})
+
+  </script>
+
+  <script src="script.js"> </script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

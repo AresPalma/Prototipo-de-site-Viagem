@@ -1,0 +1,133 @@
+.image {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+}
+
+#contato-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+.list-contat {
+    padding: 10px;
+
+}
+
+#Endereco {
+    margin-top: auto;
+}
+
+#form-contato {
+    max-width: 550px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 40px;
+    margin-bottom: 0px;
+}
+
+.inputState {
+    font-size: 14px
+}
+
+.contato-col ul {
+    list-style: none;
+
+}
+
+.input-group.form-group span {
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border: 0;
+    height: 40px;
+}
+
+.form-label-title {
+    font-size: 18px;
+    color: black;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.jumbotron {
+    align-content: center;
+    align-items: center;
+    padding: 50px 50px 0px;
+    margin-top: 20px;
+}
+
+@media (max-width:800px) {
+    body {
+        width: 100vw;
+    }
+}
+
+@media (max-width:768px) {
+    #form-contato {
+        padding-right: 20px;
+        margin-top: 20px;
+        padding-left: 0px;
+    }
+
+    .jumbotron {
+        padding: 0px 20px 0px;
+        margin-top: 55px;
+    }
+}
+
+@media (max-width:600px) {
+    body {
+        width: 100%;
+
+    }
+}
+
+@media (max-width:540px) {
+
+    #form-contato {
+        max-width: 500px;
+        padding-left: 35px;
+    }
+
+    .jumbotron {
+        padding: 20px 50px 10px 50px;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width:375px) {
+    .jumbotron {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .list-contat {
+        margin: 0px;
+
+    }
+
+    #form-contato {
+        max-width: 500px;
+        padding-left: 10px;
+
+    }
+
+    div#Endereco {
+        padding: 10px;
+    }
+
+    #contato {
+        padding: 0px;
+    }
+
+    div#form-contato {
+        padding: 10px;
+    }
+
+    #img-cabec {
+        min-height: 0px;
+    }
+}

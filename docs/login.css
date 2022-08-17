@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@400;700 & display=swap');
+
+body {
+
+    font-family: 'Noto Sans', Helvetica, sans-serif;
+}
+
+.modal-header {
+    background-color: rgba(100, 98, 98, 0.3);
+}
+
+/* Center the image */
+.modal-header img {
+    width: 100%;
+    height: 200px;
+    filter: opacity(80%);
+}
+
+#text-cab-login {
+    position: absolute;
+    margin-top: -25px;
+    padding-right: 10px;
+    margin-bottom: -20px;
+    font-weight: 700;
+}
+
+p.subtexto {
+    color: white;
+    text-shadow: 2px 4px 5px blue;
+}
+
+/* Modal (background) */
+#modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content {
+    display: flex;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 0px;
+    width: 80%;
+    height: 80vh;
+
+    padding-top: 0px;
+    border: 2px solid rgba(131, 127, 127, 0.3);
+    position: relative;
+    border-radius: .4rem;
+    top: 0px;
+
+}
+
+.modal-dialog-scrollable .modal-body {
+    overflow-x: hidden;
+}
+
+/* Set a style for all buttons */
+#button-login {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#button-login:hover {
+    background-color: orange;
+    opacity: 0.8;
+}
+
+.form-control-login {
+    height: 40px;
+
+}
+
+#icone-login,
+#icone-senha {
+    padding: 0.65rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    background-color: orange;
+    width: 40px;
+}
+
+/* Close Button (x) */
+.close {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: orange;
+    cursor: pointer;
+}
+
+/* text footer*/
+.caption {
+    font-size: 12px;
+    font-family: HindMRegular, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-right: 5px;
+    align-items: center;
+    margin: 0%;
+    justify-content: center;
+    align-content: center;
+    padding-left: 10px;
+}
+
+.text-modal {
+    margin: 20px 20px;
+
+}
+
+.text-modal a {
+    color: blue;
+    text-decoration: none;
+}
+
+.text-modal a:hover {
+    color: orange;
+}
+
+.caption a {
+    color: blue;
+    text-decoration: none;
+}
+
+.caption a:hover {
+    color: orange;
+}
+
+.fa-eye {
+    position: absolute;
+    opacity: 50;
+    width: 16px;
+    cursor: pointer;
+    right: 50px;
+    left: 320px;
+    top: -17px;
+    z-index: 1;
+}
+
+.signup-aceitar {
+    font-size: 15px;
+    font-family: 'Noto Sans', Helvetica, sans-serif;
+    font-weight: 400;
+    align-items: center;   
+    padding: 2% 2%;
+    justify-content: center;
+    align-content: center;
+    padding-left: 10px;
+
+}
+
+.signup-aceitar a {
+    color: blue;
+    text-decoration: none;
+}
+
+.signup-aceitar a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+.required:after {
+    content:" *"; 
+    color: red;
+  }
+
+/*  Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@media (width: 912px) {
+    .modal-dialog-scrollable .modal-content {
+        height: 50%
+    }
+}
+
+@media (width: 820px) {
+    .modal-dialog-scrollable .modal-content {
+        height: 70%;
+    }
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+    }
+
+    @media (min-width: 576px) {
+
+        .modal-dialog-scrollable {
+            height: calc(100% - 3.5rem);
+        }
+
+        .modal-dialog {
+            max-width: 500px;
+            margin: 1.75rem auto;
+        }
+    }
+
+    @media (max-width: 375px) {
+        modal-dialog-scrollable .modal-content {
+            height: 100%;
+        }
+    }
+}
