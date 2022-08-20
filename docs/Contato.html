@@ -48,9 +48,8 @@
               <a class="nav-link" href="./Promoções.html" target="_self" rel="prev">Promoções</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" style="color: orange" aria-current="page"
+              <a class="nav-link active" style="color: orange;" aria-current="page"
                 href="./Contato.html"><strong>Contato</strong></a>
-
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Hospedagem</a>
@@ -58,26 +57,27 @@
           </ul>
           <form class="d-flex align-items-center me-2">
             <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
-              <button class="login-open btn btn-outline-primary rounded-pill text-white" type="submit">Entre ou
-                cadastre-se</button></span>
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+                class="btn btn-outline-primary rounded-pill text-white">Entre ou
+                cadastre-se</button> </span>
           </form>
         </div>
       </div>
     </nav>
   </header>
   <!--fim navbar -->
-  <div class="p-5 text-center bg-image w-100 " id="img-cabec" style="
+  <div class="p-5 text-center bg-image w-100 img-responsive" id="imgeCabec" style="
 background-image:url('./imagens/tropical-beach-and-sea.jpg');
 ">
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="text-white">
-        <h1 class="mb-0 mt-lg-5 mask mt-1 mb-0 " style="background-color: rgba(22, 22, 22, 0.473);color:orange">Fale
+        <h1 class="display-5 mask" style="background-color: rgba(22, 22, 22, 0.473);">Fale
           Conosco
         </h1>
       </div>
     </div>
   </div>
-  
+
   <!--inicio do conteúdo -->
   <main class="row row-cols-1 row-cols-md-2 justify-content-end" id="contato-row">
     <div class="jumbotron">
@@ -100,7 +100,7 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
     </div>
     <!-- inicio do formulario-->
     <div class="col  mb-2 pe-lg-5">
-      <form class=""id="form-contato">
+      <form class="" id="form-contato">
         <label for="inputState" class="form-label-title"><strong>
             Olá! Preencha o formulário abaixo e retornaremos seu email!
           </strong></label>
@@ -135,7 +135,7 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
         <div class="form-outline">
           <label class="form-label mt-2 mb-0 " for="formMensag">Mensagem*</label>
           <textarea class=" form-control" id="formMensag" placeholder="Descreva detalhadamente sua dúvida" rows="6"
-            style="font-size: 14px;"required></textarea>
+            style="font-size: 14px;" required></textarea>
         </div>
         <div class="col-12 mt-3 mb-0 text-end ">
           <button type="submit" class="btn btn-primary btn-block " value="enviar"><i class="fa fa-paper-plane pe-1"
@@ -158,7 +158,6 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
-      <!--fim Social media -->
       <!--inicio newslatter Grid column-->
       <div class="footer-col">
         <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
@@ -176,18 +175,15 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
       </div>
       <!--fim newslatter Grid column-->
       <div class="footer-col p-0">
-        <!--Grid column card-->
         <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
           <strong>Formas de pagamento</strong>
         </p>
         <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito">
       </div>
     </div>
-    <!--fim Grid row 1-->
-
     <!--inicio Grid row 2-->
     <div class="row-footer me-lg-4">
-        <div class="footer-col">
+      <div class="footer-col">
         <ul>
           <li>
             <a href="#">Quem somos</a>
@@ -200,8 +196,7 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
           </li>
         </ul>
       </div>
-
-        <div class="footer-col">
+      <div class="footer-col">
         <ul>
           <li>
             <a href="#">Central de atendimento</a>
@@ -214,7 +209,6 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
           </li>
         </ul>
       </div>
-      
       <div class="footer-col pt-lg-1">
         <ul>
           <li>
@@ -229,18 +223,99 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
         </ul>
       </div>
     </div>
-     </div>
+    </div>
     <!-- Grid container -->
     </div>
-
     <!-- Copyright -->
     <div class="copyright-row">
       <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2"><small>&copy; 2022 by
           Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
     </div>
   </footer>
+  <!-- Modal Login-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+          <!--botão fechar -->
+          <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
+            data-bs-dismiss="modal" aria-label="Close">&times;</span>
+
+          <div class=" text-center mt-0" id="text-cab-login">
+            <h1 class="display-6 modal-title"><strong>DVSviagem</strong></h1>
+            <p class="subtexto mb-1">Gerencie com mais facilidade as suas passagens aéreas e aproveite vantagens
+              exclusivas!
+            </p>
+            <p class="subtexto mb-2" style="font-size: .8rem;">Insira seu e-mail para fazer login</p>
+          </div>
+        </div>
+        <form class="modal-body p-1 mx-0 bg-white" action="" method="post">
+          <div class="container">
+            <fieldset>
+              <legend class="subtitulo">Login</legend>
+              <div class="input-group form-group mt-3 mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="user" id="icone-login">
+                    <i class="fa fa-user fa-fw"></i></span>
+                </div>
+                <input id="user" autocomplete="email" type="text" class="form-control login" name="usuario"
+                  placeholder="exemplo@email.com" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+              <!--passaword -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="senha" id="icone-senha"><i class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input id="psw" class="form-control login" type="password" name="password" placeholder="Senha"
+                  aria-label="password" aria-describedby="password-constraints" required>
+
+                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+              </div>
+            </fieldset>
+            <!--botão login -->
+            <button id="button-login" class="rounded-3" type="submit">Login</button>
+            <label>
+              <input id="remember" type="checkbox" checked="checked" name="remember" value="remember-me"> Lembrar
+            </label>
+            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./CadastroUser.html">
+                Esqueceu sua senha?</a>
+            </div>
+          </div>
+          <hr style="border-bottom: 2px solid rgb(48, 46, 46);margin-bottom: 0px;">
+          <div class="text-modal d-flex justify-content-center"><a href="#">
+              Inscreva-se</a>
+          </div>
+          <div class="container pb-1 pt-1" style="background-color:#f1f1f1">
+            <div class="caption">
+              <span>Ao fazer login ou criar uma conta, você concorda com nossos</span>
+              <span><a href="" target="_blank">
+                  <span class="caption ">Termos e Condições</span></a>
+                <span class=" caption textPrimary"> e </span>
+                <a href="#" target="_blank"><span> Política de Privacidade</span></a>
+                <span>e saiba sobre o tratamento dos seus dados pessoais.</span></span>
+            </div>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
 
   <script src="script.js"> </script>
+  <script>
+    //mostar password
+    let btn = document.querySelector('.fa-eye')
+    btn.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#psw')
+      if (inputSenha.getAttribute('type') == 'password') {
+        inputSenha.setAttribute('type', 'text')
+      } else {
+        inputSenha.setAttribute('type', 'password')
+      }
+    })
+
+  </script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

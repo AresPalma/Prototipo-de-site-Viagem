@@ -14,35 +14,17 @@ function ocultar() {
 }
 ocultar()
 
-//modal
-function iniciarModal(modalID) {
-  const modal = document.getElementById(modalID);
-  if (modal) {
-    modal.classList.add('mostrar')
-    modal.addEventListener('click', (e) => {
-      if (e.target.className == "close") {
-        modal.classList.remove('mostrar');
-      }
-    });
-  }
-}
-const login = document.querySelector('#btn-login');
-login.addEventListener('click', () => iniciarModal('modal'));
-
-//mensagem de erro no cadastro
-
-
 //confirmação de senha
 var password = document.getElementById("password")
-  , confirm_password = document.getElementById("register-Confirmar_password");
+  , confirm_password = document.getElementById("ConfirmarPassword");
 
 function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Senhas diferentes!");
+  if(password.value != register-confirm_password.value) {
+    confirmPassword.setCustomValidity("Senhas diferentes!");
   } else {
-    confirm_password.setCustomValidity('');
+    confirmPassword.setCustomValidity('');
   }
 }
 
 password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+confirmPassword.onkeyup = validatePassword;

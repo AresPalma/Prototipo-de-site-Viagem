@@ -17,6 +17,7 @@
 
   <!--CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
   <link rel="next" href="./Destino.html">
 
 
@@ -32,7 +33,6 @@
           atendimento: <strong> (11) 0000-5555 </strong> | Televendas: <strong>0800 000 3334</strong></small><span>
       </div>
     </nav>
-
     <nav class="navbar navbar-expand-lg navbar-light p-2 pb-0 pt-0" style="background-color:#68810bc2;" id="cabecalho2">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -61,12 +61,12 @@
               <a class="nav-link" href="#">Hospedagem</a>
             </li>
             </ul>
-          <form class="d-flex align-items-center me-2">
-            <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
-              <button class="btn btn-outline-primary rounded-pill text-white" type="submit"style="text-decoration:none">
-                <a href="./login.html" rel="stylesheet" type="text/css">Entre ou
-                cadastre-se</button></span></a>
-          </form>
+            <form class="d-flex align-items-center me-2">
+              <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+                  class="btn btn-outline-primary rounded-pill text-white">Entre ou
+                  cadastre-se</button> </span>
+            </form>
         </div>
       </div>
     </nav>
@@ -83,21 +83,21 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <img src="./imagens/wepik-creative.png" class="d-block w-100" alt="avião">
+          <img src="./imagens/wepik-creative.png" class="d-block w-100 h-50"  alt="avião">
           <div class="carousel-caption d-none d-md-block">
             <h1 style="color:rgb(194, 188, 188)">Viaje com destino ao sol</h1>
             <h3 style="color:orange">Planeje a viagem dos sues sonhos</h3>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="./imagens/balões.jpg" class="d-block w-100" alt="Capadocia">
+          <img src="./imagens/balões.jpg" class="d-block w-100 h-50" alt="Capadocia">
           <div class="carousel-caption d-none d-md-block">
             <h1 style="color: white">Aproveite nossos pacotes</h1>
             <h3 style="color:orange">Monte pacotes turísticos e escolha a viagens na sua maneira.</h3>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./imagens/Buenos Aires.jpg" class="d-block w-100" alt="Buenos Aires">
+          <img src="./imagens/Buenos Aires.jpg" class="d-block w-100 h-50" alt="Buenos Aires">
           <div class="carousel-caption d-none d-md-block">
             <h1 style="color: white">Ofertas imperdivéis esperando você</h1>
             <h3 style="color:orange">Encontre os melhores preços e segurança.</h3>
@@ -202,10 +202,93 @@
           Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
     </div>
   </footer>
+   <!-- Modal Login-->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-white">
+        <div class="modal-header">
+          <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+          
+          <!--botão fechar -->
+          <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
+            data-bs-dismiss="modal" aria-label="Close">&times;</span>
+
+          <div class=" text-center mt-0" id="text-cab-login">
+            <h1 class="display-6 modal-title"><strong>DVSviagem</strong></h1>
+            <p class="subtexto mb-1">Gerencie com mais facilidade as suas passagens aéreas e aproveite vantagens
+              exclusivas!
+            </p>
+            <p class="subtexto mb-2" style="font-size: .8rem;">Insira seu e-mail para fazer login</p>
+          </div>
+        </div>
+        <form class="modal-body p-1 mx-0 bg-white" action="" method="post">
+          <div class="container">
+            <fieldset>
+              <legend class="subtitulo">Login</legend>
+              <div class="input-group form-group mt-3 mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="user" id="icone-login">
+                    <i class="fa fa-user fa-fw"></i></span>
+                </div>
+                <input id="user" autocomplete="email" type="text" class="form-control login" name="usuario"
+                  placeholder="exemplo@email.com" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+              <!--passaword -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="senha" id="icone-senha"><i class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input id="psw" class="form-control login" type="password" name="password" placeholder="Senha"
+                  aria-label="password" aria-describedby="password-constraints" required>
+
+                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+              </div>
+            </fieldset>
+            <button id="button-login" class="rounded-3" type="submit">Login</button>
+            <label>
+              <input id="remember" type="checkbox" checked="checked" name="remember"> Lembrar
+            </label>
+            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./Cadastro.html">
+                Esqueceu sua senha?</a>
+            </div>
+          </div>
+          <hr style="border-bottom: 2px solid rgb(48, 46, 46);margin-bottom: 0px;">
+          <div class="text-modal d-flex justify-content-center"><a href="#">
+              Inscreva-se</a>
+          </div>
+          <div class="container pb-1 pt-1" style="background-color:#f1f1f1">
+            <div class="caption">
+              <span>Ao fazer login ou criar uma conta, você concorda com nossos</span>
+              <span><a href="/termos-e-condicoes-de-uso" target="_blank">
+                  <span class="caption ">Termos e Condições</span></a>
+                <span class=" caption textPrimary"> e </span>
+                <a href="/politica-de-privacidade" target="_blank"><span> Política de Privacidade</span></a>
+                <span>e saiba sobre o tratamento dos seus dados pessoais.</span></span>
+            </div>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  
+  <script>
+        //mostar password
+    let btn = document.querySelector('.fa-eye')
+    btn.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#psw')
+
+      if (inputSenha.getAttribute('type') == 'password') {
+        inputSenha.setAttribute('type', 'text')
+      } else {
+        inputSenha.setAttribute('type', 'password')
+      }
+    })
+
+  </script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 </body>
-
 </html>

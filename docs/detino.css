@@ -70,6 +70,7 @@
 .gallery_product .title small {
   display: flex;
   justify-content: end;
+
 }
 
 .preco-atual {

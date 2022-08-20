@@ -71,8 +71,9 @@
           </ul>
           <form class="d-flex align-items-center me-2">
             <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
-              <button id="btn-login" class="btn btn-outline-primary rounded-pill text-white">Entre ou
-                cadastre-se</button></span>
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+                class="btn btn-outline-primary rounded-pill text-white">Entre ou
+                cadastre-se</button> </span>
           </form>
         </div>
       </div>
@@ -80,20 +81,17 @@
     <!--fim navbar -->
   </header>
 
-
-  <button onclick="document.getElementById('modal').style.display='block'" style="width:auto;">Login</button>
-
-
-  <div id="modal" class="modal-container" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header pt-0 pb-0">
-
+      <div class="modal-content bg-white">
+        <div class="modal-header">
           <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+          
           <!--botão fechar -->
           <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
             data-bs-dismiss="modal" aria-label="Close">&times;</span>
+
           <div class=" text-center mt-0" id="text-cab-login">
             <h1 class="display-6 modal-title"><strong>DVSviagem</strong></h1>
             <p class="subtexto mb-1">Gerencie com mais facilidade as suas passagens aéreas e aproveite vantagens
@@ -102,9 +100,7 @@
             <p class="subtexto mb-2" style="font-size: .8rem;">Insira seu e-mail para fazer login</p>
           </div>
         </div>
-
-        <!--formulario login -->
-        <form class="modal-body p-1 mx-0 " action="" method="post">
+        <form class="modal-body p-1 mx-0 bg-white" action="" method="post">
           <div class="container">
             <fieldset>
               <legend class="subtitulo">Login</legend>
@@ -117,9 +113,9 @@
                   placeholder="exemplo@email.com" aria-label="Username" aria-describedby="basic-addon1" required>
               </div>
               <!--passaword -->
-               <div class="input-group mb-2">
+              <div class="input-group mb-2">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" for="senha" id="icone-senha"><i   class="fa fa-key fa-fw"></i></span>
+                  <span class="input-group-text" for="senha" id="icone-senha"><i class="fa fa-key fa-fw"></i></span>
                 </div>
                 <input id="psw" class="form-control login" type="password" name="password" placeholder="Senha"
                   aria-label="password" aria-describedby="password-constraints" required>
@@ -152,34 +148,122 @@
       </div>
       </form>
     </div>
-    <!--fim modal -->
   </div>
   </div>
 
+  <footer class="container-footer" id="rodape">
+    <div class="row-footer me-md-2 me-lg-4">
+      <!-- Social media -->
+      <div class="footer-col">
+        <p class="text-center fs-6 p-0 m-1"><strong>Siga-nos</strong></p>
+        <div class="icon-medias-sociais">
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- inicio newslatter Grid column-->
+      <div class="footer-col">
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
+          <strong>Inscreva para receber ofertas exclusivas</strong>
+        </p>
+        <!--newsletter input -->
+        <form action="">
+          <div class="input-group mb-3">
+            <input class="form-control" type="text" placeholder="Digite seu e-mail" aria-label="nome-destinatario"
+              aria-describedby="button-addon2"></input>
+            <button class="btn  btn-outline border-0 rounded-1" style="background-color: #68810bc2;" id="button-addon2"
+              type="button"><i class="ri-send-plane-2-fill"></i></button>
+          </div>
+        </form>
+      </div>
+      <!--fim newslatter Grid column-->
+      <div class="footer-col p-0">
+        <!--Grid column card-->
+        <p class="text-center fs-6 p-0 m-0" style="color: rgb(48, 46, 46);">
+          <strong>Formas de pagamento</strong>
+        </p>
+        <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito"><span>
+      </div>
+    </div>
+    <!--fim Grid row 1-->
+
+    <!--inicio Grid row 2-->
+    <div class="row-footer me-lg-4">
+      <!--Grid column-->
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Quem somos</a>
+          </li>
+          <li>
+            <a href="#">Termos e condições gerais</a>
+          </li>
+          <li>
+            <a href="#">Politica de privacidade</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Central de atendimento</a>
+          </li>
+          <li>
+            <a href="#">central de ajuda</a>
+          </li>
+          <li>
+            <a href="#">Remarcações de viagens</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col pt-lg-1">
+        <ul>
+          <li>
+            <a href="./Promoções.html">Passagens Promocionais</a>
+          </li>
+          <li>
+            <a href="./Promoções.html">Pacotes promocionais</a>
+          </li>
+          <li>
+            <a href="#">Cancelamento e reembolso</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="copyright-row" id=copyright>
+      <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2" font-size=" 1px">
+        <small>&copy; 2022 by
+          Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a>
+      </p>
+    </div>
+  </footer>
+
+  
 
 
   <script>
-    // Get the modal
-    /*var modal = document.getElementById('modal');
+    
+    //mostar password
+    let btn = document.querySelector('.fa-eye')
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    btn.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#psw')
+
+      if (inputSenha.getAttribute('type') == 'password') {
+        inputSenha.setAttribute('type', 'text')
+      } else {
+        inputSenha.setAttribute('type', 'password')
       }
-    }*/
-     //mostar password
- let btn= document.querySelector('.fa-eye')
-
-btn.addEventListener('click', () => {
-  let inputSenha = document.querySelector('#psw')
-
-  if (inputSenha.getAttribute('type') == 'password') {
-    inputSenha.setAttribute('type', 'text')
-  } else {
-    inputSenha.setAttribute('type', 'password')
-  }
-})
+    })
 
   </script>
 

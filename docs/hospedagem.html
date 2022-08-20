@@ -19,6 +19,7 @@
   <!--CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="detino.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
 
   <link rel="next" href="./Promoções.html">
   <link rel="prev" href="./index.html">
@@ -45,8 +46,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item me-auto mb-2 mb-lg-0">
               <a class="nav-link" href="./index.html" target="_self" rel="prev"> Home </a>
             </li>
             <li class="nav-item">
@@ -61,22 +62,12 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Hospedagem</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Mais
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-                <li><a class="dropdown-item" href="#">Termos e Condições</a></li>
-                <li><a class="dropdown-item" href="#">Política de Cancelamento</a></li>
-              </ul>
-            </li>
           </ul>
           <form class="d-flex align-items-center me-2">
             <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
-              <button class="btn btn-outline-primary rounded-pill text-white" type="submit">Entre ou
-                cadastre-se</button></span>
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+                class="btn btn-outline-primary rounded-pill text-white">Entre ou
+                cadastre-se</button> </span>
           </form>
         </div>
       </div>
@@ -86,13 +77,13 @@
   <main>
     <div class="container-segundario">
       <!-- Background + form image -->
-      <div class="p-5 text-center bg-image w-100 " id="img-cabec" style="
+      <div class="p-5 text-center bg-image w-100 img-responsive" id="img-cabec" style="
 background-image:url('./imagens/Parque Nacion. Montanha.jpg');
 ">
         <div class="mask mt-1" style="background-color: rgba(22, 22, 22, 0.473);">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-0 mt-2" style="color: orange">Os melhores destinos</h1>
+              <h1 class="display-5 mb-0 mt-2" style="color: orange">Os melhores destinos</h1>
               <form action class="row m-1 form" id="formulario">
 
                 <div class="col-auto">
@@ -131,10 +122,11 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                 <div class="col-auto " id="buscar">
                   <label class="visually-hidden" for="busca">buscar hóteis</label>
                   <div class="col-auto mt-4">
-                    <button class="btn btn-outline-primary text-white rounded-5" type="submit">Buscar hotéis &nbsp;</button>
+                    <button class="btn btn-outline-primary text-white rounded-5" type="submit">Buscar hotéis
+                      &nbsp;</button>
                   </div>
                 </div>
-                              </form>
+              </form>
             </div>
           </div>
         </div>
@@ -146,54 +138,43 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
 
 
 
-    <!--inicio cad -->
-    <section class="px-2" id="card-destino-">
-      <div class=" col-sm-12 mx-5 mt-3 col-lg-12 mt-lg-1">
-        <div class="btn-group mx-5 mt-lg-4 pb-2 px-2" role="group" aria-label="Exemplo Basic">
-          <a href="#" class="btn btn-warning active" aria-current="page"
-            style="font-size: 20px;"><strong>Nacional</strong></a>
-          <a href="./destinoInter.html" class="btn btn-outline-primary text-dark"
-            style="font-size: 20px;"><strong>Internacional</strong></a>
-        </div>
-      </div>
-
-      <div class="card-header">
-        <div class="nav nav-tabs card-header-tabs">
-          <div class="row row-cols-1 row-cols-md-4 mx-lg-2 g-3 pb-3 justify-content-center" id="destinos">
-            <div class="col text-center" style="width: 20rem;">
-              <div class="card h=100 border-light" id="img-zoom">
-                <img src="./imagens/Bonito Matogrosso doSul.jpg" class="card-img-top rounded img-responsive"
-                  alt="Bonito">
-                <div class="card-body">
-                  <h5 class="card-text-nacional">Bonito</h5>
-                  <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
-                </div>
-              </div>
-            </div>
-            <div class="col text-center" style="width: 20rem;">
-              <div class="card h=100 border-light" id="img-zoom">
-                <img src="./imagens/fortaleza.jpg" class="card-img-top rounded img-responsive" alt="fortaleza">
-                <div class="card-body">
-                  <h5 class="card-text-nacional">Fortaleza</h5>
-                  <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
+      <!--inicio cad -->
+      <section class="px-2" id="card-destino-">
+        <div class=" col-sm-12 mx-5 mt-3 col-lg-12 mt-lg-1">
+          <div class="btn-group mx-5 mt-lg-4 pb-2 px-2" role="group" aria-label="Exemplo Basic">
+            <a href="#" class="btn btn-warning active" aria-current="page"
+              style="font-size: 20px;"><strong>Nacional</strong></a>
+            <a href="./destinoInter.html" class="btn btn-outline-primary text-dark"
+              style="font-size: 20px;"><strong>Internacional</strong></a>
           </div>
-          <!--fim cad-row -->
         </div>
-      </div>
-      </div>
+        <div class="card-header">
+          <div class="nav nav-tabs card-header-tabs">
+            <div class="row row-cols-1 row-cols-md-4 mx-lg-2 g-3 pb-3 justify-content-center" id="destinos">
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Bonito Matogrosso doSul.jpg" class="card-img-top rounded img-responsive"
+                    alt="Bonito">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Bonito</h5>
+                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/fortaleza.jpg" class="card-img-top rounded img-responsive" alt="fortaleza">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Fortaleza</h5>
+                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--fim cad-row -->
+          </div>
+        </div>
+    </div>
     </section>
     <!--fim cad -->
     </div>
@@ -299,6 +280,19 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
   <div class="buttontop-top buttontop-fade-out buttontop-is-visible" id="btnTop">
     <i class="arrow up"><i class="fa fa-arrow-up"></i>
   </div>
+
+  <script>
+    //mostar password
+    let btn = document.querySelector('.fa-eye')
+    btn.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#psw')
+      if (inputSenha.getAttribute('type') == 'password') {
+        inputSenha.setAttribute('type', 'text')
+      } else {
+        inputSenha.setAttribute('type', 'password')
+      }
+    })
+  </script>
 
   <script src="script.js"> </script>
   <!-- Bootstrap JavaScript -->
