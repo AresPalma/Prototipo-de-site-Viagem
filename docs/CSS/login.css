@@ -25,7 +25,10 @@ body {
     margin-bottom: -20px;
     font-weight: 700;
 }
-
+.display-5 {
+    font-weight: 600;
+    color: orange;
+    }
 p.subtexto {
     color: white;
     text-shadow: 2px 2px 3px black;
@@ -133,7 +136,6 @@ p.subtexto {
     color: orange;
     text-decoration: underline;
 }
-
 .fa-eye {
     display: flex;
     position: absolute;
@@ -145,17 +147,17 @@ p.subtexto {
     top: -17px;
     z-index: 1;
 }
-
 .ico {
     display: flex;
     font-size: 1.4rem;
     margin-right: 10px;
     margin-left: 10px;
     align-items: center;
+    font-weight: bold;
     justify-content: center;
 }
 
-
+/*pagina usuario/cadastro*/
 .img-regist-left {
     width: 40vw;
     height: 40vh;
@@ -167,13 +169,13 @@ legend {
 
 }
 
-.col .signup-image {
+.signup-image {
     display: flex;
     max-width: 30%;
     margin: auto;
     padding: 0px;
+    flex-wrap: wrap;
 }
-
 .row .signup-container {
     display: flex;
     flex-wrap: wrap;
@@ -195,9 +197,9 @@ legend {
 }
 
 .form-register {
-    margin-right: 40px;
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
 }
-
 
 .signup-aceitar {
     font-size: 15px;
@@ -220,10 +222,6 @@ legend {
     color: orange;
     text-decoration: underline;
 }
-
-
-
-
 
 /*  Zoom Animation */
 .animate {
@@ -250,63 +248,76 @@ legend {
         transform: scale(1)
     }
 }
-
+/*reposividade*/
 @media (width: 912px) {
     .modal-dialog-scrollable .modal-content {
         height: 50%
     }
 }
 
-@media screen and (max-width: 820px) {
+@media only screen and (max-width: 820px) {
     span.psw {
         display: block;
         float: none;
     }
-    .signup-image {
-        display: inline-block;
+
+    .modal-dialog-scrollable .modal-content {
+        height: 70%;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .img-regist-left {
         flex-direction: column;
-            position: relative;
-            text-align: center;
-        
+        position: relative;
+    }
+    .signup-image {
+      
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+
+    }
+    .img-left-cadast {
+        width: 150px;
+        display: inline-block;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .img-regist-left {
+        display: none;
     }
 
-    @media (width: 820px) {
-        .modal-dialog-scrollable .modal-content {
-            height: 70%;
-        }
-
-        @media (max-width: 412px) {
-            .signup-image {
-                display: none;
-            }
-
-            .text-auxiliar .fs4 {
-                display: none;
-            }
-        }
-
-        @media (min-width: 576px) {
-
-            .modal-dialog-scrollable {
-                height: calc(100% - 3.5rem);
-            }
-
-            .modal-dialog {
-                max-width: 500px;
-                margin: 1.75rem auto;
-            }
-        }
-
-        @media (max-width: 375px) {
-            modal-dialog-scrollable .modal-content {
-                height: 100%;
-            }
-        }
-
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-        }
+    .text-auxiliar-cadast {
+        display: none;
     }
+
+    .container-casdrat {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+@media (min-width: 576px) {
+
+    .modal-dialog-scrollable {
+        height: calc(100% - 3.5rem);
+    }
+
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .modal-dialog-scrollable .modal-content {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <title>Destino</title>
+  <title>DestinoInternacinal</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,32 +13,35 @@
 
   <!-- Bootstrap remixicon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
 
   <!--CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="destino.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/detino.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/login.css" />
 
   <link rel="next" href="./Promoções.html">
   <link rel="prev" href="./index.html">
 
+  <script src="script.js"defer></script>
 
 </head>
 
 <style>
-  .card-text {
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    bottom: 20px;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    color: white;
-    font-weight: 800;
-  }
+.card-text {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 110px;
+  color:white;
+  font-weight: 800;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px rgb(92, 90, 90);
+}
+
 </style>
 
 <body>
@@ -61,7 +64,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="./index.html" target="_self" rel="prev"> Home </a>
             </li>
@@ -72,13 +75,12 @@
               <a class="nav-link" href="./Promoções.html" rel="next">Promoções</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Contato.html">Contato</a>
+              <a class="nav-link" href="./hospedagem.html">Hospedagem</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hospedagem</a>
-            </li>
+              <a class="nav-link" href="./Contato.html">Contato</a>
           </ul>
-          <form class="d-flex align-items-center me-2">
+          <form class="d-flex align-items-center me-2 mb-2">
             <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
               <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
                 class="btn btn-outline-primary rounded-pill text-white">Entre ou
@@ -105,7 +107,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="name">Origem</div>
                   <div class="input-group">
                     <div class="input-group-text"><i class="icon ri-send-plane-fill" style="font-size: 1rem;"></i></div>
-                    <input type="text" size="10px" class="form-control" id="origem" placeholder="De onde vai sair?">
+                    <input type="text" size="12px" class="form-control" id="origem" placeholder="De onde vai sair?">
                   </div>
                 </div>
                 <div class="col-auto">
@@ -113,7 +115,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="name">Destino</div>
                   <div class="input-group">
                     <div class="input-group-text"><i class="icon ri-map-pin-line" style="font-size: 1rem;"></i></div>
-                    <input type="text" size="10px" class="form-control" id="destino" placeholder="Para onde vai?">
+                    <input type="text" size="12px" class="form-control" id="destino" placeholder="Para onde vai?">
                   </div>
                 </div>
                 <div class="col-auto">
@@ -126,14 +128,14 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <div class="name">Volta</div>
                   <input type="date" size="5px" class="form-control" id="datavolta" placeholder="ida">
                 </div>
-                <div class="col-auto p-0 me-lg-2">
+                <div class="col-auto p-0 me-lg-1">
                   <label class="visually-hidden" for="destino">destino</label>
-                  <div class="name">Passageiros / Quarto</div>
+                  <div class="name">Passageiros / classe de cabine</div>
                   <div class="input-group">
-                    <div class="input-group-text"><i class="icon ri-parent-line pe-1 " style="font-size: 1rem;"></i><i
-                        class="icon ri-hotel-bed-fill" style="font-size: 1rem;"></i></div>
-                    <input type="text" size="17px" class="form-control" id="destino"
-                      placeholder="2 passageiros 1 Quarto">
+                    <div class="input-group-text"><i class="icon ri-parent-line" style="font-size: 1rem;"></i><i
+                        class="icon ri-star-s-line pe-0" style="font-size: 1rem;"></i></div>
+                    <input type="text" size="20px" class="form-control" id="destino"
+                      placeholder="1 passageiros / econômica">
                   </div>
                 </div>
                 <div class="col-auto me-lg-1" id="buscarSeach">
@@ -165,7 +167,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Boston.jpg" class="card-img-top rounded img-responsive" alt="Boston">
                   <div class="card-body">
                     <h5 class="card-text">Boston</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -174,7 +176,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Cancun.jpg" class="card-img-top rounded img-responsive" alt="Cancun">
                   <div class="card-body">
                     <h5 class="card-text">Cancun</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -183,7 +185,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Machu_Picchu.jpeg" class="card-img-top rounded img-responsive" alt="Machu_Picchu">
                   <div class="card-body">
                     <h5 class="card-text">Machu Picchu</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -193,7 +195,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Dusseldorf">
                   <div class="card-body">
                     <h5 class="card-text">Dusseldorf</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -203,7 +205,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Buenos Aires">
                   <div class="card-body">
                     <h5 class="card-text">Buenos Aires</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -213,7 +215,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     class="card-img-top rounded img-responsive" alt="Lima">
                   <div class="card-body">
                     <h5 class="card-text">Lima</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -222,7 +224,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Lisboa-01.jpg" class="card-img-top rounded img-responsive" alt="Lisboa">
                   <div class="card-body">
                     <h5 class="card-text">Lisboa</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -231,7 +233,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/maldivas.jpg" class="card-img-top rounded img-responsive" alt="Ilhas maldivas">
                   <div class="card-body">
                     <h5 class="card-text">Ilhas Maldivas</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -241,7 +243,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Genebra">
                   <div class="card-body">
                     <h5 class="card-text">Genebra</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -250,7 +252,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Tel_Aviv_Israel.jpg" class="card-img-top rounded img-responsive" alt="Tel Aviv">
                   <div class="card-body">
                     <h5 class="card-text">Tel Aviv</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -259,7 +261,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/new-york-.jpg" class="card-img-top rounded img-responsive" alt="New York">
                   <div class="card-body">
                     <h5 class="card-text">New York</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -268,7 +270,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/plaza-grande-quito.jpg" class="card-img-top rounded img-responsive" alt="Quito">
                   <div class="card-body">
                     <h5 class="card-text">Quito</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -277,7 +279,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Miami.jpg" class="card-img-top rounded img-responsive" alt="Miami">
                   <div class="card-body">
                     <h5 class="card-text">Miami</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -286,7 +288,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Conpenhagen.jpg" class="card-img-top rounded img-responsive" alt="Conpenhagen">
                   <div class="card-body">
                     <h5 class="card-text">Conpenhagen</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -295,7 +297,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Paris.jpg" class="card-img-top rounded img-responsive" alt="Paris">
                   <div class="card-body">
                     <h5 class="card-text">Paris</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -304,7 +306,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/vatican--roma.jpg" class="card-img-top rounded img-responsive" alt="Roma">
                   <div class="card-body">
                     <h5 class="card-text">Roma</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -314,7 +316,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Stuttgart">
                   <div class="card-body">
                     <h5 class="card-text">Stuttgart</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -323,7 +325,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Orlando.jpg" class="card-img-top rounded img-responsive" alt="Orlando">
                   <div class="card-body">
                     <h5 class="card-text">Orlando</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -332,7 +334,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/berlin.jpg" class="card-img-top rounded img-responsive" alt="berlin">
                   <div class="card-body">
                     <h5 class="card-text">Berlin</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -342,7 +344,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="/Interlaken">
                   <div class="card-body">
                     <h5 class="card-text">Interlaken</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -351,7 +353,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/channel-veneza.jpg" class="card-img-top rounded img-responsive" alt="Veneza">
                   <div class="card-body">
                     <h5 class="card-text">Veneza</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -361,7 +363,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Sevilla">
                   <div class="card-body">
                     <h5 class="card-text">Sevilla</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -371,7 +373,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Maldonado">
                   <div class="card-body">
                     <h5 class="card-text">Maldonado</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -380,7 +382,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Zurique-Suica.jpg" class="card-img-top rounded img-responsive" alt="Zurique">
                   <div class="card-body">
                     <h5 class="card-text">Zurique</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -390,7 +392,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Barcelona">
                   <div class="card-body">
                     <h5 class="card-text">Barcelona</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -400,7 +402,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Capadócia">
                   <div class="card-body">
                     <h5 class="card-text">Capadócia</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -410,7 +412,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                     alt="Montreal">
                   <div class="card-body">
                     <h5 class="card-text">Montreal</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -419,7 +421,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                   <img src="./imagens/Madri.jpg" class="card-img-top rounded img-responsive" alt="Madri">
                   <div class="card-body">
                     <h5 class="card-text">Madri</h5>
-                    <a href="#" class="btn btn-warning rounded-pill">Saiba Mais</a>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
                   </div>
                 </div>
               </div>
@@ -431,11 +433,21 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
     </div>
   </main>
 
-  <!--inicio do Grid container rodapé -->
-  <footer class="container-footer" id="rodape">
-    <div class="row-footer  me-lg-4">
+   <!--inicio do Grid container rodapé -->
+   <footer class="container-footer">
+    <div class="row-footer  me-lg-5 ">
+      <div class="footer-col mb-1">
+        <ul>
+          <li>
+            <h1 class="display-6 has-shown"><strong>DVSviagem</strong></h1>
+          </li>
+          <p class="subtitulo-footer has-shown " style="animation-delay:235ms;font-weight: 700;"><em>Viaje com Destino as novas
+              <br>Aventuras</em></p>
+          </li>
+        </ul>
+      </div>
       <!-- Social media -->
-      <div class="footer-col">
+      <div class="footer-col px-1">
         <p class="text-center fs-6 p-0 m-1"><strong>Siga-nos</strong></p>
         <div class="icon-medias-sociais">
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -445,33 +457,29 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
-      <!-- inicio newslatter Grid column-->
-      <div class="footer-col">
+      <!--newslatter Grid column-->
+      <div class="footer-col pe-1">
         <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
           <strong>Inscreva para receber ofertas exclusivas</strong>
         </p>
         <!--newsletter input -->
-        <form action="">
+        <form action="" method="post">
           <div class="input-group mb-3">
             <input class="form-control" type="text" placeholder="Digite seu e-mail" aria-label="nome-destinatario"
               aria-describedby="button-addon2"></input>
-            <button class="btn  btn-outline border-0 rounded-1" style="background-color: #68810bc2;" id="button-addon2"
+            <button class="btn  btn-outline border-0 rounded-1" style="background-color:#68810bc2;" id="button-addon2"
               type="button"><i class="ri-send-plane-2-fill"></i></button>
           </div>
         </form>
       </div>
-      <!--fim newslatter Grid column-->
-      <div class="footer-col p-0">
+      <div class="footer-col p-0 mb-2">
         <!--Grid column card-->
-        <p class="text-center fs-6 p-0 m-0" style="color: rgb(48, 46, 46);">
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
           <strong>Formas de pagamento</strong>
         </p>
         <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito"><span>
       </div>
-    </div>
-    <!--inicio Grid row 2-->
-    <div class="row-footer  me-lg-4">
-      <div class="footer-col pt-3 ">
+      <div class="footer-col">
         <ul>
           <li>
             <a href="#">Quem somos</a>
@@ -487,7 +495,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
       <div class="footer-col">
         <ul>
           <li>
-            <a href="#">Central de atendimento</a>
+            <a href="./Contato.html">Central de atendimento</a>
           </li>
           <li>
             <a href="#">central de ajuda</a>
@@ -497,7 +505,7 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
           </li>
         </ul>
       </div>
-      <div class="footer-col pt-lg-1">
+      <div class="footer-col">
         <ul>
           <li>
             <a href="./Promoções.html">Passagens Promocionais</a>
@@ -506,28 +514,25 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
             <a href="./Promoções.html">Pacotes promocionais</a>
           </li>
           <li>
-            <a href="#">Cancelamento e reembolso</a>
+            <a href="">Cancelamento e reembolso</a>
           </li>
         </ul>
       </div>
+      <!--Grid row-->
     </div>
-    <!--Grid row-->
-    </div>
-    <!-- Grid container -->
     <!-- Copyright -->
-    <div class="copyright-row" id=copyright>
-      <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2" font-size=" 1px">
-        <small>&copy; 2022 by
-          Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a>
-      </p>
+    <div class="copyright-row">
+      <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2"><small>&copy; 2022 by
+          Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
     </div>
   </footer>
   <!-- Modal Login-->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
+      <div class="modal-content bg-white">
         <div class="modal-header">
           <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+
           <!--botão fechar -->
           <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
             data-bs-dismiss="modal" aria-label="Close">&times;</span>
@@ -563,12 +568,11 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
                 <span><i class="fa fa-eye" aria-hidden="true"></i></span>
               </div>
             </fieldset>
-            <!--botão login -->
             <button id="button-login" class="rounded-3" type="submit">Login</button>
             <label>
-              <input id="remember" type="checkbox" checked="checked" name="remember"value="remember-me"> Lembrar
+              <input id="remember" type="checkbox" checked="checked" name="remember"> Lembrar
             </label>
-            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./CadastroUser.html">
+            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./Cadastro.html">
                 Esqueceu sua senha?</a>
             </div>
           </div>
@@ -579,21 +583,16 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
           <div class="container pb-1 pt-1" style="background-color:#f1f1f1">
             <div class="caption">
               <span>Ao fazer login ou criar uma conta, você concorda com nossos</span>
-              <span><a href="" target="_blank">
-                  <span class="caption ">Termos e Condições</span></a>
-                <span class=" caption textPrimary"> e </span>
-                <a href="#" target="_blank"><span> Política de Privacidade</span></a>
-                <span>e saiba sobre o tratamento dos seus dados pessoais.</span></span>
+              <a href="./TermCondicoes .html" target="_blank"><span class="caption"> Termos e Condições
+                </span></a> e </span> <a href="#" target="_blank">Política de Privacidade</a>
+              e saiba sobre o tratamento dos seus dados pessoais.
             </div>
           </div>
       </div>
-      </form>
     </div>
+    </form>
   </div>
   </div>
-
-  <div class="buttontop-top buttontop-fade-out buttontop-is-visible" id="btnTop">
-    <i class="arrow up"><i class="fa fa-arrow-up"></i>
   </div>
 
   <script>
@@ -609,9 +608,8 @@ background-image:url('./imagens/Parque Nacion. Montanha.jpg');
       }
     })
   </script>
-
-  <script src="script.js"> </script>
-  <!-- Bootstrap JavaScript -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

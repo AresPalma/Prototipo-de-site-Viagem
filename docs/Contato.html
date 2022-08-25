@@ -13,14 +13,15 @@
 
   <!-- Bootstrap remxicon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
 
-  <link rel="prev" href="./index.html">
   <!--CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="contato.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/contato.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/login.css" />
+
+  <link rel="next" href="./index.html">
+  <script src="script.js" defer></script>
 
 </head>
 
@@ -37,7 +38,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link " href="./index.html">Home</a>
             </li>
@@ -48,14 +49,14 @@
               <a class="nav-link" href="./Promoções.html" target="_self" rel="prev">Promoções</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="./hospedagem.html">Hospedagem</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link active" style="color: orange;" aria-current="page"
                 href="./Contato.html"><strong>Contato</strong></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hospedagem</a>
-            </li>
           </ul>
-          <form class="d-flex align-items-center me-2">
+          <form class="d-flex align-items-center me-2 mb-2">
             <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
               <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
                 class="btn btn-outline-primary rounded-pill text-white">Entre ou
@@ -138,51 +139,72 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
             style="font-size: 14px;" required></textarea>
         </div>
         <div class="col-12 mt-3 mb-0 text-end ">
-          <button type="submit" class="btn btn-primary btn-block " value="enviar"><i class="fa fa-paper-plane pe-1"
-              style="color: rgb(160, 88, 88);"></i>Enviar</button>
-        </div>
+          <button type="submit" class="btn btn-primary text-white buttonBase" value="enviar"
+            data-test-id="enviar-button">
+            Enviar &nbsp;<span>
+              <?xml version="1.0" encoding="iso-8859-1"?>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" style="color: rgb(160, 88, 88);"
+                width="20" height="20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 513.32 513.32" xml:space="preserve">
+                <g>
+                  <g>
+                    <polygon points="299.437,42.777 269.493,72.72 432.045,235.272
+                 0,235.272 0,278.048 432.045,278.048 269.493,440.6 
+                  299.437,470.543 513.32,256.66" />
+                  </g>
+                </g>
+              </svg>
+            </span></button>
       </form>
     </div>
   </main>
   <!-- Grid container -->
   <footer class="container-footer">
-    <div class="row-footer me-lg-4">
+    <div class="row-footer  me-lg-5 ">
+      <div class="footer-col mb-1">
+        <ul>
+          <li>
+            <h1 class="display-6 has-shown"><strong>DVSviagem</strong></h1>
+          </li>
+          <p class="subtitulo-footer has-shown " style="animation-delay:235ms;font-weight: 700;"><em>Viaje com Destino
+              as novas
+              <br>Aventuras</em></p>
+          </li>
+        </ul>
+      </div>
       <!-- Social media -->
-      <div class="footer-col">
+      <div class="footer-col px-1">
         <p class="text-center fs-6 p-0 m-1"><strong>Siga-nos</strong></p>
         <div class="icon-medias-sociais">
-          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a></li>
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-twitter"></i></a>
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-whatsapp"></i></a>
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-youtube"></i></a>
           <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
-      <!--inicio newslatter Grid column-->
-      <div class="footer-col">
+      <!--newslatter Grid column-->
+      <div class="footer-col pe-1">
         <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
           <strong>Inscreva para receber ofertas exclusivas</strong>
         </p>
         <!--newsletter input -->
-        <form action="">
+        <form action="" method="post">
           <div class="input-group mb-3">
-            <input class="form-control" type="text" placeholder="informe seu e-mail" aria-label="nome-destinatario"
+            <input class="form-control" type="text" placeholder="Digite seu e-mail" aria-label="nome-destinatario"
               aria-describedby="button-addon2"></input>
             <button class="btn  btn-outline border-0 rounded-1" style="background-color:#68810bc2;" id="button-addon2"
               type="button"><i class="ri-send-plane-2-fill"></i></button>
           </div>
         </form>
       </div>
-      <!--fim newslatter Grid column-->
-      <div class="footer-col p-0">
+      <div class="footer-col p-0 mb-2">
+        <!--Grid column card-->
         <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
           <strong>Formas de pagamento</strong>
         </p>
-        <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito">
+        <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito"><span>
       </div>
-    </div>
-    <!--inicio Grid row 2-->
-    <div class="row-footer me-lg-4">
       <div class="footer-col">
         <ul>
           <li>
@@ -199,7 +221,7 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
       <div class="footer-col">
         <ul>
           <li>
-            <a href="#">Central de atendimento</a>
+            <a href="./Contato.html">Central de atendimento</a>
           </li>
           <li>
             <a href="#">central de ajuda</a>
@@ -209,7 +231,7 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
           </li>
         </ul>
       </div>
-      <div class="footer-col pt-lg-1">
+      <div class="footer-col">
         <ul>
           <li>
             <a href="./Promoções.html">Passagens Promocionais</a>
@@ -218,13 +240,12 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
             <a href="./Promoções.html">Pacotes promocionais</a>
           </li>
           <li>
-            <a href="#">Cancelamento e reembolso</a>
+            <a href="">Cancelamento e reembolso</a>
           </li>
         </ul>
+
       </div>
-    </div>
-    </div>
-    <!-- Grid container -->
+      <!--Grid row-->
     </div>
     <!-- Copyright -->
     <div class="copyright-row">
@@ -235,9 +256,10 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
   <!-- Modal Login-->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
+      <div class="modal-content bg-white">
         <div class="modal-header">
           <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+
           <!--botão fechar -->
           <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
             data-bs-dismiss="modal" aria-label="Close">&times;</span>
@@ -273,12 +295,11 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
                 <span><i class="fa fa-eye" aria-hidden="true"></i></span>
               </div>
             </fieldset>
-            <!--botão login -->
             <button id="button-login" class="rounded-3" type="submit">Login</button>
             <label>
-              <input id="remember" type="checkbox" checked="checked" name="remember" value="remember-me"> Lembrar
+              <input id="remember" type="checkbox" checked="checked" name="remember"> Lembrar
             </label>
-            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./CadastroUser.html">
+            <div class="text-modal me-sm-1 d-flex justify-content-end"><a href="./Cadastro.html">
                 Esqueceu sua senha?</a>
             </div>
           </div>
@@ -289,32 +310,30 @@ background-image:url('./imagens/tropical-beach-and-sea.jpg');
           <div class="container pb-1 pt-1" style="background-color:#f1f1f1">
             <div class="caption">
               <span>Ao fazer login ou criar uma conta, você concorda com nossos</span>
-              <span><a href="" target="_blank">
-                  <span class="caption ">Termos e Condições</span></a>
-                <span class=" caption textPrimary"> e </span>
-                <a href="#" target="_blank"><span> Política de Privacidade</span></a>
-                <span>e saiba sobre o tratamento dos seus dados pessoais.</span></span>
+              <a href="./TermCondicoes .html" target="_blank"><span class="caption"> Termos e Condições
+                </span></a> e </span> <a href="#" target="_blank">Política de Privacidade</a>
+              e saiba sobre o tratamento dos seus dados pessoais.
             </div>
           </div>
       </div>
-      </form>
     </div>
+    </form>
+  </div>
   </div>
   </div>
 
-  <script src="script.js"> </script>
   <script>
     //mostar password
     let btn = document.querySelector('.fa-eye')
     btn.addEventListener('click', () => {
       let inputSenha = document.querySelector('#psw')
+
       if (inputSenha.getAttribute('type') == 'password') {
         inputSenha.setAttribute('type', 'text')
       } else {
         inputSenha.setAttribute('type', 'password')
       }
     })
-
   </script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
