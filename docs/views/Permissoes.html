@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <title>Permisões</title>
+  <title>UsuarioCadastro</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,8 +16,9 @@
 
   <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
   <!--CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/style.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/login.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/views.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css" />
 
 </head>
 
@@ -25,53 +26,77 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light p-2 pb-0 pt-0" style="background-color:#68810bc2;" id="cabecalho2">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
           <h1 class="display-6"><strong>DVSviagem</strong></h1>
         </a>
-        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-center mx-4" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="./index.html"><i class="ico fa fa-home fa-fw" aria-hidden="true"></i>Home</a>
+              <a class="nav-link" href="../index.html"><i class="ico fa fa-home fa-fw "></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" style="color: orange;" aria-current="page" href="#" target="_self"><i
-                  class="ico fa fa-user-plus" aria-hidden="true"></i>Cadastro/User</a>
+              <a class="nav-link" href="./passagens/index.html">Passagens</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="./views/Permissoes.html"><i class="ico fa fa-home fa-fw"
-                  aria-hidden="true"></i>Permissão</a>
+              <a class="nav-link" href="./pacotes/index.html">Pacotes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Hospedagem/index.html">hospedagem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: orange;" aria-current="page" href="#"
+                target="_self">Permissão</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../usuarioCadastro.html">Cadastro</a>
             </li>
           </ul>
         </div>
-        </li>
       </div>
     </nav>
+    <div class="header2">
+      <h1 class="titulo-cadast text-center"><strong>Permissôes</strong></h1>
+    </div>
   </header>
 
   <main>
-    <div class="col  col-lg-6 container ">
-      <h3 class="text-center mt-3 mb-4"><strong>Tipo de permissão</strong></h3>
-      <form class=" form-register subtitulo-signup" action="" method="post">
-        <label for="" class="form-label">Tipo de permissão</label>
-        <input type="permissão" class="form-label" id="permissão" autocomplete="off" name="permissao"
-          value="" required>
-    
-    <button type="subimit" class btn btn-primary mt-4>Submit</button>
-  </div>
-    </form>
-   
+    <div class="container col-md-10 mx-auto col-lg-6" id="form-create">
+      <form>
+        <div class="form-group mb-3">
+          <label for="tipoPermissao" class="form-label">Tipo de permissão</label>
+          <input type="text" class="form-control input-lg" id="tipoPermissao">
+        </div>
+        <div class="actions">
+          <button class="btn btn-outline-primary text-black rounded-5 buttonBase" type="submit"
+            data-test-id="submit-button">submit &nbsp;<span></span>
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <svg class="seta-input" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 513.32 513.32"
+              xml:space="preserve">
+              <g>
+                <g>
+                  <polygon points="299.437,42.777 269.493,72.72 432.045,235.272
+                   0,235.272 0,278.048 432.045,278.048 269.493,440.6 
+                    299.437,470.543 513.32,256.66" />
+                </g>
+              </g>
+            </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
   </main>
-
-  <!-- Copyright -->
-  <div class="copyright-row">
-    <p class="small text-dark p-sm-0 mb-0 text-center"><small>&copy; 2022 by
-        Copyrights: VDSviagem.com.br</small><a class="text-primary" href="#"></a></p>
-  </div>
+  <footer>
+    <!-- Copyright -->
+    <div id="copyright">
+      <div class="small text-dark p-sm-0 mb-0 text-center"><small>&copy; 2022 by
+          Copyrights: VDSviagem</small><a class="text-primary" href="#"></a></div>
+    </div>
   </footer>
 
   <!-- Bootstrap JavaScript Libraries -->

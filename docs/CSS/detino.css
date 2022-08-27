@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .container-segundario {
   display: flex;
   flex-wrap: wrap;
@@ -86,11 +87,12 @@
   min-width: 100vw;
   margin-top: 50px;
 }
+
 /*pagina Hospedagem*/
 #hospedagem {
   min-width: 100vw;
   margin-top: 50px;
-  right:2rem;
+  right: 2rem;
   margin-top: 20px;
   left: 2rem;
   flex-wrap: wrap;
@@ -100,14 +102,14 @@
   justify-content: center;
 }
 
-#hosped-card{
-    transition: all 0.5s;
-    cursor: pointer;
+#hosped-card {
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-#hosped-card:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+#hosped-card:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
@@ -132,10 +134,11 @@
   color: #fff;
 }
 
-.secao-2{
+.secao-2 {
   margin-top: 30px;
   padding: 0px;
 }
+
 .buttonBase svg {
   fill: currentColor;
 }
@@ -153,7 +156,8 @@ svg:not(:root) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(60deg, rgba(203, 203, 240, 0.781),rgb(219, 157, 41),rgb(236, 185, 90));
+  background: linear-gradient(60deg, rgba(203, 203, 240, 0.781),
+      rgb(219, 157, 41), rgb(236, 185, 90));
   margin-top: 10px;
   padding-top: 10px;
 }
@@ -168,6 +172,7 @@ svg:not(:root) {
   padding-left: var(--spacing-2);
   padding-right: var(--spacing-2);
 }
+
 .ticketDiaria {
   display: flex;
   width: 100%;
@@ -209,11 +214,13 @@ svg:not(:root) {
     margin-left: 10px;
   }
 }
-  @media only screen and (max-width: 600px) {
-    .image-hosp {
-      display: none;
-    }
-    .secao-2{
-      margin-top: 0px;
-    }
+
+@media only screen and (max-width: 600px) {
+  .image-hosp {
+    display: none;
   }
+
+  .secao-2 {
+    margin-top: 0px;
+  }
+}

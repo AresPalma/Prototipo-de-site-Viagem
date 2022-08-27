@@ -25,10 +25,12 @@ body {
     margin-bottom: -20px;
     font-weight: 700;
 }
+
 .display-5 {
     font-weight: 600;
     color: orange;
-    }
+}
+
 p.subtexto {
     color: white;
     text-shadow: 2px 2px 3px black;
@@ -136,6 +138,7 @@ p.subtexto {
     color: orange;
     text-decoration: underline;
 }
+
 .fa-eye {
     display: flex;
     position: absolute;
@@ -147,21 +150,18 @@ p.subtexto {
     top: -17px;
     z-index: 1;
 }
+
 .ico {
     display: flex;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-right: 10px;
     margin-left: 10px;
     align-items: center;
-    font-weight: bold;
+    font-weight: 600;
     justify-content: center;
 }
 
 /*pagina usuario/cadastro*/
-.img-regist-left {
-    width: 40vw;
-    height: 40vh;
-}
 
 legend {
     margin: 0px;
@@ -169,36 +169,27 @@ legend {
 
 }
 
-.signup-image {
-    display: flex;
-    max-width: 30%;
-    margin: auto;
-    padding: 0px;
-    flex-wrap: wrap;
-}
-.row .signup-container {
+#signup-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0 10px 0;
     margin-left: 0px;
+    max-width: 100%;
+    padding: 15px;
+    right: 2%;
 }
 
 .titulo-cadast {
     font-weight: 600;
     padding-top: 10px;
     color: orange;
-}
-
-.signup-container .direito {
-    max-width: 60%;
-    padding: 15px;
-    right: 1%;
+    text-shadow: 2px 1px 2px black;
 }
 
 .form-register {
     border-radius: 10px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 20px 20px 20px;
 }
 
 .signup-aceitar {
@@ -248,6 +239,7 @@ legend {
         transform: scale(1)
     }
 }
+
 /*reposividade*/
 @media (width: 912px) {
     .modal-dialog-scrollable .modal-content {
@@ -265,38 +257,25 @@ legend {
         height: 70%;
     }
 }
+
 @media only screen and (max-width: 720px) {
-    .img-regist-left {
-        flex-direction: column;
-        position: relative;
-    }
+
     .signup-image {
-      
+
         flex-direction: column;
         position: relative;
         text-align: center;
-
     }
-    .img-left-cadast {
-        width: 150px;
-        display: inline-block;
-    }
-    
 }
+
 @media only screen and (max-width: 600px) {
-    .img-regist-left {
-        display: none;
-    }
 
     .text-auxiliar-cadast {
         display: none;
     }
 
-    .container-casdrat {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
 }
+
 @media (min-width: 576px) {
 
     .modal-dialog-scrollable {

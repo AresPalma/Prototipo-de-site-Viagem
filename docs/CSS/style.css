@@ -24,6 +24,7 @@ body {
     grid-template-rows: auto 100vh auto;
 }
 
+
 #imgeCabec {
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,7 +35,7 @@ body {
 
 #img-cabec {
     background-size: cover;
-       background-repeat: no-repeat;
+    background-repeat: no-repeat;
     margin: 0;
     min-height: 250px;
     width: 100vw;
@@ -61,7 +62,7 @@ body {
 
 .navbar-light .navbar-toggler {
     border-radius: 3px;
-   border-color: orange;
+    border-color: orange;
     line-height: 15px;
 }
 
@@ -103,18 +104,20 @@ form a:hover {
     align-items: center;
     position: relative;
 }
-.buttonMais{
+
+.buttonMais {
     display: inline-block;
     min-height: 2.25rem;
     font-weight: 600;
     line-height: 1.5rem;
     text-decoration: none;
-    color:black;
-  }
-  
-  .buttonMais:hover {
-    Color:blue;
-  }  
+    color: black;
+}
+
+.buttonMais:hover {
+    Color: blue;
+}
+
 .container-footer {
     grid-area: footer;
     display: inline-flexbox;
@@ -124,7 +127,7 @@ form a:hover {
     height: auto;
     margin: 10;
     padding: 10px 0px;
-    background: linear-gradient(60deg, #6880129a,#cdee549d, #8aac0f9a, #83a50a9a);
+    background: linear-gradient(60deg, #6880129a, #cdee549d, #8aac0f9a, #83a50a9a);
     color: rgb(48, 46, 46);
 }
 
@@ -192,7 +195,7 @@ form a:hover {
     width: auto;
     padding: 0px 40px 0px 0px;
     margin: auto;
-  
+
 }
 
 .footer-col ul {
@@ -248,11 +251,13 @@ form a:hover {
     visibility: visible;
     opacity: 1;
     transition: .2s;
+
 }
 
 .copyright {
     font-size: 12;
 }
+
 /*reposividade*/
 @keyframes has-shown {
     from {

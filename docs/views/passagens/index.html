@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Passagens Aéreas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2-beta1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap remxicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+
+    <!--CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/views.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/login.css" />
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-2 pb-0 pt-0" style="background-color:#68810bc2;"
+            id="cabecalho2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h1 class="display-6"><strong>DVSviagem</strong></h1>
+                </a>
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center mx-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html"><i class="ico fa fa-home fa-fw "></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: orange;" aria-current="page" href="#"
+                                target="_self">Passagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pacotes/index.html">Pacotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Hospedagem/index.html">hospedagem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./passagens/index.html">Permissão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../usuarioCadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header2">
+            <h1 class="titulo-cadast text-center"><strong>Passagens</strong></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="form-create">
+            <button class="btn btn-primary text-black rounded-5 buttonBase mb-3 p-1" type="submit"
+                data-test-id="submit-button">Criar passagens aéreas &nbsp;
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg class="seta-input m-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 513.32 513.32"
+                    xml:space="preserve">
+                    <g>
+                        <g>
+                            <polygon points="299.437,42.777 269.493,72.72 432.045,235.272
+   0,235.272 0,278.048 432.045,278.048 269.493,440.6 
+    299.437,470.543 513.32,256.66" />
+                        </g>
+                    </g>
+                </svg>
+
+            </button>
+       
+
+
+
+
+        <div class="row-cols-sm-auto col-lg-4 mb-3 mx-2">
+
+            <div class="form-group input-group text-black rounded-5 buttonBase">
+                <a href="/Phone/Create" id="btnCreate">
+                    <span class="input-group-addon"></span></a>
+                <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+                <button id="search-button" type="button" class="btn btn-primary"><i class="ri-search-line"></i>
+                </button>
+            </div>
+
+            <div id="form-create">
+                <a class="btn btn-primary text-black mb-2 py-3 pe-3" type="submit"
+                    data-test-id="submit-button" href="./create.html">Criar passagens aéreas &nbsp;
+            <i class="fa fa-plus"styte="font-size:1.2rem;font-weight: 600;"></i></a>
+           
+
+            </div>
+
+
+
+        </div>
+
+
+            <div class="bordered striped centered highlight table-responsive mx-2">
+                <table class="table" id="tabela">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Origem</th>
+                            <th scope="col">Destino</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">C&A</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Rio de Janeiro</td>
+                            <td>Salvador</td>
+                            <td>ida/volta</td>
+                            <td>Azul</td>
+                            <td>R$ 2.061,00</td>
+                            <td class="d-flex py-3">
+                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
+                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">2</td>
+                            <td>Rio de janeiro</td>
+                            <td>Gramado</td>
+                            <td>ida/volta</td>
+                            <td>Azul</td>
+                            <td>R$ 1.583,00</td>
+                            <td class="d-flex py-3">
+                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
+                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      
+
+
+        <div> <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="criar passagens" style="margin-left: 10px;" id="btnCreate"><i class="fa fa-plus"
+                aria-hidden="true"></i></button>
+    </div>
+
+    
+    <a class="btn btn-success" data-modal="" href="/Phone/Create" id="btnCreate">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
+
+        <footer>
+            <!-- Copyright -->
+            <div id="copyright">
+                <div class="small text-dark p-sm-0 mb-0 text-center"><small>&copy; 2022 by
+                        Copyrights: VDSviagem</small><a class="text-primary" href="#"></a></div>
+            </div>
+        </footer>
+
+        <script>
+
+            window.alert = function () { };
+            var defaultCSS = document.getElementById('bootstrap-css');
+            function changeCSS(css) {
+                if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+                else $('head > link').filter(':first').replaceWith(defaultCSS);
+            }
+            $(document).ready(function () {
+                var iframe_height = parseInt($('html').height());
+                window.parent.postMessage(iframe_height, 'https://bootsnipp.com');
+            });
+
+
+            function myFunction() {
+                var input, filter, table, tr, td, cell, i, j;
+                input = document.getElementById("txt_consulta");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("tabela");
+                tr = table.getElementsByTagName("tr");
+
+                for (i = 1; i < tr.length; i++) {
+                    tr[i].style.display = "none";
+                    td = tr[i].getElementsByTagName("td");
+
+                    for (var j = 0; j < td.length; j++) {
+                        cell = tr[i].getElementsByTagName("td")[j];
+                        if (cell) {
+                            if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+            $('input#txt_consulta').quicksearch('table#tabela tbody tr');
+
+
+
+            const searchButton = document.getElementById('search-button');
+            const searchInput = document.getElementById('search-input');
+            searchButton.addEventListener('click', () => {
+                const inputValue = searchInput.value;
+                alert(inputValue);
+            });
+
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
