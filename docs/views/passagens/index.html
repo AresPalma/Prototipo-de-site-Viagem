@@ -46,16 +46,19 @@
                                 target="_self">Passagens</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pacotes/index.html">Pacotes</a>
+                            <a class="nav-link" href="../Companhias/index.html">Companhias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./Hospedagem/index.html">hospedagem</a>
+                            <a class="nav-link" href="../pacotes/index.html">Pacotes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./passagens/index.html">Permissão</a>
+                            <a class="nav-link" href="../Hospedagem/index.html">hospedagem</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../usuarioCadastro.html">Cadastro</a>
+                            <a class="nav-link" href="../Permissoes.html">Permissão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../usuarioCadastro.html">Cadastro</a>
                         </li>
                     </ul>
                 </div>
@@ -84,42 +87,33 @@
                 </svg>
 
             </button>
-       
 
 
+            <div class="row-cols-sm-auto col-lg-4 mb-3 mx-2">
 
+                <div class="form-group input-group text-black rounded-5 buttonBase">
+                    <a href="/Phone/Create" id="btnCreate">
+                        <span class="input-group-addon"></span></a>
+                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+                    <button id="search-button" type="button" class="btn btn-primary"><i class="ri-search-line"></i>
+                    </button>
+                </div>
+                <div id="form-create">
+                    <a class="btn btn-primary text-black mb-2 py-3 pe-3" type="submit" data-test-id="submit-button"
+                        href="./create.html">Criar passagens aéreas &nbsp;
+                        <i class="fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
 
-        <div class="row-cols-sm-auto col-lg-4 mb-3 mx-2">
-
-            <div class="form-group input-group text-black rounded-5 buttonBase">
-                <a href="/Phone/Create" id="btnCreate">
-                    <span class="input-group-addon"></span></a>
-                <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
-                <button id="search-button" type="button" class="btn btn-primary"><i class="ri-search-line"></i>
-                </button>
+                </div>
             </div>
 
-            <div id="form-create">
-                <a class="btn btn-primary text-black mb-2 py-3 pe-3" type="submit"
-                    data-test-id="submit-button" href="./create.html">Criar passagens aéreas &nbsp;
-            <i class="fa fa-plus"styte="font-size:1.2rem;font-weight: 600;"></i></a>
-           
-
-            </div>
-
-
-
-        </div>
-
-
-            <div class="bordered striped centered highlight table-responsive mx-2">
+            <div class="bordered striped centered table-responsive mx-2">
                 <table class="table" id="tabela">
                     <thead class="table-light">
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Origem</th>
                             <th scope="col">Destino</th>
-                            <th scope="col">Tipo</th>
+                            <th scope="col">Tipo de voo</th>
                             <th scope="col">C&A</th>
                             <th scope="col">Preço</th>
                             <th scope="col">Ações</th>
@@ -133,9 +127,12 @@
                             <td>ida/volta</td>
                             <td>Azul</td>
                             <td>R$ 2.061,00</td>
-                            <td class="d-flex py-3">
-                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <td class="d-flex">
+                                <!--botão Editar-->
+                                <a href={`/Passagem-Update/${passagem.id}`} class="btn btn-info"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i
+                                        class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <!--botão Edeletar-->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
                                     data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
                                         class="fa fa-trash" aria-hidden="true"></i></button>
@@ -148,9 +145,11 @@
                             <td>ida/volta</td>
                             <td>Azul</td>
                             <td>R$ 1.583,00</td>
-                            <td class="d-flex py-3">
-                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            <td class="d-flex">
+                                <!--botão Editar-->
+                                <a href={`/Passagens-Update/${passagem.id}`} class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                     title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <!--botão deletar-->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
                                     data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
                                         class="fa fa-trash" aria-hidden="true"></i></button>
@@ -161,18 +160,10 @@
                 </table>
             </div>
         </div>
-      
-
-
         <div> <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom"
-            title="criar passagens" style="margin-left: 10px;" id="btnCreate"><i class="fa fa-plus"
-                aria-hidden="true"></i></button>
-    </div>
-
-    
-    <a class="btn btn-success" data-modal="" href="/Phone/Create" id="btnCreate">
-        <span class="glyphicon glyphicon-plus"></span>
-    </a>
+                title="criar passagens" style="margin-left: 10px;" id="btnCreate"><i class="fa fa-plus"
+                    aria-hidden="true"></i></button>
+        </div>
 
         <footer>
             <!-- Copyright -->

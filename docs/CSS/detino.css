@@ -110,7 +110,7 @@
 #hosped-card:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
+ }
 
 
 .hosped-image {
@@ -157,7 +157,7 @@ svg:not(:root) {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(60deg, rgba(203, 203, 240, 0.781),
-      rgb(219, 157, 41), rgb(236, 185, 90));
+      rgb(231, 179, 80), rgb(236, 185, 90));
   margin-top: 10px;
   padding-top: 10px;
 }

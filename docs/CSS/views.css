@@ -19,11 +19,6 @@ body * {
     align-items: flex-start;
 }
 
-.container-row {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 #form-create {
     justify-content: center;
     align-items: center;
@@ -38,12 +33,22 @@ form {
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
 
+input[type=text],
+input[type=tel],
+input[type=date],
+select[class=form-select] {
+    height: 45px;
+    border-radius: 6px;
+}
+#tabela_cia{
+    width: 90vh;
+    justify-content: center;
+    margin-left: 100px;
+}
 .seta-input {
-
     fill: #666;
     stroke: #333;
     stroke-width: 40px;
-
 }
 
 tr {
@@ -52,10 +57,11 @@ tr {
 }
 
 #copyright {
-    margin-top: 5px;
+    margin-top: 10px;
 
 }
 
+/*Reposividade*/
 @media only screen and (max-width: 1280px) {
     #form-create {
         justify-content: center;
@@ -64,9 +70,6 @@ tr {
 }
 
 @media only screen and (max-width: 540px) {
-    body {
-        overflow-x: hidden;
-    }
 
     .header2 {
         padding: 19px;
@@ -77,12 +80,13 @@ tr {
     #form-create {
         margin-bottom: 30px;
         padding-left: 15px;
-        padding-right: 0px;
+        padding-right: 10px;
+        margin-top: 0px;
     }
 
     .container-row {
-        padding-left: 20px;
-        padding-right: 10px;
+        padding-left: 10px;
+        padding-right: 5px;
     }
 
 }
