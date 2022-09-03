@@ -13,10 +13,29 @@ body * {
 .header2 {
     height: 100px;
     background: linear-gradient(60deg, rgba(203, 203, 240, 0.781),
-            rgb(165, 165, 189), #48580685, #607909a8);
+            rgb(165, 165, 189), rgb(236, 182, 81), #607909a8);
     padding: 30px;
     display: flex;
     align-items: flex-start;
+}
+ 
+#search{
+    border-right: 1px solid #ddd;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 290px;
+    margin-left: 10px;
+
+  }
+ 
+#search input{
+    width: 80%;
+    color:white;
+
+}
+#create {
+    margin-left: 20px;
+   
 }
 
 #form-create {
@@ -40,11 +59,13 @@ select[class=form-select] {
     height: 45px;
     border-radius: 6px;
 }
-#tabela_cia{
+
+#tabela_cia {
     width: 90vh;
     justify-content: center;
     margin-left: 100px;
 }
+
 .seta-input {
     fill: #666;
     stroke: #333;

@@ -219,10 +219,6 @@ form a:hover {
     color: whitesmoke;
 }
 
-.subtitulo-footer {
-    opacity: 0;
-}
-
 #btnTop {
     position: fixed;
     bottom: 10px;
@@ -279,3 +275,4 @@ form a:hover {
         min-height: 200px;
     }
 }
+
