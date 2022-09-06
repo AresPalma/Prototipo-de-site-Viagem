@@ -18,26 +18,24 @@ body * {
     display: flex;
     align-items: flex-start;
 }
- 
-#search{
+
+#search {
     border-right: 1px solid #ddd;
     flex-direction: column;
     margin-bottom: 15px;
     width: 290px;
-    margin-left: 10px;
+   margin-left: 10px;
+}
 
-  }
- 
-#search input{
+#search input {
     width: 80%;
-    color:white;
-
-}
-#create {
-    margin-left: 20px;
-   
+    color: white;
 }
 
+#search-cadastro {
+    display: flex;     
+    margin: 20px;
+}
 #form-create {
     justify-content: center;
     align-items: center;

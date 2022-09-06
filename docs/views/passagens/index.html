@@ -70,39 +70,34 @@
     </header>
 
     <main>
-        <section class="container-fluid me-4">
+        <section class="container">
+
             <!--botão consultar e create -->
-
-            <div class="d-flex mt-5">
-
-                <div class="form-group input-group">
+            <div class=" mt-5 mb-3">
+                <div class="form-group input-group text-black rounded-5 buttonBase">
                     <a href="" id="search">
                         <span class="input-group-addon"></span></a>
                     <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
                     <button id="search-button" type="button" class="btn btn-primary"><i class="ri-search-line"></i>
                     </button>
                 </div>
-
-
-
                 <div class="input-group">
                     <div id="create">
                         <a class="btn btn-primary mb-2 py-2" name="create" type="submit" data-test-id="submit-button"
-                            href="./create.html">Criar passagens &nbsp;
+                            href="./create.html">Cadastrar passagens &nbsp;
                             <i class="fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
                     </div>
                 </div>
-
             </div>
             <!--tabela-->
-            <div class="bordered striped centered table-responsive mx-2 me-4">
+            <div class=" table bordered striped centered table-responsive mx-2 me-4">
                 <table class="table" id="tabela">
                     <thead class="table-light">
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Origem</th>
                             <th scope="col">Destino</th>
-                            <th scope="col">Tipo de voo</th>
+                            <th scope="col">Tipo de destino</th>
                             <th scope="col">C&A</th>
                             <th scope="col">Preço</th>
                             <th scope="col">Ações</th>
@@ -113,14 +108,13 @@
                             <td scope="row">1</td>
                             <td>Rio de Janeiro</td>
                             <td>Salvador</td>
-                            <td>ida/volta</td>
+                            <td>nacional-ida/volta</td>
                             <td>Azul</td>
                             <td>R$ 2.061,00</td>
                             <td class="d-flex">
                                 <!--botão Editar-->
-                                <a href={`/Passagem-Update/${passagem.id}`} class="btn btn-info"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i
-                                        class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 <!--botão deletar-->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
                                     data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
@@ -131,14 +125,13 @@
                             <td scope="row">2</td>
                             <td>Rio de janeiro</td>
                             <td>Gramado</td>
-                            <td>ida/volta</td>
+                            <td>nacional-ida/volta</td>
                             <td>Azul</td>
                             <td>R$ 1.583,00</td>
                             <td class="d-flex">
                                 <!--botão Editar-->
-                                <a href={`/Passagens-Update/${passagem.id}`} class="btn btn-info"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i
-                                        class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 <!--botão deletar-->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
                                     data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
@@ -149,7 +142,6 @@
                     </tbody>
                 </table>
             </div>
-
         </section>
     </main>
     <footer>
@@ -160,59 +152,6 @@
         </div>
     </footer>
 
-    <script>
-
-        window.alert = function () { };
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css) {
-            if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
-            else $('head > link').filter(':first').replaceWith(defaultCSS);
-        }
-        $(document).ready(function () {
-            var iframe_height = parseInt($('html').height());
-            window.parent.postMessage(iframe_height, 'https://bootsnipp.com');
-        });
-
-
-        function myFunction() {
-            var input, filter, table, tr, td, cell, i, j;
-            input = document.getElementById("txt_consulta");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("tabela");
-            tr = table.getElementsByTagName("tr");
-
-            for (i = 1; i < tr.length; i++) {
-                tr[i].style.display = "none";
-                td = tr[i].getElementsByTagName("td");
-
-                for (var j = 0; j < td.length; j++) {
-                    cell = tr[i].getElementsByTagName("td")[j];
-                    if (cell) {
-                        if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-
-
-
-        $('input#txt_consulta').quicksearch('table#tabela tbody tr');
-
-
-
-        const searchButton = document.getElementById('search-button');
-        const searchInput = document.getElementById('search-input');
-        searchButton.addEventListener('click', () => {
-            const inputValue = searchInput.value;
-            alert(inputValue);
-        });
-
-
-    </script>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
