@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse justify-content-center mx-4" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../index.html"><i class="ico fa fa-home fa-fw "></i></a>
+                            <a class="nav-link" href="../../index.html"><i class="ico-h fa fa-home fa-fw "></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../passagens/index.html">Passagens</a>
@@ -71,21 +71,18 @@
 
     <main>
         <section class="container">
-            <!--botão consultar e create -->
-            <div id="search-cadastro">
-                <div class="input-group mx-5">
-                    <div id="create">
-                        <a class="btn btn-primary mb-2 py-2" name="create" type="submit" data-test-id="submit-button"
-                            href="./create.html">Cadastrar companhias&nbsp;
-                            <i class="fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="table table-striped  table-responsive">
+            
+            <!-- botão create -->          
+                <div class="input-group" id="create-2">
+                    <a class="btn btn-primary mb-2 py-2" name="create" type="submit" data-test-id="submit-button"
+                        href="./create.html">Cadastrar companhias&nbsp;
+                        <i class="icon-criate fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
+                </div>            
+            <div class="table table-striped centered  table-responsive">
                 <table class="table table-sm" id="tabela_cia">
                     <thead class="table-light">
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Açôes</th>
                         </tr>
@@ -97,11 +94,11 @@
                             <td class="d-flex">
                                 <!--botão editar -->
                                 <a href="" class=" btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 <!--botão deletar -->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
                                     data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
-                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                                        class="icon-delete fa fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -110,11 +107,11 @@
                             <td class="d-flex">
                                 <!--botão editar -->
                                 <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o"></i></a>
                                 <!--botão deletar -->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
-                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+                                    <i class="icon-delete fa fa-trash"></i></button>
                             </td>
                             </td>
                         </tr>
@@ -124,11 +121,11 @@
                             <td class="d-flex">
                                 <!--botão editar -->
                                 <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o"></i></a>
                                 <!--botão deletar -->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
-                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+                                    <i class="icon-delete fa fa-trash"></i></button>
                             </td>
                         </tr>
                     </tbody>
@@ -136,7 +133,13 @@
             </div>
         </section>
     </main>
-
+    <footer>
+        <!-- Copyright -->
+        <div id="copyright">
+            <div class="small text-dark p-sm-0 mb-0 text-center"><small>&copy; 2022 by
+                    Copyrights: VDSviagem</small><a class="text-primary" href="#"></a></div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

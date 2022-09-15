@@ -157,7 +157,7 @@ public class DestinoDAO {
 	}
 
 	// Metodo para deletar
-	public void removeById(int id) {
+	public void deleteById(int id) {
 		
 		String sql = "DELETE FROM destino WHERE id_destino = ?";
 
@@ -185,9 +185,9 @@ public class DestinoDAO {
 			}
 		}
 	}
-	public Destino getDestinoById(int id) {
+	public Destino getDestinoById(int id) { 
 
-		String sql = "SELECT * FROM destino where id = ?";
+		String sql = "SELECT * FROM destino where id_destino = ?;";
 		
 		Destino destinos = new Destino();
 		Companhias companhias = new Companhias();

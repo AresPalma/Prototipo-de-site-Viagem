@@ -39,18 +39,13 @@ p.subtexto {
 
 /* Modal */
 .modal-content {
-    display: flex;
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 0px;
-    width: 80%;
-    height: 80vh;
+    
+    height: 90vh;
     padding-top: 0px;
     border: 2px solid rgba(121, 112, 112, 0.3);
     position: relative;
     border-radius: .4rem;
     top: 0px;
-
 }
 
 /* Set a style for all buttons */
@@ -68,7 +63,6 @@ p.subtexto {
     background-color: orange;
     opacity: 0.8;
 }
-botton-register
 .form-control-login {
     height: 40px;
 }
@@ -146,12 +140,11 @@ botton-register
     width: 16px;
     cursor: pointer;
     right: 50px;
-    left: 320px;
+    left: 420px;
     top: -17px;
     z-index: 1;
 }
-
-.ico {
+.ico-h {
     display: flex;
     font-size: 1.3rem;
     margin-right: 10px;
@@ -160,7 +153,6 @@ botton-register
     font-weight: 500;
     justify-content: center;
 }
-
 /*pagina usuario/cadastro*/
 
 legend {

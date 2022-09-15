@@ -62,10 +62,9 @@ public class Principal {
 	destinoDAO.update(d);
 
 
-	 destinoDAO.removeById(4);
+	 destinoDAO.deleteById(4);
 
-	 
-	
+		
 	}
 	
 

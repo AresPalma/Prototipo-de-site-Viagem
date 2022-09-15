@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse justify-content-center mx-4" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../index.html"><i class="ico fa fa-home fa-fw "></i></a>
+                            <a class="nav-link" href="../../index.html"><i class="ico-h fa fa-home fa-fw "></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" style="color: orange;" aria-current="page" href="#"
@@ -72,29 +72,18 @@
     <main>
         <section class="container">
 
-            <!--botão consultar e create -->
-            <div class=" mt-5 mb-3">
-                <div class="form-group input-group text-black rounded-5 buttonBase">
-                    <a href="" id="search">
-                        <span class="input-group-addon"></span></a>
-                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
-                    <button id="search-button" type="button" class="btn btn-primary"><i class="ri-search-line"></i>
-                    </button>
-                </div>
-                <div class="input-group">
-                    <div id="create">
-                        <a class="btn btn-primary mb-2 py-2" name="create" type="submit" data-test-id="submit-button"
-                            href="./create.html">Cadastrar passagens &nbsp;
-                            <i class="fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
-                    </div>
-                </div>
+            <!--botão create -->
+            <div class="input-group" id="create-1">
+                <a class="btn btn-primary mb-2 py-2" name="create" type="submit" data-test-id="submit-button"
+                    href="./create.html">Cadastrar passagens &nbsp;
+                    <i class="fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
             </div>
             <!--tabela-->
-            <div class=" table bordered striped centered table-responsive mx-2 me-4">
+            <div class=" table table-striped centered table-responsive mx-2">
                 <table class="table" id="tabela">
                     <thead class="table-light">
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col">#</th>
                             <th scope="col">Origem</th>
                             <th scope="col">Destino</th>
                             <th scope="col">Tipo de destino</th>
@@ -114,11 +103,11 @@
                             <td class="d-flex">
                                 <!--botão Editar-->
                                 <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o"></i></a>
                                 <!--botão deletar-->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
-                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+                                    <i class="icon-delete fa fa-trash"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -131,11 +120,11 @@
                             <td class="d-flex">
                                 <!--botão Editar-->
                                 <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    title="Editar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o"></i></a>
                                 <!--botão deletar-->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;"><i
-                                        class="fa fa-trash" aria-hidden="true"></i></button>
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+                                    <i class="icon-delete fa fa-trash"></i></button>
                             </td>
                             </td>
                         </tr>

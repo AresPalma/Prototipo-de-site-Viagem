@@ -127,7 +127,7 @@ public class DestinoCrud {
 				try {
 					posicao = s.nextInt();
 
-					destinoDAO.removeById(posicao);
+					destinoDAO.deleteById(posicao);
 
 				} catch (Exception e) {
 					

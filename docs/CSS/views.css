@@ -19,23 +19,16 @@ body * {
     align-items: flex-start;
 }
 
-#search {
-    border-right: 1px solid #ddd;
-    flex-direction: column;
-    margin-bottom: 15px;
-    width: 290px;
-   margin-left: 10px;
+#create-1 {
+    display: flex;
+    margin: 30px 0px 20px 10px;
 }
 
-#search input {
-    width: 80%;
-    color: white;
+#create-2 {
+    display: flex;
+    margin: 30px 0px 20px 95px;
 }
 
-#search-cadastro {
-    display: flex;     
-    margin: 20px;
-}
 #form-create {
     justify-content: center;
     align-items: center;
@@ -73,6 +66,14 @@ select[class=form-select] {
 tr {
     justify-content: center;
     align-items: center;
+}
+
+.icon-edite,
+.icon-delete{ display: flex;
+font-size: 1.2rem;
+align-items: center;
+font-weight: 300;
+justify-content: center;
 }
 
 #copyright {
