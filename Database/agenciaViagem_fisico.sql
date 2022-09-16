@@ -1,3 +1,4 @@
+
 create database agenciaViagem;
 
 use agenciaViagem;
@@ -34,16 +35,16 @@ nome_companhia VARCHAR(30)NOT NULL
 
 CREATE TABLE hospedagem (
 id_hospedagem integer PRIMARY KEY auto_increment,
-nome_hosped VARCHAR(50) NOT NULL,
-tel_hosped VARCHAR(20),
+nome_hospedagem VARCHAR(50) NOT NULL,
+tel_hospedagem VARCHAR(20),
 cidade_estado VARCHAR(50)NOT NULL,
 logradouro VARCHAR(80) NOT NULL,
-preco_Hosped decimal(10.2) NOT NULL
+preco_hospedagem decimal(10.2) NOT NULL
 );
 
 CREATE TABLE Passagem (
 id_passagem INTEGER PRIMARY KEY auto_increment,
-tipo_pacote VARCHAR(20) NOT NULL,
+tipo_pacote VARCHAR(60) NOT NULL,
 data_embarque DATE NOT NULL,
 data_retorno DATE NOT NULL,
 Qtd_dias VARCHAR(10) NOT NULL,
@@ -85,16 +86,16 @@ INSERT INTO companhias (nome_companhia) values
 ('American Airlines');
 
  insert into destino (tipo_destino, origem_destino, nome_destino, preco_destino, id_companhia) values
- ('Nacional-ida/volta', 'Rio de Janeiro', 'Salvador', 2061, 4),
-  ('Internacional-ida/volta', 'São Paulo', 'Berlim', 8757, 2),
-  ('Nacional-ida/volta', 'Rio de Janeiro', 'Gramado', 1583, 2),
-  ('Nacional-ida/volta', 'São Paulo','Fortaleza', 1694, 1),
-   ('internacional-ida/volta', 'Rio de Janeiro','Orlando', 3.400,7),
-   ('Nacional-ida/volta', 'São Paulo','Natal', 1694, 1),
-   ('internacionla-ida/volta', 'Salvador','Lisboa', 12.147, 4),
-   ('Nacional-ida/volta', 'São Paulo','Porto Seguro', 1.030, 2);
+ ('Nacional', 'Rio de Janeiro', 'Salvador', 2061, 4),
+  ('Internacional','São Paulo', 'Berlim', 8757, 2),
+  ('Nacional','Rio de Janeiro', 'Gramado', 1583, 2),
+  ('Nacional','São Paulo','Fortaleza', 1694, 1),
+   ('internacional','Rio de Janeiro','Orlando', 3400,7),
+   ('Nacional','São Paulo','Natal', 1694, 1),
+   ('internacionl','Salvador','Lisboa', 12147, 4),
+   ('Nacional', 'São Paulo','Porto Seguro', 1030, 2);
    
-INSERT INTO hospedagem (nome_hosped, tel_hosped, cidade_estado, logradouro, preco_Hosped ) values
+INSERT INTO hospedagem (nome_hospedagem, tel_hospedagem, cidade_estado, logradouro, preco_hospedagem ) values
 ('Seara Praia Hotel', '85 4011 2200','Fortaleza-CE','Av.Beira Mar 3080','411.00'),
 ('Esmeralda Praia Hotel',' 84 4005 0000','Ponta Negra Natal RN',' R.Francisco Gurgel 1160 ',606.00),
 ('Ibis Lisboa Liberdade', '35 121330 0630','Lisboa Portugal','R.Barata Salgueiro',452.00),
@@ -114,7 +115,7 @@ INSERT INTO hospedagem (nome_hosped, tel_hosped, cidade_estado, logradouro, prec
  
 -- Criação da View
 create view passagem_destino_hospedagem as
-select passagem.tipo_pacote, destino.nome_destino, hospedagem.nome_hosped from passagem, destino, hospedagem
+select passagem.tipo_pacote, destino.nome_destino, hospedagem.nome_hospedagem from passagem, destino, hospedagem
 where passagem.id_passagem = destino.id_destino and passagem.id_hospedagem = hospedagem.id_hospedagem;
  
  
@@ -128,23 +129,22 @@ BEGIN
  return total;
 END $$
 
- select passagem.tipo_pacote, destino.nome_destino, hospedagem.nome_hosped from passagem, destino, hospedagem
-where passagem.id_destino = destino.id_destino and passagem.id_hospedagem = hospedagem.id_hospedagem;
- 
+
   
  --  Criação da view passagem completa
 create view passagem_completa as
-select passagem.id_passagem, 
-passagem.tipo_pacote, 
-destino.nome_destino, 
-hospedagem.nome_hosped, 
-passagem.data_embarque,
-passagem.Qtd_dias, 
-passagem.preco_compra, 
+select pass.id_passagem, 
+pass.tipo_pacote, 
+dest.nome_destino, 
+hosped.nome_hospedagem, 
+pass.data_embarque,
+pass.Qtd_dias, 
+pass.preco_compra, 
 desconto(preco_compra) as desconto
 from passagem pass, destino dest, hospedagem hosped
-where passagem.id_destino = dest.id_destino and passagem.id_hospedagem = hosped.id_hospedagem order by id_passagem asc;
- 
+where pass.id_destino = dest.id_destino and pass.id_hospedagem = hosped.id_hospedagem order by id_passagem asc;
+
+
  
  -- Consulta desses dados
 select * from destino;
@@ -152,10 +152,6 @@ select * from passagem;
 select * from hospedagem;
 select * from usuario;
 select * from passagem_destino_hospedagem;
-
-SELECT * FROM usuarios where id = ?;
-
-
 
 
 
