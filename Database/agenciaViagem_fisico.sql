@@ -96,7 +96,7 @@ INSERT INTO companhias (nome_companhia) values
    ('Nacional', 'São Paulo','Porto Seguro', 1030, 2);
    
 INSERT INTO hospedagem (nome_hospedagem, tel_hospedagem, cidade_estado, logradouro, preco_hospedagem ) values
-('Seara Praia Hotel', '85 4011 2200','Fortaleza-CE','Av.Beira Mar 3080','411.00'),
+('Seara Praia Hotel', '85 4011 2200','Fortaleza-CE','Av.Beira Mar 3080',411.00),
 ('Esmeralda Praia Hotel',' 84 4005 0000','Ponta Negra Natal RN',' R.Francisco Gurgel 1160 ',606.00),
 ('Ibis Lisboa Liberdade', '35 121330 0630','Lisboa Portugal','R.Barata Salgueiro',452.00),
 ('Hôtel Le A', '33 14256-9999','Paris França','A 3.54 km do centro,Rue d Artois', 1568.00),
@@ -107,10 +107,10 @@ INSERT INTO hospedagem (nome_hospedagem, tel_hospedagem, cidade_estado, logradou
 ('H2 Hotel Berlin-Alexanderplatz', '49 30 24088010','Berlim Alemanha','Karl Liebknecht Str.32a Mitte 10178',650.00);
 
  INSERT INTO passagem (tipo_pacote, data_embarque, data_retorno, Qtd_dias, preco_compra, id_usuario, id_destino, id_hospedagem)values
-('voo(ida-volta) Hospedagem-café da manha','2022-10-06','2022-10-10','4','1247.00', 1, 8, 6),
-('voo(ida-volta) Hospedagem-café da manha','2022-09-15','2022-09-18','3','1247.00', 1, 4, 1),
-('voo(ida-volta) Hospedagem-café da manha','2022-09-15','2022-09-18','3','1247.00', 1, 4, 1),
-('voo(ida-volta)','2022-09-17','2022-10-21','4','8900.00', 1, 1, "5");
+('voo(ida-volta) Hospedagem-café da manha','2022-10-06','2022-10-10','4',1550.00, 1, 8, 6),
+('voo(ida-volta) Hospedagem-café da manha','2022-09-15','2022-09-18','3',13503.00, 1, 7, 3),
+('voo(ida-volta) Hospedagem-café da manha','2022-09-10','2022-09-14','4',1247.00, 1, 4, 1),
+('voo(ida-volta)',',2022-09-20','2022-10-25','5',8900.00, 1, 1, null);
  
  
 -- Criação da View
@@ -138,11 +138,12 @@ pass.tipo_pacote,
 dest.nome_destino, 
 hosped.nome_hospedagem, 
 pass.data_embarque,
+pass.data_retorno,
 pass.Qtd_dias, 
 pass.preco_compra, 
 desconto(preco_compra) as desconto
-from passagem pass, destino dest, hospedagem hosped
-where pass.id_destino = dest.id_destino and pass.id_hospedagem = hosped.id_hospedagem order by id_passagem asc;
+from usuarios user, passagem pass, destino dest, hospedagem hosped
+where usuarios.id_usuario and pass.id_destino = dest.id_destino and pass.id_hospedagem = hosped.id_hospedagem order by id_passagem asc;
 
 
  
@@ -150,16 +151,5 @@ where pass.id_destino = dest.id_destino and pass.id_hospedagem = hosped.id_hospe
 select * from destino;
 select * from passagem;
 select * from hospedagem;
-select * from usuario;
+select * from usuarios;
 select * from passagem_destino_hospedagem;
-
-
-
-
-
-
-
-
-
-
-
