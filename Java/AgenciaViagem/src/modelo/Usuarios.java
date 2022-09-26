@@ -76,11 +76,10 @@ public class Usuarios {
 	public Permissoes getPermissoes() {
 		return permissoes;
 	}
-
 	public void setPermissoes(Permissoes permissoes) {
 		this.permissoes = permissoes;
 	}
-
+	
 		public String mostrar() {
 		return "id: " + this.id + "Nome" + this.nome 
 				+ "CPF: " + this.cpf
@@ -90,6 +89,7 @@ public class Usuarios {
 				+ "Tipo permissão: " + this.permissoes.getTipo();
 	}
 
+	
 		
 		}
 

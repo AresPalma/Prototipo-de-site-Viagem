@@ -10,7 +10,7 @@ public class Passagem {
 	private LocalDate dataEmbarque;
 	private LocalDate dataRetorno;
 	private String Qtd_dias;
-	private double precoCompra;
+	private double valor_pacote;
 
 	private Usuarios usuarios;
 	private Hospedagem hospedagem;
@@ -18,23 +18,21 @@ public class Passagem {
 
 	// classe responsavel por formatar um padrao diferente do formato ISO
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	
-	
+		
 	// Construtores
 	public Passagem() {
 
 	}
 
 	public Passagem(int id, String tipoPacote, String dataEmbarque, String dataRetorno, String qtd_dias,
-			Double precoCompra, Usuarios usuarios, Hospedagem hospedagem, Destino destino) {
+			Double valor_pacote, Usuarios usuarios, Hospedagem hospedagem, Destino destino) {
 		this.id = id;
-		this.tipoPacote = tipoPacote;
-		// convertendo data do tipo String ("dd/MM/yyyy") para LocalDate (yyyy-MM-dd)
+		this.tipoPacote = tipoPacote;		
 		this.dataEmbarque = LocalDate.parse(dataEmbarque, formatter);
 		this.dataRetorno = LocalDate.parse(dataRetorno, formatter);
 		this.Qtd_dias = qtd_dias;
-		valorPacote(hospedagem.getPrecoHosped());
-		valorPacote(destino.getPrecoDestino());
+		valor_pacote(hospedagem.getPrecoHosped());
+		valor_pacote(destino.getPrecoDestino());
 	}
 
 	// gettes e setters
@@ -79,12 +77,12 @@ public class Passagem {
 		Qtd_dias = qtd_dias;
 	}
 
-	public double getPrecoCompra() {
-		return precoCompra;
+	public double getValor_pacote() {
+		return valor_pacote;
 	}
 
-	public void setPrecoCompra(double precoCompra) {
-		this.precoCompra = precoCompra;
+	public void setValor_pacote(double valor_total) {
+		this.valor_pacote= valor_total;
 	}
 
 	public Usuarios getUsuarios() {
@@ -114,12 +112,12 @@ public class Passagem {
 	@Override
 	public String toString() {
 		return "Passagem [id= " + id + ", Qtd_dias= " + Qtd_dias + ", tipo de pacote= " + tipoPacote + ", data de embarque= "
-				+ dataEmbarque + ", data de retorno= " + dataRetorno + ", preco da compra do pacote= " + precoCompra + ", usuarios = "
+				+ dataEmbarque + ", data de retorno= " + dataRetorno + ", preco da compra do pacote= " + valor_pacote + ", usuarios = "
 				+ usuarios + ", hospedagem= " + hospedagem + ", destino= " + destino + ", formatter= " + formatter + "]";
 	}
-
-	private void valorPacote(double precoCompra) {
-		this.precoCompra = hospedagem.getPrecoHosped() + destino.getPrecoDestino();
+	
+	private void valor_pacote(double valor_total) {
+		this.valor_pacote= hospedagem.getPrecoHosped() + destino.getPrecoDestino();
 		
 	}
 

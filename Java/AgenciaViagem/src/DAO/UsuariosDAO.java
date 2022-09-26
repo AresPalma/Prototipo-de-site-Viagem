@@ -93,7 +93,7 @@ public class UsuariosDAO {
 
 				permissao.setId(rset.getInt("id_permissao"));
 				
-				permissao.setTipo(rset.getString("tipo"));
+				permissao.setTipo(rset.getString("tipo_permissao"));
 
 				usuario.setPermissoes(permissao);
 
@@ -195,7 +195,7 @@ public class UsuariosDAO {
 	}
 	public Usuarios getUsuariosById(int id) {
 
-		String sql = "SELECT * FROM usuarios where id = ?";
+		String sql = "SELECT * FROM usuarios where id_usuario= ?";
 		
 		Usuarios usuarios = new Usuarios();
 		Permissoes permissoes = new Permissoes();
@@ -208,15 +208,22 @@ public class UsuariosDAO {
 			rset = pstm.executeQuery();
 
 			rset.next();
+			
+			usuarios.setId(rset.getInt("id_usuario"));	
 
-			usuarios.setNome(rset.getString("nome"));
+			usuarios.setNome(rset.getString("nome_usuario"));
+			
 			usuarios.setCpf(rset.getString("cpf"));
-			usuarios.setTel(rset.getString("tel"));
+			
+			usuarios.setTel(rset.getString("tel_usuario"));
+			
 			usuarios.setEmail(rset.getString("email"));
+			
 			usuarios.setSenha(rset.getString("senha"));
-			permissoes.setTipo(rset.getString("tipo"));			
-			permissoes.setId(rset.getInt("id"));
-			usuarios.setId(rset.getInt("id"));			
+			
+			permissoes.setTipo(rset.getString("tipo"));	
+			
+			permissoes.setId(rset.getInt("id_permissao"));						
 		
 		} catch (Exception e) {
 			e.printStackTrace();

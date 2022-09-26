@@ -66,11 +66,10 @@ public class Destino {
 	public Companhias getCompanhias() {
 		return companhias;
 	}
-
 	public void setCompanhias(Companhias companhias) {
 		this.companhias = companhias;
 	}
-
+	
 	public String mostrar() {
 	return "Destino \n[id: " + this.id + "Tipo_destino: " + this.tipoDestino
 		    + "Origem: " + this.origem

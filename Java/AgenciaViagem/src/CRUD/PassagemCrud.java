@@ -65,7 +65,7 @@ public class PassagemCrud {
 				dataRetorno = p.nextLine();
 				System.out.println("Digite a quantidade de dias: ");
 				Qtd_dias = p.nextLine();
-				System.out.println("Valor do pacote: ");
+				System.out.println("Total do pacote: ");
 				precoCompra = p.nextDouble();
 				p.nextLine();
 				System.out.println("Digite o id da hospedagem: ");
@@ -99,7 +99,7 @@ public class PassagemCrud {
 					System.out.println("Destino: " + p2.getDestino().getNome());
 					System.out.println("Hospedagem: " + p2.getHospedagem().getNome());
 					System.out.println("Qqt. de dias: " + p2.getQtd_dias());
-					System.out.println("Valor do pacote: " + p2.getPrecoCompra());
+					System.out.println("Valor do pacote: " + p2.getValor_pacote());
 
 					System.out.println("----------------------------------- ");
 				}

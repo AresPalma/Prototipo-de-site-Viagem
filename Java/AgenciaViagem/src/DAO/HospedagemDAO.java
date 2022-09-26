@@ -16,8 +16,8 @@ public class HospedagemDAO {
 
 	// Metodo pra salvar
 	public void save(Hospedagem hospedagem) {
-		String sql = "INSERT INTO hospedagem (nome_hosped, tel_estado, cidade_estado,"
-				+ " logradouro, preco_hosped ) values(?, ?, ?, ?, ?);";
+		String sql = "INSERT INTO hospedagem (nome_hospedagem, tel_hospedagem, cidade_estado,"
+				+ " logradouro, preco_hospedagem ) values(?, ?, ?, ?, ?);";
 
 		try {
 			// Cria uma conexão com o banco
@@ -61,7 +61,7 @@ public class HospedagemDAO {
 	public List<Hospedagem> getHospedagem() {
 		String sql = "select * from hospedagem;";
 
-		List<Hospedagem> hospedagem = new ArrayList<Hospedagem>();
+		List<Hospedagem> hospedagens = new ArrayList<Hospedagem>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -80,15 +80,15 @@ public class HospedagemDAO {
 				
 				hosped.setNome(rset.getString("nome_hospedagem"));
 				
-				hosped.setTel(rset.getString("tel_hosped"));
+				hosped.setTel(rset.getString("tel_hospedagem"));
 				
 				hosped.setCidadeEstado(rset.getString("cidade_estado"));
 				
 				hosped.setLogradouro(rset.getString("logradouro"));
 				
-				hosped.setPrecoHosped(rset.getDouble("preco_hosped"));
+				hosped.setPrecoHosped(rset.getDouble("preco_hospedagem"));
 
-				hospedagem.add(hosped);
+				hospedagens.add(hosped);
 			}
 
 		} catch (Exception e) {
@@ -110,13 +110,13 @@ public class HospedagemDAO {
 			}
 		}
 
-		return hospedagem;
+		return hospedagens;
 	}
 	
 	// Metodo pra UPDATE
 	public void update(Hospedagem hospedagem) {
-		String sql = "UPDATE hospedagem set nome_hosped = ?, tel_hosped = ?,cidade_estado = ?"
-				+ ",logradouro_hosped = ?, preco_hosped = ? WHERE id_hospedagem = ?;";
+		String sql = "UPDATE hospedagem set nome_hospedagem = ?, tel_hospedagem = ?,cidade_estado = ?"
+				+ ",logradouro= ?, preco_hospedagem = ? WHERE id_hospedagem = ?;";
 
 		try {
 			conn = ConnectionMySQL.createConnectionMySQL();
@@ -182,8 +182,8 @@ public class HospedagemDAO {
 		}
 	}
 	public Hospedagem getHospedagemById(int id) {
-
-		String sql = "SELECT * FROM hospedagem where id = ?";
+		
+		String sql = "SELECT * FROM hospedagem where id_hospedagem = ?";
 		Hospedagem hospedagens = new Hospedagem();
 
 		ResultSet rset = null;
@@ -195,14 +195,18 @@ public class HospedagemDAO {
 			rset = pstm.executeQuery();
 
 			rset.next();
-
-			hospedagens.setNome(rset.getString("nome"));
-			hospedagens.setTel(rset.getString("tel"));
-			hospedagens.setCidadeEstado(rset.getString("CidadeEstado"));
-			hospedagens.setLogradouro(rset.getString("logradouro"));
-			hospedagens.setPrecoHosped(rset.getDouble("precoHosped"));
 			
-			hospedagens.setId(rset.getInt("id"));			
+			hospedagens.setId(rset.getInt("id_hospedagem"));	
+
+			hospedagens.setNome(rset.getString("nome_hospedagem"));
+			
+			hospedagens.setTel(rset.getString("tel_hospedagem"));
+			
+			hospedagens.setCidadeEstado(rset.getString("cidade_estado"));
+			
+			hospedagens.setLogradouro(rset.getString("logradouro"));
+						
+			hospedagens.setPrecoHosped(rset.getDouble("preco_Hospedagem"));					
 			
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -22,7 +22,7 @@ public class PassagemDAO {
 	// Metodo pra salvar
 	public void save(Passagem passagem) {
 		String sql = "INSERT INTO passagem (tipo_pacote, data_embarque, data_retorno,"
-				+ "  Qtd_dias, preco_compra, id_usuario, id_destino, id_hospedagem)values(?, ?, ?, ?, ?, ?, ?, ?;";
+				+ "  Qtd_dias, preco_compra, id_usuario, id_destino, id_hospedagem) values (?, ?, ?, ?, ?, ?, ?, ?;";
 
 		try {
 			// Cria uma conexão com o banco
@@ -36,17 +36,18 @@ public class PassagemDAO {
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
 			pstm.setDate(2, new Date(formatter.parse(passagem.getDataEmbarque()).getTime()));
+			
 			pstm.setDate(3, new Date(formatter.parse(passagem.getDataRetorno()).getTime()));
 			
-			pstm.setString(5, passagem.getQtd_dias());
+			pstm.setString(4, passagem.getQtd_dias());
 			
-			pstm.setDouble(6, passagem.getPrecoCompra());
+			pstm.setDouble(5, passagem.getValor_pacote());
 
-			pstm.setInt(7, passagem.getUsuarios().getId());
+			pstm.setInt(6, passagem.getUsuarios().getId());
 
-			pstm.setInt(8, passagem.getDestino().getId());
+			pstm.setInt(7, passagem.getDestino().getId());
 
-			pstm.setInt(9, passagem.getHospedagem().getId());
+			pstm.setInt(8, passagem.getHospedagem().getId());
 
 			// Executar a sql para inserção dos dados
 			pstm.execute();
@@ -72,7 +73,7 @@ public class PassagemDAO {
 	public List<Passagem> getPassagem() {
 		String sql = "select * from passagem;";
 
-		List<Passagem> passagem = new ArrayList<Passagem>();
+		List<Passagem> pacotes = new ArrayList<Passagem>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -93,16 +94,17 @@ public class PassagemDAO {
 
 				passagens.setId(rset.getInt("id_passagem"));
 				
-				passagens.setTipoPacote(rset.getString("tipoPacote"));			
+				passagens.setTipoPacote(rset.getString("tipo_pacote"));			
 
 				SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 				
-				passagens.setDataEmbarque(dateFormat.format(rset.getDate("dataEmbarque")));
-				passagens.setDataRetorno(dateFormat.format(rset.getDate("dataRetorno")));
+				passagens.setDataEmbarque(dateFormat.format(rset.getDate("data_embarque")));
+				
+				passagens.setDataRetorno(dateFormat.format(rset.getDate("data_retorno")));
 				
 				passagens.setQtd_dias(rset.getString("Qtd_dias"));			
 
-				passagens.setPrecoCompra(rset.getDouble("precoCompra"));
+				passagens.setValor_pacote(rset.getDouble("preco_Compra"));
 
 				usuarios.setId(rset.getInt("id_usuario"));
 
@@ -118,11 +120,11 @@ public class PassagemDAO {
 							
 				hospedagem.setId(rset.getInt("id_hospedagem"));
 
-				hospedagem.setNome(rset.getString("nome_hosped"));
+				hospedagem.setNome(rset.getString("nome_hospedagem"));
 
 				passagens.setHospedagem(hospedagem);
 
-				passagem.add(passagens);
+				pacotes.add(passagens);
 			}
 
 		} catch (Exception e) {
@@ -144,13 +146,13 @@ public class PassagemDAO {
 			}
 		}
 
-		return passagem;
+		return pacotes;
 	}
 	
 	// Metodo pra UPDATE
 	public void update(Passagem passag) {
 		String sql = "UPDATE passagem SET tipo_pacote = ?,data_embarque = ?,"
-				+ "data_retorno = ?,Qtd_dias = ?, preco_compra = ?, id_usuario = ?, id_destino = ?id_hospedagem =? WHERE id_passagem = ?";
+				+ "data_retorno = ?,Qtd_dias = ?, preco_compra = ?, id_usuario = ?, id_destino = ? id_hospedagem =? WHERE id_passagem = ?";
 
 		try {
 								
@@ -162,21 +164,21 @@ public class PassagemDAO {
 				
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-			pstm.setDate(3, new Date(formatter.parse(passag.getDataEmbarque()).getTime()));
+			pstm.setDate(2, new Date(formatter.parse(passag.getDataEmbarque()).getTime()));
 
-			pstm.setDate(4, new Date(formatter.parse(passag.getDataRetorno()).getTime()));
+			pstm.setDate(3, new Date(formatter.parse(passag.getDataRetorno()).getTime()));
 			
-			pstm.setString(1, passag.getQtd_dias());
+			pstm.setString(4, passag.getQtd_dias());
 
-			pstm.setDouble(2, passag.getPrecoCompra());			
+			pstm.setDouble(5, passag.getValor_pacote());			
 			
-			pstm.setInt(5, passag.getUsuarios().getId());
+			pstm.setInt(6, passag.getUsuarios().getId());
 
-			pstm.setInt(6, passag.getDestino().getId());
+			pstm.setInt(7, passag.getDestino().getId());
 
-			pstm.setInt(7, passag.getHospedagem().getId());
+			pstm.setInt(8, passag.getHospedagem().getId());
 
-			pstm.setInt(8, passag.getId());
+			pstm.setInt(9, passag.getId());
 
 			pstm.execute();
 
@@ -248,17 +250,17 @@ public class PassagemDAO {
 
 			passagem.setId(rset.getInt("id_passagem"));
 
-			passagem.setTipoPacote(rset.getString("tipoPacote"));		
+			passagem.setTipoPacote(rset.getString("tipo_pacote"));		
 			
 			SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 			
-			passagem.setDataEmbarque(dateFormat.format(rset.getDate("dataEmbarque")));
+			passagem.setDataEmbarque(dateFormat.format(rset.getDate("data_embarque")));
 			
-			passagem.setDataRetorno(dateFormat.format(rset.getDate("dataEmbarque")));
+			passagem.setDataRetorno(dateFormat.format(rset.getDate("data_embarque")));
 
 			passagem.setQtd_dias(rset.getString("Qtd_dias"));
 			
-			passagem.setPrecoCompra(rset.getDouble("precoCompra"));
+			passagem.setValor_pacote(rset.getDouble("preco_compra"));
 			
 			user.setId(rset.getInt("id_usuario"));
 

@@ -57,7 +57,7 @@ public class DestinoDAO {
 	public List<Destino> getDestino() {
 		String sql = "select * from destino;";
 
-		List<Destino> destino = new ArrayList<Destino>();
+		List<Destino> destinos = new ArrayList<Destino>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -81,7 +81,7 @@ public class DestinoDAO {
 				
 				dest.setNome(rset.getString("nome_destino"));
 				
-				dest.setPrecoDestino(rset.getDouble("precoDestino"));
+				dest.setPrecoDestino(rset.getDouble("preco_destino"));
 				
 				companhia.setId(rset.getInt("id_companhia"));
 				
@@ -89,7 +89,7 @@ public class DestinoDAO {
 				
 				dest.setCompanhias(companhia);
 
-				destino.add(dest);
+				destinos.add(dest);
 			}
 
 		} catch (Exception e) {
@@ -111,7 +111,7 @@ public class DestinoDAO {
 			}
 		}
 
-		return destino;
+		return destinos;
 	}
 
 	// Metodo pra atualizar
@@ -196,19 +196,26 @@ public class DestinoDAO {
 
 		try {
 			pstm = conn.prepareStatement(sql);
+			
 			pstm.setInt(1, id);
+			
 			rset = pstm.executeQuery();
 
 			rset.next();
-
-			destinos.setNome(rset.getString("nome"));
-			destinos.setOrigem(rset.getString("origem"));
-			destinos.setTipoDestino(rset.getString("tipoDestino"));
-			destinos.setPrecoDestino(rset.getDouble("precoDestino"));
-			companhias.setNome(rset.getString("nome"));
-			companhias.setId(rset.getInt("id"));
-
-			destinos.setId(rset.getInt("id"));			
+			
+			destinos.setId(rset.getInt("id_destino"));
+			
+			destinos.setTipoDestino(rset.getString("Tipo_destino"));
+			
+			destinos.setOrigem(rset.getString("origem_destino"));
+			
+			destinos.setNome(rset.getString("nome_destino"));
+			
+			destinos.setPrecoDestino(rset.getDouble("preco_destino"));
+			
+			companhias.setId(rset.getInt("id_companhia"));
+			
+			companhias.setNome(rset.getString("nome_companhia"));			
 						
 		} catch (Exception e) {
 			e.printStackTrace();
