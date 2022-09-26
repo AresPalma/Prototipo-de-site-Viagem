@@ -22,6 +22,26 @@
 
     <script src="script.js" defer></script>
 </head>
+<script>
+    $(function () {
+        $("#tabela input").keyup(function () {
+
+            var index = $(this).parent().index();
+            var nth = "#tabela td:nth-child(" + (index + 1).toString() + ")";
+            var valor = $(this).val().toUpperCase();
+            $("#tabela tbody tr").show();
+            $(nth).each(function () {
+                if ($(this).text().toUpperCase().indexOf(valor) < 0) {
+                    $(this).parent().hide();
+                }
+            });
+        });
+
+        $("#tabela input").blur(function () {
+            $(this).val("");
+        });
+    });
+</script>
 
 <body>
     <header>
@@ -58,7 +78,7 @@
                             <a class="nav-link" href="../Permissoes.html">Permissão</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../UsuarioCliente/index.html">Usuarios</a>
+                            <a class="nav-link" href="../../usuarioCadastro.html">Cadastro</a>
                         </li>
                     </ul>
                 </div>
