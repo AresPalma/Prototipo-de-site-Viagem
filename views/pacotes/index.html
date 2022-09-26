@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Pacotes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2-beta1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap remxicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+
+    <!--CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/views.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/login.css" />
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-2 pb-0 pt-0" style="background-color:#68810bc2;"
+            id="cabecalho2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h1 class="display-6"><strong>DVSviagem</strong></h1>
+                </a>
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center mx-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html"><i class="ico-h fa fa-home fa-fw "></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../passagens/index.html">Passagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Companhias/index.html">Companhias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: orange;" aria-current="page" href="#"
+                                target="_self">Pacotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Hospedagem/index.html">Hospedagem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Permissoes.html">Permissão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../UsuarioCliente/index.html">Usuarios</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header2">
+            <h1 class="titulo-cadast text-center"><strong>Pacotes</strong></h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <!--botão create -->
+            <div class="input-group" id="create-1">
+                <a class="btn btn-primary mb-2 py-2" name="create" type="submit" data-test-id="submit-button"
+                    href="./create.html">Cadastrar Pacotes &nbsp;
+                    <i class="ico-create fa fa-plus" styte="font-size:1.2rem;font-weight: 600;"></i></a>
+            </div>
+            <div class="table table-striped  highlight table-responsive mx-2">
+                <table class="table" id="tabela">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tipo de pacote</th>
+                            <th scope="col">Destino</th>
+                            <th scope="col">Hospedagem</th>
+                            <th scope="col">Embarque</th>
+                            <th scope="col">Retorno</th>
+                            <th scope="col">Qtd.dias</th>
+                            <th scope="col">Preço/pessoa</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Voo(i-v), Hospedagem,<br> café da manhâ</td>
+                            <td>Fortaleza</td>
+                            <td>Seara Praia Hotel</td>
+                            <td>10/11/2022</td>
+                            <td>20/11/2022</td>
+                            <td>3 dias</td>
+                            <td>R$ 341,00</td>
+                            <td class="d-flex">
+                                <!-- Botão Editar -->
+                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o"></i></a>
+                                <!-- Botão deletar -->
+                                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+                                    <i class="icon-delete fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">2</td>
+                            <td>Voo(i-v), Hospedagem,<br> café da manhâ</td>
+                            <td>Hotel Le A</td>
+                            <td>Paris-França</td>
+                            <td>09/10/2022</td>
+                            <td>20/11/2022</td>
+                            <td>4 dias</td>
+                            <td>R$ 1.568,00</td>
+                            <td class="d-flex">
+                                <!-- Botão Editar -->
+                                <a href="" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Editar"><i class="icon-edite fa fa-pencil-square-o"></i></a>
+                                <!-- Botão deletar -->
+                                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+                                    <i class="icon-delete fa fa-trash"></i></button>
+                            </td>                           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Copyright -->
+        <div id="copyright">
+            <div class="small text-dark p-sm-0 mb-0 text-center"><small>&copy; 2022 by
+                    Copyrights: VDSviagem</small><a class="text-primary" href="#"></a></div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
