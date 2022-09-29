@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>DestinoNacional</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.0.2-beta1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Bootstrap remxicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+
+  <!--CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/detino.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/login.css" />
+
+  <link rel="next" href="./Promoções.html">
+  <link rel="prev" href="./index.html">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <!--inicio navbar -->
+    <nav class="navbar navbar-light justify-content-end pe-2" style="background-color:rgba(255, 166, 0, 0.719)">
+      <div class="d-flex me-lg-3" id="cabecalho1">
+        <img src="./imagens/cent.atend.svg" alt="atendimento" width="21" height="21"> <small> Central de
+          atendimento: <strong> (11) 0000-5555 </strong> | Televendas: <strong>0800 000 3334</strong></small><span>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light p-2 pb-0 pt-0" id="cabecalho2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h1 class="display-6"><strong>DVSviagem</strong></h1>
+        </a>
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html" target="_self" rel="prev"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: orange" aria-current="page" href="#"><strong>Destino</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Promoções.html" rel="next">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hospedagem.html">Hospedagem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contato.html">Contato</a>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center me-2 mb-2">
+            <i class="ri-account-circle-line text-dark" style="font-size: 2.5rem; opacity: 70%"></i><span>
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+                class="btn btn-outline-primary rounded-pill text-white">
+                Entre ou cadastre-se</button> </span>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--fim navbar -->
+  </header>
+  <main>
+    <div class="container-segundario">
+      <!-- Background + form image -->
+      <div class="p-5 text-center bg-image w-100 " id="img-cabec"
+        style="background-image:url('./imagens/Parque Nacion. Montanha.jpg');">
+
+        <div class="mask">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="display-5 mb-0 mt-2">Os melhores destinos</h1>
+              <form action class="row m-1 form" id="formulario">
+                <div class="col-auto">
+                  <label class="visually-hidden" for="destino">Origem</label>
+                  <div class="name">Origem</div>
+                  <div class="input-group">
+                    <div class="input-group-text"><i class="icon ri-send-plane-fill" style="font-size: 1rem;"></i></div>
+                    <input type="text" size="12px" class="form-control" id="origem" placeholder="De onde vai sair ?">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <label class="visually-hidden" for="destino">destino</label>
+                  <div class="name">Destino</div>
+                  <div class="input-group">
+                    <div class="input-group-text"><i class="icon ri-map-pin-line" style="font-size: 1rem;"></i></div>
+                    <input type="text" size="12px" class="form-control" id="destino" placeholder="Para onde vai ?">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <label class="visually-hidden" for="dateIda">dataIda</label>
+                  <div class="name">Ida</div>
+                  <input type="date" size="5px" class="form-control" id="dataida" placeholder="ida">
+                </div>
+                <div class="col-auto me-lg-1">
+                  <label class="visually-hidden" for="dateVolta">dataVolta</label>
+                  <div class="name">Volta</div>
+                  <input type="date" size="5px" class="form-control" id="datavolta" placeholder="volta">
+                </div>
+                <div class="col-auto p-0 me-lg-1">
+                  <label class="visually-hidden" for="destino">destino</label>
+                  <div class="name">Passageiros / Classe de cabine</div>
+                  <div class="input-group">
+                    <div class="input-group-text"><i class="icon ri-parent-line" style="font-size: 1rem;"></i><i
+                        class="icon ri-star-s-line pe-0" style="font-size: 1rem;"></i></div>
+                    <input type="text" size="19px" class="form-control" id="destino"
+                      placeholder="2 passageiros/ econômica">
+                  </div>
+                </div>
+                <div class="col-auto me-lg-1" id="buscarSeach">
+                  <label class="visually-hidden" for="destino">busca</label>
+                  <div class="col-auto mt-4" id=seach>
+                    <button class="btn btn-outline-primary text-white rounded-5" type="submit">Buscar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--fim  Background +form image -->
+
+      <!--inicio cad -->
+      <section class="px-2" id="card-destino-">
+        <div class=" col-sm-12 mx-5 mt-3 col-lg-12 mt-lg-1">
+          <div class="btn-group mx-5 mt-lg-4 pb-2 px-2" role="group" aria-label="Exemplo Basic">
+            <a href="#" class="btn btn-warning active" aria-current="page"
+              style="font-size: 20px;"><strong>Nacional</strong></a>
+            <a href="./destinoInter.html" class="btn btn-outline-primary text-dark"
+              style="font-size: 20px;"><strong>Internacional</strong></a>
+          </div>
+        </div>
+        <div class="card-header">
+          <div class="nav nav-tabs card-header-tabs">
+            <div class="row row-cols-1 row-cols-md-4 mx-lg-2 g-3 pb-3 justify-content-center" id="destinos">
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Bonito Matogrosso doSul.jpg" class="card-img-top rounded img-responsive"
+                    alt="Bonito">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Bonito</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/fortaleza.jpg" class="card-img-top rounded img-responsive" alt="fortaleza">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Fortaleza</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Foz do Iguaçu.jpg" class="card-img-top rounded img-responsive"
+                    alt="Foz do Iguaçu">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Foz do Iguaçu</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Maceió.jpg" class="card-img-top rounded img-responsive" alt="maceio">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Macéio</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais" size="10">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/porto Seguro.jpg" class="card-img-top rounded img-responsive" alt="Porto Seguro">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Porto Seguro</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Poços_de_Caldas_MG.jpg" class="card-img-top rounded img-responsive"
+                    alt="Poços de Caldas">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Poços de Caldas</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Salvador.jpeg" class="card-img-top img-responsive" alt="Salvador">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Salvador</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Buzios.jpg" class="card-img-top img-responsive" alt="buzios">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Búzios</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Fernando de Noronha.jpg" class="card-img-top img-responsive"
+                    alt="Fernando de Noronha">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Fernando de Noronha</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Curva_da_Avenida_Beira_Mar_Aracaju.jpg" class="card-img-top img-responsive"
+                    alt="Aracaju">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Aracaju</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Gramado-01.jpg" class="card-img-top img-responsive" alt="Gramado">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Gramado</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/praia-das-conchas-cabo-frio.jpg" class="card-img-top img-responsive"
+                    alt="Cabo Frio">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Cabo Frio</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Recife.jpg" class="card-img-top img-responsive" alt="Recife">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional ">Recife</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Ilha_do_Fogo_e_Orla_I_-_Petrolina,_Pernambuco.jpg"
+                    class="card-img-top img-responsive" alt="Petrolina">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Petrolina</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Natal_R-Grande do Norte.jpg" class="card-img-top img-responsive" alt="Natal">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Natal</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Rio_de_Janeiro-01.jpg" class="card-img-top img-responsive" alt="Rio de janeiro">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Rio de Janeiro</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/ilhéus.jpg" class="card-img-top img-responsive" alt="ilhéus">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">ilhéus</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/Brasilia-Planalto_Central.jpg" class="card-img-top img-responsive" alt="Brasilia">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Brasilia</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/bahia-peninsula-de-marau.jpg" class="card-img-top img-responsive" alt="Maraú">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">Maraú</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-center" style="width: 20rem;">
+                <div class="card h=100 border-light" id="img-zoom">
+                  <img src="./imagens/São Paulo-avenida-brigadeiro-faria-lima.jpg" class="card-img-top img-responsive"
+                    alt="São Paulo">
+                  <div class="card-body">
+                    <h5 class="card-text-nacional">São Paulo</h5>
+                    <a href="#" class="btn btn-warning rounded-pill buttonMais">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+              <!--fim cad-row -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--fim cad -->
+    </div>
+  </main>
+  <!--inicio do Grid container rodapé -->
+  <footer class="container-footer">
+    <div class="row-footer  me-lg-5 ">
+      <div class="footer-col mb-1">
+        <ul>
+          <li>
+            <h1 class="display-6 has-shown"><strong>DVSviagem</strong></h1>
+          </li>
+          <p class="subtitulo-footer" style="font-weight: 700;"><em>Viaje com Destino as novas
+              <br>Aventuras</em></p>
+          </li>
+        </ul>
+      </div>
+      <!-- Social media -->
+      <div class="footer-col px-1">
+        <p class="text-center fs-6 p-0 m-1"><strong>Siga-nos</strong></p>
+        <div class="icon-medias-sociais">
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="#" rel="stylesheet" type="text/css" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <!--newslatter Grid column-->
+      <div class="footer-col pe-1">
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
+          <strong>Inscreva para receber ofertas exclusivas</strong>
+        </p>
+        <!--newsletter input -->
+        <form action="" method="post">
+          <div class="input-group mb-3">
+            <input class="form-control" type="text" placeholder="Digite seu e-mail" aria-label="nome-destinatario"
+              aria-describedby="button-addon2"></input>
+            <button class="btn  btn-outline border-0 rounded-1" style="background-color:#68810bc2;" id="button-addon2"
+              type="button"><i class="ri-send-plane-2-fill"></i></button>
+          </div>
+        </form>
+      </div>
+      <div class="footer-col p-0 mb-2">
+        <!--Grid column card-->
+        <p class="text-center fs-6 p-0 m-1" style="color: rgb(48, 46, 46);">
+          <strong>Formas de pagamento</strong>
+        </p>
+        <img src="./imagens/bandeiras-de-cartao-de-credito1.jpg" alt="Cartoes de credito"><span>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="#">Quem somos</a>
+          </li>
+          <li>
+            <a href="#">Termos e condições gerais</a>
+          </li>
+          <li>
+            <a href="#">Politica de privacidade</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="./Contato.html">Central de atendimento</a>
+          </li>
+          <li>
+            <a href="#">central de ajuda</a>
+          </li>
+          <li>
+            <a href="#">Remarcações de viagens</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="./Promoções.html">Passagens Promocionais</a>
+          </li>
+          <li>
+            <a href="./Promoções.html">Pacotes promocionais</a>
+          </li>
+          <li>
+            <a href="">Cancelamento e reembolso</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Copyright -->
+    <div class="copyright-row">
+      <p class="small text-dark p-sm-0 mb-0 text-center" style="background-color:#68810bc2"><small>
+          &copy; 2022 by Copyrights: VDSviagem</small><a class="text-primary" href="#"></a></p>
+    </div>
+  </footer>
+  <!-- Modal Login-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-white">
+        <div class="modal-header">
+          <img src="./imagens/airplane_login.png" class="rounded" alt="..." id="imglogin">
+
+          <!--botão fechar -->
+          <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Fechar Modal"
+            data-bs-dismiss="modal" aria-label="Close">&times;</span>
+
+          <div class=" text-center mt-0" id="text-cab-login">
+            <h1 class="display-6 modal-title"><strong>DVSviagem</strong></h1>
+            <p class="subtexto mb-1">Gerencie com mais facilidade as suas passagens aéreas e
+              aproveite vantagens exclusivas!
+            </p>
+            <p class="subtexto mb-2" style="font-size: .8rem;">Insira seu e-mail para fazer login</p>
+          </div>
+        </div>
+        <form class="modal-body p-1 mx-0 bg-white" action="" method="post">
+          <div class="container">
+            <fieldset>
+              <legend class="subtitulo">Login</legend>
+              <div class="input-group form-group mt-3 mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="user" id="icone-login">
+                    <i class="fa fa-user fa-fw"></i></span>
+                </div>
+                <input id="user" autocomplete="email" type="text" class="form-control login" name="usuario"
+                  placeholder="exemplo@email.com" aria-label="Username" aria-describedby="basic-addon1" required>
+              </div>
+              <!--passaword -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" for="senha" id="icone-senha"><i class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input id="psw" class="form-control login" type="password" name="password" placeholder="Senha"
+                  aria-label="password" aria-describedby="password-constraints" required>
+
+                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+              </div>
+            </fieldset>
+            <button id="button-login" class="rounded-3" type="submit">Login</button>
+            <label>
+              <input id="remember" type="checkbox" checked="checked" name="remember"> Lembrar
+            </label>
+            <div class="text-modal me-sm-1 d-flex justify-content-end">
+              <a href="./usuarioCadastro.html">Esqueceu sua senha?</a>
+            </div>
+          </div>
+          <hr style="border-bottom: 2px solid rgb(48, 46, 46);margin-bottom: 0px;">
+          <div class="text-modal d-flex justify-content-center"><a href="#">
+              Inscreva-se</a>
+          </div>
+          <div class="container pb-1 pt-1" style="background-color:#f1f1f1">
+            <div class="caption">
+              <span>Ao fazer login ou criar uma conta, você concorda com nossos</span>
+              <a href="" target="_blank"><span class="caption"> Termos e Condições
+                </span></a> e </span> <a href="#" target="_blank">Política de Privacidade</a>
+              e saiba sobre o tratamento dos seus dados pessoais.
+            </div>
+          </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+  </div>
+
+  <script>
+    //mostar password
+    let btn = document.querySelector('.fa-eye')
+    btn.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#psw')
+
+      if (inputSenha.getAttribute('type') == 'password') {
+        inputSenha.setAttribute('type', 'text')
+      } else {
+        inputSenha.setAttribute('type', 'password')
+      }
+    })
+
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

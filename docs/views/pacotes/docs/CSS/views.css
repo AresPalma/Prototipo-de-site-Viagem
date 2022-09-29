@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+body * {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+.header2 {
+    height: 100px;
+    background: linear-gradient(60deg, rgba(203, 203, 240, 0.781),
+            rgb(165, 165, 189), rgb(236, 182, 81), #607909a8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#create-1 {
+    display: flex;
+    margin: 30px 0px 20px 10px;
+}
+
+#create-2 {
+    display: flex;
+    margin: 30px 0px 20px 95px;
+}
+
+#form-create {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+form {
+    background-color: #f1f1f1;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.8em;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+input[type=text],
+input[type=tel],
+input[type=date],
+select[class=form-select] {
+    height: 45px;
+    border-radius: 6px;
+}
+
+#tabela_cia {
+    width: 90vh;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.seta-input {
+    fill: #666;
+    stroke: #333;
+    stroke-width: 40px;
+}
+
+tr {
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-edite,
+.icon-delete {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    font-weight: 300;
+    justify-content: center;
+
+}
+
+.icon-create {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#copyright {
+    margin-top: 10px;
+
+}
+
+/*Reposividade*/
+@media only screen and (max-width: 1280px) {
+    #form-create {
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+    .header2 {
+        padding: 19px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #form-create {
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 10px;
+        margin-top: 0px;
+    }
+
+    .container-row {
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+
+}
