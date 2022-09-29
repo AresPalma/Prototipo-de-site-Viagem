@@ -16,7 +16,7 @@ public class HospedagemDAO {
 
 	// Metodo pra salvar
 	public void save(Hospedagem hospedagem) {
-		String sql = "INSERT INTO hospedagem (nome_hospedagem, tel_hospedagem, cidade_estado,"
+		String sql = "INSERT INTO hospedagem (nome_hospedagem, tel_estado, cidade_estado,"
 				+ " logradouro, preco_hospedagem ) values(?, ?, ?, ?, ?);";
 
 		try {
@@ -61,7 +61,7 @@ public class HospedagemDAO {
 	public List<Hospedagem> getHospedagem() {
 		String sql = "select * from hospedagem;";
 
-		List<Hospedagem> hospedagens = new ArrayList<Hospedagem>();
+		List<Hospedagem> hospedagem = new ArrayList<Hospedagem>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -88,7 +88,7 @@ public class HospedagemDAO {
 				
 				hosped.setPrecoHosped(rset.getDouble("preco_hospedagem"));
 
-				hospedagens.add(hosped);
+				hospedagem.add(hosped);
 			}
 
 		} catch (Exception e) {
@@ -110,13 +110,13 @@ public class HospedagemDAO {
 			}
 		}
 
-		return hospedagens;
+		return hospedagem;
 	}
 	
 	// Metodo pra UPDATE
 	public void update(Hospedagem hospedagem) {
 		String sql = "UPDATE hospedagem set nome_hospedagem = ?, tel_hospedagem = ?,cidade_estado = ?"
-				+ ",logradouro= ?, preco_hospedagem = ? WHERE id_hospedagem = ?;";
+				+ ",logradouro_hospedagem = ?, preco_hospedagem = ? WHERE id_hospedagem = ?;";
 
 		try {
 			conn = ConnectionMySQL.createConnectionMySQL();
@@ -182,31 +182,27 @@ public class HospedagemDAO {
 		}
 	}
 	public Hospedagem getHospedagemById(int id) {
-		
+
 		String sql = "SELECT * FROM hospedagem where id_hospedagem = ?";
 		Hospedagem hospedagens = new Hospedagem();
 
 		ResultSet rset = null;
 
 		try {
-			
+			conn = ConnectionMySQL.createConnectionMySQL();			
 			pstm = conn.prepareStatement(sql);
 			pstm.setInt(1, id);
 			rset = pstm.executeQuery();
 
 			rset.next();
-			
-			hospedagens.setId(rset.getInt("id_hospedagem"));	
 
 			hospedagens.setNome(rset.getString("nome_hospedagem"));
-			
 			hospedagens.setTel(rset.getString("tel_hospedagem"));
-			
 			hospedagens.setCidadeEstado(rset.getString("cidade_estado"));
-			
 			hospedagens.setLogradouro(rset.getString("logradouro"));
-						
-			hospedagens.setPrecoHosped(rset.getDouble("preco_Hospedagem"));					
+			hospedagens.setPrecoHosped(rset.getDouble("preco_hospedagem"));
+			
+			hospedagens.setId(rset.getInt("id_hospedagem"));			
 			
 		} catch (Exception e) {
 			e.printStackTrace();

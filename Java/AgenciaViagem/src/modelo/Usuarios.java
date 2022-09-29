@@ -6,6 +6,7 @@ public class Usuarios {
 	private String nome;
 	private String cpf;
 	private String tel;
+	private String cep;
 	private String email;
 	private String senha;
 
@@ -15,11 +16,12 @@ public class Usuarios {
 
 	}
 
-	public Usuarios(int id, String nome, String cpf, String tel, String email, String senha, Permissoes permissoes) {
+	public Usuarios(int id, String nome, String cpf, String tel, String cep,String email, String senha, Permissoes permissoes) {
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.tel = tel;
+		this.cep = cep;
 		this.email = email;
 		this.senha = senha;
 		this.permissoes = permissoes;
@@ -52,6 +54,14 @@ public class Usuarios {
 	public String getTel() {
 		return tel;
 	}
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
 
 	public void setTel(String tel) {
 		this.tel = tel;
@@ -76,10 +86,11 @@ public class Usuarios {
 	public Permissoes getPermissoes() {
 		return permissoes;
 	}
+
 	public void setPermissoes(Permissoes permissoes) {
 		this.permissoes = permissoes;
 	}
-	
+
 		public String mostrar() {
 		return "id: " + this.id + "Nome" + this.nome 
 				+ "CPF: " + this.cpf
@@ -88,9 +99,7 @@ public class Usuarios {
 				+ "senha" + this.senha
 				+ "Tipo permissão: " + this.permissoes.getTipo();
 	}
-
-	
-		
+				
 		}
 
 		

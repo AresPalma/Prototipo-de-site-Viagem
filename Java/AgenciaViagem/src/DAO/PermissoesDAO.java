@@ -107,9 +107,9 @@ public class PermissoesDAO {
 
 			pstm = conn.prepareStatement(sql);
 			
-			pstm.setInt(1, permissao.getId());	
-			
-			pstm.setString(2, permissao.getTipo());				
+			pstm.setString(1, permissao.getTipo());
+
+			pstm.setInt(2, permissao.getId());			
 			
 			pstm.execute();
 
@@ -159,7 +159,7 @@ public class PermissoesDAO {
 	}
 	public Permissoes getPermissaoById(int id_permissao) {
 
-		String sql = "SELECT * FROM permissoes where id_permissao = ?";
+		String sql = "SELECT * FROM permissoes where id = ?";
 		Permissoes permissoes = new Permissoes();
 
 		ResultSet rset = null;
@@ -175,9 +175,7 @@ public class PermissoesDAO {
 
 			rset.next();
 			
-			permissoes.setId(rset.getInt("id_permissao"));
-			
-			permissoes.setTipo(rset.getString("tipo_permissao"));
+			permissoes.setTipo(rset.getString("Tipo_permissoes"));
 			
 				} catch (Exception e) {
 			e.printStackTrace();

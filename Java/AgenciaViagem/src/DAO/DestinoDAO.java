@@ -26,13 +26,13 @@ public class DestinoDAO {
 			pstm = conn.prepareStatement(sql);
 
 			pstm.setString(1, destino.getTipoDestino());
-			
+
 			pstm.setString(2, destino.getOrigem());
-			
+
 			pstm.setString(3, destino.getNome());
-			
+
 			pstm.setDouble(4, destino.getPrecoDestino());
-			
+
 			pstm.setInt(5, destino.getCompanhias().getId());
 
 			pstm.execute();
@@ -57,7 +57,7 @@ public class DestinoDAO {
 	public List<Destino> getDestino() {
 		String sql = "select * from destino;";
 
-		List<Destino> destinos = new ArrayList<Destino>();
+		List<Destino> destino = new ArrayList<Destino>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -74,22 +74,22 @@ public class DestinoDAO {
 				Companhias companhia = new Companhias();
 
 				dest.setId(rset.getInt("id_destino"));
-				
+
 				dest.setTipoDestino(rset.getString("Tipo_destino"));
-				
+
 				dest.setOrigem(rset.getString("origem_destino"));
-				
+
 				dest.setNome(rset.getString("nome_destino"));
-				
+
 				dest.setPrecoDestino(rset.getDouble("preco_destino"));
-				
+
 				companhia.setId(rset.getInt("id_companhia"));
-				
+
 				companhia.setNome(rset.getString("nome_companhia"));
-				
+
 				dest.setCompanhias(companhia);
 
-				destinos.add(dest);
+				destino.add(dest);
 			}
 
 		} catch (Exception e) {
@@ -111,7 +111,7 @@ public class DestinoDAO {
 			}
 		}
 
-		return destinos;
+		return destino;
 	}
 
 	// Metodo pra atualizar
@@ -127,19 +127,19 @@ public class DestinoDAO {
 			pstm = conn.prepareStatement(sql);
 
 			pstm.setString(1, destino.getTipoDestino());
-			
+
 			pstm.setString(2, destino.getOrigem());
-			
+
 			pstm.setString(3, destino.getNome());
-		
+
 			pstm.setDouble(5, destino.getPrecoDestino());
-			
+
 			pstm.setInt(6, destino.getCompanhias().getId());
-			
+
 			pstm.setInt(7, destino.getId());
-			
-			pstm.execute();	
-			
+
+			pstm.execute();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -158,7 +158,7 @@ public class DestinoDAO {
 
 	// Metodo para deletar
 	public void deleteById(int id) {
-		
+
 		String sql = "DELETE FROM destino WHERE id_destino = ?";
 
 		try {
@@ -185,38 +185,40 @@ public class DestinoDAO {
 			}
 		}
 	}
-	public Destino getDestinoById(int id) { 
+
+	public Destino getDestinoById(int id) {
 
 		String sql = "SELECT * FROM destino where id_destino = ?;";
-		
+
 		Destino destinos = new Destino();
 		Companhias companhias = new Companhias();
 
 		ResultSet rset = null;
 
 		try {
+			conn = ConnectionMySQL.createConnectionMySQL();
 			pstm = conn.prepareStatement(sql);
-			
 			pstm.setInt(1, id);
-			
 			rset = pstm.executeQuery();
 
 			rset.next();
-			
-			destinos.setId(rset.getInt("id_destino"));
-			
-			destinos.setTipoDestino(rset.getString("Tipo_destino"));
+
+			destinos.setNome(rset.getString("nome_destino"));
 			
 			destinos.setOrigem(rset.getString("origem_destino"));
 			
-			destinos.setNome(rset.getString("nome_destino"));
+			destinos.setTipoDestino(rset.getString("tipo_destino"));
 			
-			destinos.setPrecoDestino(rset.getDouble("preco_destino"));
+			destinos.setPrecoDestino(rset.getDouble("preco_destino"));			
+			
+			companhias.setNome(rset.getString("nome_companhia"));
 			
 			companhias.setId(rset.getInt("id_companhia"));
+
+			destinos.setId(rset.getInt("id_destino"));
 			
-			companhias.setNome(rset.getString("nome_companhia"));			
-						
+			destinos.setCompanhias(companhias);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -237,5 +239,4 @@ public class DestinoDAO {
 		return destinos;
 	}
 
-	
 }

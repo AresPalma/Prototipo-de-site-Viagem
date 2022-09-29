@@ -28,8 +28,8 @@ public class PassagemCrud {
 		String tipoPacote = "";
 		String dataEmbarque = "";
 		String dataRetorno = "";
-		String Qtd_dias = "";
-		double precoCompra = 0;
+		int Qtd_dias = 0;
+		
 
 		int id_usuario = 0;
 		int id_destino = 0;
@@ -64,10 +64,8 @@ public class PassagemCrud {
 				System.out.println("Digite a data de retorno: ");
 				dataRetorno = p.nextLine();
 				System.out.println("Digite a quantidade de dias: ");
-				Qtd_dias = p.nextLine();
-				System.out.println("Total do pacote: ");
-				precoCompra = p.nextDouble();
-				p.nextLine();
+				Qtd_dias = p.nextInt();
+				p.nextLine();				
 				System.out.println("Digite o id da hospedagem: ");
 				id_hospedagem = p.nextInt();
 				System.out.println("Digite o id do destino: ");
@@ -75,10 +73,10 @@ public class PassagemCrud {
 				p.nextLine();
 
 				Usuarios usuarios = usuariosDAO.getUsuariosById(id_usuario);
-				Hospedagem hospedagem = hospedDAO.getHospedagemById(id_hospedagem);
+				Hospedagem hospedagem = hospedDAO.getHospedagemById(id_hospedagem);				
 				Destino destino = destinoDAO.getDestinoById(id_destino);
 
-				Passagem p1 = new Passagem(id, tipoPacote, dataEmbarque, dataRetorno, Qtd_dias, precoCompra, usuarios,
+				Passagem p1 = new Passagem(id, tipoPacote, dataEmbarque, dataRetorno, Qtd_dias, usuarios,
 						hospedagem, destino);
 
 				passagemDAO.save(p1);
@@ -99,7 +97,7 @@ public class PassagemCrud {
 					System.out.println("Destino: " + p2.getDestino().getNome());
 					System.out.println("Hospedagem: " + p2.getHospedagem().getNome());
 					System.out.println("Qqt. de dias: " + p2.getQtd_dias());
-					System.out.println("Valor do pacote: " + p2.getValor_pacote());
+					System.out.println("Valor do pacote: " + p2.getPrecoCompra());
 
 					System.out.println("----------------------------------- ");
 				}
@@ -121,22 +119,23 @@ public class PassagemCrud {
 				System.out.println("Digite a data de retorno: ");
 				dataRetorno = p.nextLine();
 				System.out.println("Digite a quantidade de dias: ");
-				Qtd_dias = p.nextLine();
+				Qtd_dias = p.nextInt();
+				p.nextLine();
 				System.out.println("Digite o id da hospedagem: ");
 				id_hospedagem = p.nextInt();
 				p.nextLine();
 				System.out.println("Digite o id do destino: ");
 				id_destino = p.nextInt();
 				p.nextLine();
-				System.out.println("Valor do Pacote: ");
-				precoCompra = p.nextDouble();
-				p.nextLine();
+				
 
 				Usuarios usuario1 = usuariosDAO.getUsuariosById(id_usuario);
+				
 				Hospedagem hosped1 = hospedDAO.getHospedagemById(id_hospedagem);
+				
 				Destino destino2 = destinoDAO.getDestinoById(id_destino);
 
-				Passagem p2 = new Passagem(posicao, tipoPacote, dataEmbarque, dataRetorno, Qtd_dias, precoCompra,
+				Passagem p2 = new Passagem(posicao, tipoPacote, dataEmbarque, dataRetorno, Qtd_dias,
 						usuario1, hosped1, destino2);
 
 				passagemDAO.update(p2);

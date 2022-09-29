@@ -18,13 +18,16 @@ public class CompanhiasDAO {
 		String sql = "INSERT INTO companhias (nome_companhia) values(?);";
 
 		try {
-		
+			// Cria uma conexão com o banco
 			conn = ConnectionMySQL.createConnectionMySQL();
 
+			// Cria um PreparedStatement, classe usada para executar a query
 			pstm = conn.prepareStatement(sql);
-			
+
+			// Adicionar o valor do primeiro parametro da sql
 			pstm.setString(1, companhia.getNome());
-			
+
+			// Executar a sql para inserção dos dados
 			pstm.execute();
 
 		} catch (Exception e) {
@@ -95,16 +98,16 @@ public class CompanhiasDAO {
 
 	// Metodo pra atualizar
 	public void update(Companhias companhia) {
-		String sql = "UPDATE companhias set id_companhia = ? where nome_companhia = ?;";
+		String sql = "UPDATE companhias set nome_companhia = ? where id_companhia = ?;";
 
 		try {
 			conn = ConnectionMySQL.createConnectionMySQL();
 
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setInt(1, companhia.getId());
+			pstm.setString(1, companhia.getNome());
 
-			pstm.setString(2, companhia.getNome());
+			pstm.setInt(2, companhia.getId());
 
 			pstm.execute();
 
@@ -171,8 +174,6 @@ public class CompanhiasDAO {
 			rset = pstm.executeQuery();
 
 			rset.next();
-
-			companhias.setId(rset.getInt("id_companhia"));
 
 			companhias.setNome(rset.getString("Nome_companhia"));
 

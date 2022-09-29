@@ -22,7 +22,7 @@ public class PassagemDAO {
 	// Metodo pra salvar
 	public void save(Passagem passagem) {
 		String sql = "INSERT INTO passagem (tipo_pacote, data_embarque, data_retorno,"
-				+ "  Qtd_dias, preco_compra, id_usuario, id_destino, id_hospedagem) values (?, ?, ?, ?, ?, ?, ?, ?;";
+				+ "  Qtd_dias, preco_compra, id_usuario, id_destino, id_hospedagem)values(?, ?, ?, ?, ?, ?, ?, ?;";
 
 		try {
 			// Cria uma conexão com o banco
@@ -36,18 +36,17 @@ public class PassagemDAO {
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
 			pstm.setDate(2, new Date(formatter.parse(passagem.getDataEmbarque()).getTime()));
-			
 			pstm.setDate(3, new Date(formatter.parse(passagem.getDataRetorno()).getTime()));
 			
-			pstm.setString(4, passagem.getQtd_dias());
+			pstm.setInt(5, passagem.getQtd_dias());
 			
-			pstm.setDouble(5, passagem.getValor_pacote());
+			pstm.setDouble(6, passagem.getPrecoCompra());
 
-			pstm.setInt(6, passagem.getUsuarios().getId());
+			pstm.setInt(7, passagem.getUsuarios().getId());
 
-			pstm.setInt(7, passagem.getDestino().getId());
+			pstm.setInt(8, passagem.getDestino().getId());
 
-			pstm.setInt(8, passagem.getHospedagem().getId());
+			pstm.setInt(9, passagem.getHospedagem().getId());
 
 			// Executar a sql para inserção dos dados
 			pstm.execute();
@@ -73,7 +72,7 @@ public class PassagemDAO {
 	public List<Passagem> getPassagem() {
 		String sql = "select * from passagem;";
 
-		List<Passagem> pacotes = new ArrayList<Passagem>();
+		List<Passagem> passagem = new ArrayList<Passagem>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -99,12 +98,11 @@ public class PassagemDAO {
 				SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 				
 				passagens.setDataEmbarque(dateFormat.format(rset.getDate("data_embarque")));
-				
 				passagens.setDataRetorno(dateFormat.format(rset.getDate("data_retorno")));
 				
-				passagens.setQtd_dias(rset.getString("Qtd_dias"));			
+				passagens.setQtd_dias(rset.getInt("Qtd_dias"));			
 
-				passagens.setValor_pacote(rset.getDouble("preco_Compra"));
+				passagens.setPrecoCompra(rset.getDouble("precoCompra"));
 
 				usuarios.setId(rset.getInt("id_usuario"));
 
@@ -124,7 +122,7 @@ public class PassagemDAO {
 
 				passagens.setHospedagem(hospedagem);
 
-				pacotes.add(passagens);
+				passagem.add(passagens);
 			}
 
 		} catch (Exception e) {
@@ -146,13 +144,13 @@ public class PassagemDAO {
 			}
 		}
 
-		return pacotes;
+		return passagem;
 	}
 	
 	// Metodo pra UPDATE
 	public void update(Passagem passag) {
 		String sql = "UPDATE passagem SET tipo_pacote = ?,data_embarque = ?,"
-				+ "data_retorno = ?,Qtd_dias = ?, preco_compra = ?, id_usuario = ?, id_destino = ? id_hospedagem =? WHERE id_passagem = ?";
+				+ "data_retorno = ?,Qtd_dias = ?, preco_compra = ?, id_usuario = ?, id_destino = ?id_hospedagem =? WHERE id_passagem = ?";
 
 		try {
 								
@@ -164,21 +162,21 @@ public class PassagemDAO {
 				
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-			pstm.setDate(2, new Date(formatter.parse(passag.getDataEmbarque()).getTime()));
+			pstm.setDate(3, new Date(formatter.parse(passag.getDataEmbarque()).getTime()));
 
-			pstm.setDate(3, new Date(formatter.parse(passag.getDataRetorno()).getTime()));
+			pstm.setDate(4, new Date(formatter.parse(passag.getDataRetorno()).getTime()));
 			
-			pstm.setString(4, passag.getQtd_dias());
+			pstm.setInt(1, passag.getQtd_dias());
 
-			pstm.setDouble(5, passag.getValor_pacote());			
+			pstm.setDouble(2, passag.getPrecoCompra());			
 			
-			pstm.setInt(6, passag.getUsuarios().getId());
+			pstm.setInt(5, passag.getUsuarios().getId());
 
-			pstm.setInt(7, passag.getDestino().getId());
+			pstm.setInt(6, passag.getDestino().getId());
 
-			pstm.setInt(8, passag.getHospedagem().getId());
+			pstm.setInt(7, passag.getHospedagem().getId());
 
-			pstm.setInt(9, passag.getId());
+			pstm.setInt(8, passag.getId());
 
 			pstm.execute();
 
@@ -238,6 +236,7 @@ public class PassagemDAO {
 		ResultSet rset = null;
 
 		try {
+			
 			conn = ConnectionMySQL.createConnectionMySQL();
 
 			pstm = conn.prepareStatement(sql);
@@ -258,9 +257,9 @@ public class PassagemDAO {
 			
 			passagem.setDataRetorno(dateFormat.format(rset.getDate("data_embarque")));
 
-			passagem.setQtd_dias(rset.getString("Qtd_dias"));
+			passagem.setQtd_dias(rset.getInt("Qtd_dias"));
 			
-			passagem.setValor_pacote(rset.getDouble("preco_compra"));
+			passagem.setPrecoCompra(rset.getDouble("preco_compra"));
 			
 			user.setId(rset.getInt("id_usuario"));
 

@@ -15,8 +15,9 @@ import modelo.Destino;
 import modelo.Hospedagem;
 import modelo.Passagem;
 
-public class Principal {
 
+public class Principal {
+	
 	public static void main(String args[]) {
 		
 		
@@ -26,7 +27,7 @@ public class Principal {
 	usuario.setTel("75-98443435262");
 	usuario.setEmail("Monique@gmail");
 	usuario.setSenha("123445");
-	usuario.setPermissoes("1");
+	usuario.setPermissoes("comum");
 	
 	UsuariosDAO usuariosDAO = new UsuariosDAO();
 	usuariosDAO.save(usuario);
@@ -47,52 +48,27 @@ public class Principal {
 
 	System.out.println(u1.mostrar());
 	System.out.println(u2.mostrar());
-	System.out.println(u3.mostrar());	
-	
-	
-	Usuarios cliente = new Usuarios(1, "Marcia","02342325612","759822323-2345", "marcia@email.com", "123446", p2);
-	Destino destino1 = new Destino(10, "nacional","São Paulo","Fernando de Noronha", 1500.00, c2);	
-	Hospedagem hotel1 = new Hospedagem(1, "Tesouto de Noronha", "8540112200","Fernando de Noronha-PE","Rua Nice Cordeiro SN, ",1300.00);
-	Passagem pacote1 = new Passagem(11,"voo(ida-volta) Hospedagem-café da manha","2022-09-10","2022-09-14", 4, 1247.00, cliente, destino1,hotel1);
-
-
-	
-	ItemPedido item1 = new ItemPedido(001, 5, 85, prod5);
-
-	
-	Passagem pacote = new Passagem(001,cliente, destino1,hotel1);
-	
-			
-	
-	System.out.println("========= DADOS DO PACOTE ============");
-	System.out.println("Cliente: " + pacote.getUsuarios().getNome());
-	System.out.println("Detino: " + pacote.getDestino().getNome());
-	System.out.println("Hospedagem: " + pacote.getHospedagem().getNome());
-	System.out.println("Data de embarque: " + pacote.getPassagem().getDataRetorno());
-	
-	
-
-
+	System.out.println(u3.mostrar());
 	
 			
 	Destino d = new Destino();
 	d.setId(3);
-	d.setTipoDestino("Nacional");
-	d.setOrigem("Sao Paulo");
 	d.setNome("Salvador");
-    d.setPrecoDestino(3000);
-    d.setCompanhias(1);
+	d.setOrigem("Sao Paulo");
+	d.setTipoDestino("Nacional-volta");
+	d.setPrecoDestino(3000);
 
 	DestinoDAO destinoDAO = new DestinoDAO();
 	destinoDAO.update(d);
 
 
 	 destinoDAO.deleteById(4);
-	 
-	 
-	 
 
 		
 	}
+	
 
 }
+
+
+

@@ -17,7 +17,7 @@ public class UsuariosDAO {
 
 	// Metodo pra salvar
 	public void save(Usuarios usuario) {
-		String sql = "INSERT INTO usuario(nome_usuario, cpf, tel_usuario, email, senha, id_permissao)"
+		String sql = "INSERT INTO usuario(nome_usuario, cpf, tel_usuario, cep, email, senha, id_permissao)"
 				+ " VALUES(?, ?, ?, ?, ?, ?);";
 
 		try {
@@ -32,11 +32,13 @@ public class UsuariosDAO {
 			
 			pstm.setString(3, usuario.getTel());
 			
-			pstm.setString(4, usuario.getEmail());
+			pstm.setString(5, usuario.getCep());
 			
-			pstm.setString(5, usuario.getSenha());
+			pstm.setString(6, usuario.getEmail());
 			
-			pstm.setInt(6, usuario.getPermissoes().getId());
+			pstm.setString(7, usuario.getSenha());
+			
+			pstm.setInt(8, usuario.getPermissoes().getId());
 
 		// Executar a sql para inserção dos dados
 			pstm.execute();
@@ -85,7 +87,9 @@ public class UsuariosDAO {
 				
 				usuario.setCpf(rset.getString("cpf"));
 				
-				usuario.setTel(rset.getString("tel"));
+				usuario.setTel(rset.getString("cep"));
+				
+				usuario.setTel(rset.getString("tel_usuario"));
 				
 				usuario.setEmail(rset.getString("email"));
 				
@@ -125,7 +129,7 @@ public class UsuariosDAO {
 
 	// Metodo pra UPDATE
 	public void update(Usuarios usuario) {
-		String sql = "UPDATE usuarios SET nome_usuario = ?, cpf = ?, tel_usuario = ?,"
+		String sql = "UPDATE usuarios SET nome_usuario = ?, cpf = ?, cpf = ?, tel_usuario = ?,"
 				+ " email = ?,senha = ?, id_permissao = ? where id_usuario = ?;";
 
 		try {
@@ -139,13 +143,15 @@ public class UsuariosDAO {
 			
 			pstm.setString(3, usuario.getTel());
 			
-			pstm.setString(4, usuario.getEmail());
+			pstm.setString(4, usuario.getCep());
 			
-			pstm.setString(5, usuario.getSenha());
+			pstm.setString(5, usuario.getEmail());
 			
-			pstm.setInt(6, usuario.getPermissoes().getId());
+			pstm.setString(6, usuario.getSenha());
 			
-			pstm.setInt(7, usuario.getId());
+			pstm.setInt(7, usuario.getPermissoes().getId());
+			
+			pstm.setInt(8, usuario.getId());
 			
 			pstm.execute();
 
@@ -195,7 +201,7 @@ public class UsuariosDAO {
 	}
 	public Usuarios getUsuariosById(int id) {
 
-		String sql = "SELECT * FROM usuarios where id_usuario= ?";
+		String sql = "SELECT * FROM usuarios where id_usuario = ?";
 		
 		Usuarios usuarios = new Usuarios();
 		Permissoes permissoes = new Permissoes();
@@ -203,13 +209,12 @@ public class UsuariosDAO {
 		ResultSet rset = null;
 
 		try {
+			conn = ConnectionMySQL.createConnectionMySQL();
 			pstm = conn.prepareStatement(sql);
 			pstm.setInt(1, id);
 			rset = pstm.executeQuery();
 
 			rset.next();
-			
-			usuarios.setId(rset.getInt("id_usuario"));	
 
 			usuarios.setNome(rset.getString("nome_usuario"));
 			
@@ -217,13 +222,19 @@ public class UsuariosDAO {
 			
 			usuarios.setTel(rset.getString("tel_usuario"));
 			
+			usuarios.setCpf(rset.getString("cep"));
+			
 			usuarios.setEmail(rset.getString("email"));
 			
 			usuarios.setSenha(rset.getString("senha"));
 			
-			permissoes.setTipo(rset.getString("tipo"));	
+			permissoes.setTipo(rset.getString("tipo_permissao"));	
 			
-			permissoes.setId(rset.getInt("id_permissao"));						
+			permissoes.setId(rset.getInt("id_permissao"));
+			
+			usuarios.setId(rset.getInt("id_usuario"));
+			
+			usuarios.setPermissoes(permissoes);
 		
 		} catch (Exception e) {
 			e.printStackTrace();

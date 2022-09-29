@@ -23,6 +23,7 @@ public class UsuariosCrud {
 		String nome = "";
 		String cpf = "";
 		String tel_usuario = "";
+		String cep = "";
 		String email = "";
 		String senha = "";
 		int id_permissao = 0;
@@ -54,6 +55,8 @@ public class UsuariosCrud {
 				cpf = user.nextLine();
 				System.out.println("Digite o telefone ou celular do Usuario: ");
 				tel_usuario = user.nextLine();
+				System.out.println("Digite o cep de sua cidade: ");
+				cep = user.nextLine();
 				System.out.println("Digite o e-mail do Usuario: ");
 				email = user.nextLine();
 				System.out.println("Digite a senha: ");
@@ -64,7 +67,7 @@ public class UsuariosCrud {
 
 				Permissoes permissao = permissaoDAO.getPermissaoById(id_permissao);
 
-				Usuarios user1 = new Usuarios(id, nome, cpf, tel_usuario, email, senha, permissao);
+				Usuarios user1 = new Usuarios(id, nome, cpf, tel_usuario, cep, email, senha, permissao);
 
 				userDAO.save(user1);
 
@@ -76,8 +79,10 @@ public class UsuariosCrud {
 
 				// READ
 				for (Usuarios u : userDAO.getUsuarios()) {
-					System.out.println("Id: " + u.getId() + " Nome: " + u.getNome() + " Tipo de permissão: "
-							+ u.getPermissoes().getTipo());
+					System.out.println("Id: " + u.getId() + " Nome: " + u.getNome() +
+							" CPF: " + u.getCpf() + " Telefone: " + u.getTel() + " CEP: " + u.getCep() + 
+							"\n Email: " + u.getEmail() +" Senha: " + u.getSenha() +
+							" \n Tipo de permissão: " + u.getPermissoes().getTipo());
 				}
 
 				System.out.println("\n**** Consultou **** \n");
@@ -97,6 +102,8 @@ public class UsuariosCrud {
 				cpf = user.nextLine();
 				System.out.println("Digite o novo telefone ou celular do Usuario: ");
 				tel_usuario = user.nextLine();
+				System.out.println("Digite o cep da cidade: ");
+				cep = user.nextLine();
 				System.out.println("Digite o novo  e-mail do Usuario: ");
 				email = user.nextLine();
 				System.out.println("Digite a senha: ");
@@ -107,7 +114,7 @@ public class UsuariosCrud {
 
 				Permissoes permissao1 =  new Permissoes();
 
-				Usuarios u2 = new Usuarios(posicao, nome, cpf, tel_usuario, email, senha, permissao1);
+				Usuarios u2 = new Usuarios(posicao, nome, cpf, tel_usuario, cep,email, senha, permissao1);
 
 				userDAO.update(u2);
 
