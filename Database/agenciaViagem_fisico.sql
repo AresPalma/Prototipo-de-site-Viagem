@@ -13,6 +13,7 @@ Id_usuario INTEGER PRIMARY KEY auto_increment,
 nome_usuario VARCHAR(80) NOT NULL,
 cpf VARCHAR(20) NOT NULL,
 tel_usuario VARCHAR(20),
+cep VARCHAR(10) NOT NULL,
 email VARCHAR(80)NOT NULL,
 senha VARCHAR(10) NOT NULL,
 id_permissao INTEGER,
@@ -59,7 +60,6 @@ FOREIGN KEY(id_hospedagem) REFERENCES Hospedagem (id_hospedagem)
 
 ALTER TABLE destino ADD FOREIGN KEY(id_companhia) REFERENCES Companhias (id_companhia);
 
-
 alter table usuarios add FOREIGN KEY(id_permissao) references permissoes (id_permissao);
 ALTER TABLE passagem ADD FOREIGN KEY(id_destino) REFERENCES Destino (id_destino);
 ALTER TABLE passagem ADD FOREIGN KEY(id_hospedagem) REFERENCES hospedagem (id_hospedagem);
@@ -70,11 +70,11 @@ insert into permissoes (tipo_permissao) values
 ('comum'), 
 ('administrador');
 
-insert into usuarios (nome_usuario, cpf, tel_usuario, email, senha, id_permissao) values
-('Maria', '00023432412', '(75)98800-1212', 'maria@email','234123',1), 
-('Marcos', '024020232412', '(75)98300-0243', 'marcos@email','134240',1),
-('Marcela', '001432232452', '(75)98121-5243', 'marcela@email','134444',1),
-('Roberto', '003402130430', '(75)98220-3257', 'roberto@email','1034202',2);
+insert into usuarios (nome_usuario, cpf, tel_usuario, cep, email, senha, id_permissao) values
+('Maria', '00023432412', '(75)98800-1212','42700-130', 'maria@email','234123',1), 
+('Marcos', '024020232412', '(75)98300-0243','40015-970', 'marcos@email','134240',1),
+('Marcela', '001432232452', '(75)98121-5243','51020-001', 'marcela@email','134444',1),
+('Roberto', '003402130430', '(75)98220-3257','47450-000', 'roberto@email','1034202',2);
 
 INSERT INTO companhias (nome_companhia) values
 ('Gol'),
@@ -95,24 +95,24 @@ INSERT INTO companhias (nome_companhia) values
    ('internacionl','Salvador','Lisboa', 12147, 4),
    ('Nacional', 'São Paulo','Porto Seguro', 1030, 2);
    
-INSERT INTO hospedagem (nome_hospedagem, tel_hospedagem, cidade_estado, logradouro, preco_hospedagem ) values
-('Seara Praia Hotel', '85 4011 2200','Fortaleza-CE','Av.Beira Mar 3080',411.00),
-('Esmeralda Praia Hotel',' 84 4005 0000','Ponta Negra Natal RN',' R.Francisco Gurgel 1160 ',606.00),
-('Ibis Lisboa Liberdade', '35 121330 0630','Lisboa Portugal','R.Barata Salgueiro',452.00),
-('Hôtel Le A', '33 14256-9999','Paris França','A 3.54 km do centro,Rue d Artois', 1568.00),
-('Sol Barra Hotel','71 3418-7000','Salvador-BA','Av.Sete de Setembro,Barra',140.00),
-('Hotel Shangrilá','73 3162-6505','Porto Seguro BA','R.do Cajueiro 70',130.00),
-('Hyatt Regency Orlando','1 407-641 2224',' Orlando, Florida EUA','International Dr Orlando FL 32819',1075.00),
-('Pousada Habitue', '54 3286-6497','Gramado RS','Av.das Hortênsias, 849 Centro',461.00),
-('H2 Hotel Berlin-Alexanderplatz', '49 30 24088010','Berlim Alemanha','Karl Liebknecht Str.32a Mitte 10178',650.00);
+INSERT INTO hospedagem (id_passagem, nome_hospedagem, tel_hospedagem, cidade_estado, logradouro, preco_hospedagem ) values
+(default,'Seara Praia Hotel', '85 4011 2200','Fortaleza-CE','Av.Beira Mar 3080',411.00),
+(default,'Esmeralda Praia Hotel',' 84 4005 0000','Ponta Negra Natal RN',' R.Francisco Gurgel 1160 ',606.00),
+(default,'Ibis Lisboa Liberdade', '35 121330 0630','Lisboa Portugal','R.Barata Salgueiro',452.00),
+(default,'Hôtel Le A', '33 14256-9999','Paris França','A 3.54 km do centro,Rue d Artois', 1568.00),
+(default,'Sol Barra Hotel','71 3418-7000','Salvador-BA','Av.Sete de Setembro,Barra',140.00),
+(default,'Hotel Shangrilá','73 3162-6505','Porto Seguro BA','R.do Cajueiro 70',130.00),
+(default,'Hyatt Regency Orlando','1 407-641 2224',' Orlando, Florida EUA','International Dr Orlando FL 32819',1075.00),
+(default,'Pousada Habitue', '54 3286-6497','Gramado RS','Av.das Hortênsias, 849 Centro',461.00),
+(default,'H2 Hotel Berlin-Alexanderplatz', '49 30 24088010','Berlim Alemanha','Karl Liebknecht Str.32a Mitte 10178',650.00);
 
  INSERT INTO passagem (tipo_pacote, data_embarque, data_retorno, Qtd_dias, preco_compra, id_usuario, id_destino, id_hospedagem)values
 ('voo(ida-volta) Hospedagem-café da manha','2022-10-06','2022-10-10','4',1550.00, 1, 8, 6),
 ('voo(ida-volta) Hospedagem-café da manha','2022-09-15','2022-09-18','3',13503.00, 1, 7, 3),
 ('voo(ida-volta) Hospedagem-café da manha','2022-09-10','2022-09-14','4',1247.00, 1, 4, 1),
-('voo(ida-volta)',',2022-09-20','2022-10-25','5',8900.00, 1, 1, null);
+('voo(ida-volta)',',2022-09-20','2022-10-25','5',8900.00, 1, 1, 2);
  
- 
+
 -- Criação da View
 create view passagem_destino_hospedagem as
 select passagem.tipo_pacote, destino.nome_destino, hospedagem.nome_hospedagem from passagem, destino, hospedagem
@@ -129,9 +129,7 @@ BEGIN
  return total;
 END $$
 
-
-  
- --  Criação da view passagem completa
+--  Criação da view passagem completa
 create view passagem_completa as
 select pass.id_passagem, 
 pass.tipo_pacote, 
@@ -149,7 +147,9 @@ where usuarios.id_usuario and pass.id_destino = dest.id_destino and pass.id_hosp
  
  -- Consulta desses dados
 select * from destino;
+select * from destino;
 select * from passagem;
 select * from hospedagem;
 select * from usuarios;
 select * from passagem_destino_hospedagem;
+select * from passagem_completa;
