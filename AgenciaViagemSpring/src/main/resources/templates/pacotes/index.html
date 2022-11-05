@@ -1,0 +1,82 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+<div th:replace="fragments/navbar :: nav"></div>
+
+<body>
+	<main>
+		<div class="header2">
+			<h1 class="titulo-cadast text-center"><strong>Pacotes</strong></h1>
+		</div>
+
+		<section class="container-fluid">
+			<div class="mb-0 mt-2">
+				<h3 class="text-center"><strong>Lista de Pacotes promocionais</strong></h3>
+			</div>
+			<div class="table table-striped  table-responsive mx-2">
+				<table class="table" id="tabela">
+					<thead class="table-light">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Cliente</th>
+							<th scope="col">Tipo de pacote</th>
+							<th scope="col">Data de Embarque</th>
+							<th scope="col">Data de retorno</th>
+							<th scope="col">Destino</th>
+							<th scope="col">Hospedagem</th>
+							<th scope="col">Preço Total</th>
+							<th scope="col">Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+
+						<tr th:each="ob:${promo}">
+							<td th:text=${ob.id}></td>
+							<td th:text=${ob.promo.cliente.nome}></td>
+							<td th:text=${ob.tipoPacote}></td>
+							<td th:text=${ob.dataEmbarque}></td>
+							<td th:text=${ob.dataRetorno}></td>
+							<td th:text=${ob.promo.passagem.destino}></td>
+							<td th:text=${ob.promo.hospedagem.nome}></td>
+							<td th:text=${ob.precoTotal}></td>
+					
+							<td class="d-flex">
+								<!-- botão Editar -->
+								<a th:href="@{/edit(id=${ob.id})}" class="btn btn-info" data-bs-toggle="tooltip"
+									data-bs-placement="bottom" title="Editar"><i
+										class="icon-edite fa fa-pencil-square-o"></i></a>
+								<!-- botão deletar -->
+								<a th:href="@{/delete(id=${ob.id})}" class="btn btn-danger" data-bs-toggle="tooltip"
+									data-bs-placement="bottom" title="deletar" style="margin-left: 10px;">
+									<i class="icon-delete fa fa-trash" aria-hidden="true"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-12 mt-4">
+				<!--botão cadastrar -->
+				<div class="input-group" id="create-1">
+					<a th:href="@{/create}" class="btn btn-primary mb-2 py-2" name="create" type="submit"
+						data-test-id="submit-button">Cadastrar novo Pacote &nbsp;
+						<i class="icon-create fa fa-plus"></i></a>
+				</div>
+				
+				<div class="col-sm-12 p-2">
+					<a th:href="@{/}"
+						class="btn btn-outline-primary text-black rounded-5 buttonBase mb-3 py-2 mx-3">Sair</a>
+				</div>
+			</div>
+			<div class="card-footer bg-white text-success" th:if="${message!=null}">
+				<span th:text="${message}"></span>
+			</div>
+		</section>
+	</main>
+	<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+</html>

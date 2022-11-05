@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th=" http://www.thymeleaf.org">
+
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+
+<!-- Navbar -->
+<div th:replace="fragments/navbar :: nav"></div>
+
+<body>
+
+	<!-- Main -->
+	<main class="justify-content-center">
+		<section class="row w-75" style="margin-top: 20px;">
+			<div class="header2 mb-3">
+				<h1 class="titulo-cadast text-center"><strong>Editar Cliente</strong></h1>
+			</div>
+			<form class="form" th:action="@{/update}" method="POST" id="Form" th:object="${cliente}">
+				<fieldset>
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="id">ID</label>
+						</div>
+						<div class="col-sm-12">
+							<input type="text" th:field="*{id}" class="form-control" readonly />
+						</div>
+					</div><br />
+
+					<!-- conteúdo: formulario -->
+					<div class="header2">
+						<h1 class="titulo-cadast text-center"><strong>Usuario</strong></h1>
+					</div>
+					<main>
+						<div class=" container-row g-3 col-md-11 mx-auto col-lg-9 mb-2">
+							<form action="" th:action="@{/save}" method="POST" th:object="${cliente}"
+								class="row g-3 needs-validation" id="form-create" novalidate>
+								<fieldset>
+									<div class="mb-0 mt-3">
+										<h3 class="text-center"><strong>Dados Pessoais</strong></h3>
+									</div>
+									<input type="hidden" th:field="*{id}">
+
+									<div class="col-md-7">
+										<div class="form-outline">
+											<label for="validationCustom01" class="form-label">Nome</label>
+											<input type="text" id="validationCustom01" class="form-control" name="nome"
+												field="*{nome}" placeholder="nome completo" th:field="*{nome}" />
+											<div class="valid-feedback">
+												<i class="ico ri-check-fill text-success"></i>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="radio">
+											<label class="col">
+												<input type="radio" name="genero" value="m"
+													ng-checked="register.gender!='f'" class="checked" checked="checked"
+													th:field="*{genero}">
+												Masculino
+											</label><span>
+												<label class="col px-3">
+													<input type="radio" name="genero" value="f"
+														ng-model="register.gender" class="ng-valid ng-not-empty"
+														checked="checked" th:field="*{genero}"> Feminino
+												</label></span>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="form-outline">
+											<label for="validation02" class="form-label">CPF</label>
+											<input type="text" class="form-control" id="validation02" placeholder=""
+												value="" th:field="*{cpf}">
+											<div class="valid-feedback">
+												<i class="ico ri-check-fill text-success"></i>
+											</div>
+										</div>
+										<div class="form-outline">
+											<label for="validation03" class="form-label">telefone</label>
+											<input type="text" class="form-control" id="validation03"
+												placeholder="(75) 99800-0000" value="" th:field="*{telefone}">
+											<div class="valid-feedback">
+												<i class="ico ri-check-fill text-success"></i>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-outline">
+											<label for="validationCustom04" class="form-label">E-mail</label>
+											<input type="text" class="form-control" id="validationCustom04"
+												placeholder="joana@exemplo.com" value="" th:field="*{email}">
+											<div class="valid-feedback">
+												<i class="ico ri-check-fill text-success"></i>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-outline">
+											<label for="validationCustom05" class="form-label">Senha</label>
+											<input type="text" class="form-control" id="validationCustom05"
+												placeholder="" value="" th:field="*{senha}">
+											<div class="valid-feedback">
+												<i class="ico ri-check-fill text-success"></i>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-outline">
+											<label for="validationCustom06" class="form-label">Cep</label>
+											<input type="tel" class="form-control" id="validationCustom06"
+												placeholder="000-00000" value="" th:field="*{senha}">
+											<div class="valid-feedback">
+												<i class="ico ri-check-fill text-success"></i>
+											</div>
+										</div>
+									</div>
+						</div>
+				</fieldset>
+				<!--aceitar termos -->
+				<div class="signup-aceitar mb-2">
+					<input type="checkbox" id="aceitarTermo-Cond" name="aceitarTermo-Cond" value="false" required>
+					<span>Declaro ter mais de 14 anos de idade, li e concordo com os </span>
+					<span><a href="" target="_blank">Termos e Condições</a>
+						<span> e </span><a href="#" target="_blank"> Política de Privacidade</a></span>
+
+					<div class="caption-aceitar mt-2">
+						<input type="checkbox" id="recebPromocao" name="aceitarTermo-Cond" value="false">
+						<span> Quero receber promoções, ofertas, novidades e dicas de viagens por e-mail.</span>
+					</div>
+				</div>
+				<div class="col-12 mt-4">
+					<button class="btn btn-primary text-black rounded-5 buttonBase mb-3" type="submit"
+						data-test-id="submit-button">Salvar&nbsp;
+						<?xml version="1.0" encoding="iso-8859-1"?>
+						<svg class="seta-input m-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+							width="20" height="20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							viewBox="0 0 513.32 513.32" xml:space="preserve">
+							<g>
+								<g>
+									<polygon points="299.437,42.777 269.493,72.72 432.045,235.272 0,235.272 0,278.048
+                                                     432.045,278.048 269.493,440.6 299.437,470.543 513.32,256.66" />
+								</g>
+							</g>
+						</svg>
+					</button>
+					<!-- botão cancelar -->
+					<a href="@{/}" class="btn btn-outline-danger text-black 
+                    rounded-5 buttonBase mb-3 py-2 mx-3">Cancelar</a>
+				</div>
+			</form>
+		</section>
+		</div>
+	</main>
+
+	<div th:replace="fragments/footer :: footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+<div th:replace="fragments/navbar :: nav"></div>
+
+<body>
+	<div th:if="${param.error}">
+		Usuário e senha inválidos.
+	</div>
+	<div th:if="${param.logout}">
+		Você saiu.
+	</div>
+
+	<!-- Main -->
+	<main class=" justify-content-center mx-auto">
+
+		<div class="header2">
+			<h1 class="titulo-cadast text-center"><strong>Login</strong></h1>
+		</div>
+		
+			<div class=" container-row g-3 col-md-11 mx-auto col-lg-10 mb-2">
+					<form>
+						<fieldset>
+							<div class="mb-3 text-center">
+								<h4>Login para Administrador</h4>
+							</div>
+							<div class="row mb-3">
+								<div class="col-12 mb-3">
+									<label for="usuario" class="form-label">Login:</label> <input type="text"
+										class="form-control" id="usuario" name="usuario" field="*{usuario}"
+										placeholder="">
+								</div>
+
+								<div class="col-12 mb-3">
+									<label for="senha" class="form-label">Senha:</label> <input type="password"
+										class="form-control" id="senha" name="senha" field="*{senha}"
+										placeholder="Senha">
+								</div>
+							</div>
+							<div class="row mb-5">
+								<div class="col-lg-6 col-sm-12" style="text-align: center;">
+									<a th:href="@{/getAllClientes}"><button type="button" id="sair"
+											class="btn btn-primary col-6">Logar</button></a>
+
+								</div>
+								<div class="col-lg-6 col-sm-12" style="text-align: center;">
+									<a th:href="@{/}"><button type="button" id="sair"
+											class="btn btn-danger col-6">Sair</button></a>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+			</div>
+		</main>
+		<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+</html>

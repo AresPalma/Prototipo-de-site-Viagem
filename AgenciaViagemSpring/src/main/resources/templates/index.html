@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th=" http://www.thymeleaf.org">
+
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+
+<body class="bg-dark" style="min-height: 100vh;">
+
+	<!-- Navbar -->
+	<div th:replace="fragments/nav :: nav"></div>
+
+
+	<!-- Main -->
+	<main class="background img-fluid">
+		<div class="row p-0 m-0">
+			<div id="text_ini" class="col-md-6 col-sm-12">
+				<h1 class="display-1">Olá!</h1>
+				<p style="font-weight: 300;">
+					<strong>Canguru Jack aguarda você em sua próxima aventura!
+						Seja na Austrália ou Nova Zelândia, nós temos as passagens certas
+						com um preço sob medida para você.</strong>
+				</p>
+				<hr class="m-0">
+			</div>
+		</div>
+	</main>
+	<!-- Main End -->
+
+	<!-- Footer -->
+	<footer class="navbar bg-opacity-25 bg-light text-secondary container-fluid fixed-bottom">
+		<p id="p_form_footer" class="mx-auto text-light">
+			© 2022 Renatour SyS v5.0 -<a th:href="@{/login}" class="fw-semibold link-dark">
+				Login para Administrador</a>
+		</p>
+	</footer>
+	<!-- Footer End-->
+
+	<!-- JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
