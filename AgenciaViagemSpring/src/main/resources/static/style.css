@@ -1,0 +1,203 @@
+#text_ini {
+	width: 35%;
+	margin-left: 25px;
+	margin-top: 400px;
+	margin-bottom: 60px;
+}
+
+.background {
+	background-image: url(Images/Backgrounds/Kanguru.jpg);
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.background_OZ {
+	background-image: url(Images/Backgrounds/OZ_BG.jpg);
+	background-color: #cccccc;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	color: white;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.background_NZ {
+	background-image: url(Images/Backgrounds/NZ_BG.jpg);
+	background-color: #cccccc;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	padding-top: 34%;
+	padding-left: 18%;
+	padding-right: 15%;
+	color: white;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.background_contato {
+	background-image: url(Images/Contato_BG.jpg);
+	background-color: #cccccc;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	padding-top: 34%;
+	padding-left: 18%;
+	padding-right: 15%;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.background_form {
+	background-image: url(Images/Form_BG.jpg);
+	background-color: #cccccc;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	padding-top: 34%;
+	padding-left: 18%;
+	padding-right: 15%;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.background_login {
+	background-image: url(Images/Login_BG.jpg);
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.background_compra {
+	background-image: url(Images/ConfCompra_BG.jpg);
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.background_update {
+	background-image: url(Images/Update_BG.jpg);
+	background-color: #cccccc;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	padding-top: 34%;
+	padding-left: 18%;
+	padding-right: 15%;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.card {
+	transition: 1s;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	border-radius: 25px;
+	background-color: rgba(0, 0, 0, 0);
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.card:hover {
+	box-shadow: 0 30px 70px #000;
+	transform: scale3d(1.05, 1.05, 1.05, 1.05);
+}
+
+#p_home_footer {
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+#index_footer_link {
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#p_promo_footer {
+	color: grey;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+#p_oz_footer {
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+#p_nz_footer {
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+#p_contato_footer {
+	color: black;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+#p_form_footer {
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
